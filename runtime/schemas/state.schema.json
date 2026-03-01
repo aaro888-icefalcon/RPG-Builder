@@ -1,8 +1,8 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "emergence-state-v5",
-  "title": "RPG Engine — Campaign State",
-  "description": "Canonical schema for the monolithic state.json. Schema version 5.0.0.",
+  "$id": "rpg-engine-state-v6",
+  "title": "RPG Engine — Campaign State (Template)",
+  "description": "Canonical schema for state.json. Schema version 6.0.0. Game-agnostic template — customize character, world_situation, and mechanics for your game.",
   "type": "object",
   "required": [
     "schema_version",
@@ -63,7 +63,10 @@
       "items": { "$ref": "#/$defs/clock" },
       "description": "Scene-level story clocks"
     },
-    "world_situation": { "$ref": "#/$defs/world_situation" },
+    "world_situation": {
+      "type": "object",
+      "description": "World-level situation tracking. Structure is game-specific — define your own keys (e.g., regions, political state, environmental conditions)."
+    },
     "inter_group_relations": {
       "type": "array",
       "items": { "$ref": "#/$defs/inter_group_relation" }
@@ -143,190 +146,19 @@
     "character": {
       "type": "object",
       "required": [
-        "name", "level", "xp", "class_name", "aspect", "archetype",
-        "background", "hp", "stamina", "mana", "composure",
-        "attributes", "combat", "awakening", "forms", "form_pool",
-        "equipment", "inventory", "combat_history"
+        "name", "level"
       ],
       "properties": {
         "name": { "type": "string", "minLength": 1 },
-        "level": { "type": "integer", "minimum": 0, "maximum": 20 },
-        "xp": {
-          "type": "object",
-          "required": ["current", "next"],
-          "properties": {
-            "current": { "type": "integer", "minimum": 0 },
-            "next": { "type": "integer", "minimum": 1 }
-          }
-        },
-        "class_name": { "type": "string", "minLength": 1 },
-        "aspect": { "type": "string", "minLength": 1 },
-        "archetype": { "type": "string", "minLength": 1 },
-        "background": { "type": "string" },
-        "hp": { "$ref": "#/$defs/resource_pool" },
-        "stamina": { "$ref": "#/$defs/resource_pool" },
-        "mana": { "$ref": "#/$defs/resource_pool" },
-        "composure": { "$ref": "#/$defs/resource_pool" },
-        "attributes": { "$ref": "#/$defs/attributes" },
-        "combat": { "$ref": "#/$defs/combat_state" },
-        "awakening": { "$ref": "#/$defs/awakening" },
-        "forms": {
-          "type": "array",
-          "items": { "$ref": "#/$defs/form_slot" }
-        },
-        "form_pool": {
-          "type": "array",
-          "items": { "type": "string" }
-        },
-        "equipment": { "$ref": "#/$defs/equipment" },
-        "inventory": {
-          "type": "array",
-          "items": { "$ref": "#/$defs/inventory_item" }
-        },
-        "combat_history": { "$ref": "#/$defs/combat_history" }
-      }
-    },
-
-    "attributes": {
-      "type": "object",
-      "required": [
-        "might", "agility", "fortitude", "precision",
-        "intellect", "wisdom", "willpower", "presence"
-      ],
-      "properties": {
-        "might": { "type": "integer", "minimum": 1, "maximum": 30 },
-        "agility": { "type": "integer", "minimum": 1, "maximum": 30 },
-        "fortitude": { "type": "integer", "minimum": 1, "maximum": 30 },
-        "precision": { "type": "integer", "minimum": 1, "maximum": 30 },
-        "intellect": { "type": "integer", "minimum": 1, "maximum": 30 },
-        "wisdom": { "type": "integer", "minimum": 1, "maximum": 30 },
-        "willpower": { "type": "integer", "minimum": 1, "maximum": 30 },
-        "presence": { "type": "integer", "minimum": 1, "maximum": 30 }
+        "level": { "type": "integer", "minimum": 0, "maximum": 100 }
       },
-      "additionalProperties": false
-    },
-
-    "combat_state": {
-      "type": "object",
-      "required": [
-        "physical_def", "mental_def", "resistance_dc",
-        "initiative", "movement", "crit_threshold",
-        "current_stance", "ap", "rp", "conditions", "zone"
-      ],
-      "properties": {
-        "physical_def": { "type": "integer" },
-        "mental_def": { "type": "integer" },
-        "resistance_dc": { "type": "integer" },
-        "initiative": { "type": "integer", "minimum": 0 },
-        "movement": { "type": "integer", "minimum": 0 },
-        "crit_threshold": { "type": "integer" },
-        "current_stance": {
-          "type": "string",
-          "enum": ["balanced", "aggressive", "defensive"]
-        },
-        "ap": { "$ref": "#/$defs/resource_pool" },
-        "rp": { "$ref": "#/$defs/resource_pool" },
-        "conditions": {
-          "type": "array",
-          "items": { "type": ["string", "object"] }
-        },
-        "zone": { "type": ["string", "null"] }
-      }
-    },
-
-    "awakening": {
-      "type": "object",
-      "required": ["name", "tier", "category", "trigger", "passive", "active", "active_available"],
-      "properties": {
-        "name": { "type": "string" },
-        "tier": { "type": "string" },
-        "category": { "type": "string" },
-        "trigger": { "type": "string" },
-        "passive": { "type": "string" },
-        "active": { "type": "string" },
-        "active_available": { "type": "boolean" }
-      }
-    },
-
-    "form_slot": {
-      "type": "object",
-      "required": ["slot"],
-      "properties": {
-        "slot": { "type": "integer", "minimum": 1 },
-        "name": { "type": ["string", "null"] },
-        "variant": { "type": ["string", "null"] },
-        "default_attribute": { "type": "string" },
-        "damage_type": { "type": "string" },
-        "aspect_affinity": { "type": "string" },
-        "variant_modifier": { "type": "string" },
-        "notes": { "type": "string" },
-        "techniques_known": {
-          "type": "array",
-          "items": { "$ref": "#/$defs/technique" }
-        }
-      }
-    },
-
-    "technique": {
-      "type": "object",
-      "required": ["name", "tier", "source", "ap", "cost", "range", "effect", "unlocked_via"],
-      "properties": {
-        "name": { "type": "string" },
-        "tier": { "type": "integer", "minimum": 1 },
-        "source": { "type": "string" },
-        "ap": { "type": "integer", "minimum": 0 },
-        "cost": { "type": "string" },
-        "range": { "type": "string" },
-        "duration": { "type": "string" },
-        "effect": { "type": "string" },
-        "unlocked_via": { "type": "string" }
-      }
-    },
-
-    "equipment": {
-      "type": "object",
-      "required": ["main_weapon", "off_weapon", "armor"],
-      "properties": {
-        "main_weapon": { "type": ["string", "null"] },
-        "off_weapon": { "type": ["string", "null"] },
-        "armor": { "type": ["string", "null"] }
-      }
-    },
-
-    "inventory_item": {
-      "type": "object",
-      "required": ["name", "qty"],
-      "properties": {
-        "name": { "type": "string", "minLength": 1 },
-        "qty": { "type": "integer", "minimum": 0 },
-        "notes": { "type": "string" }
-      }
-    },
-
-    "combat_history": {
-      "type": "object",
-      "required": [
-        "combats_survived", "enemies_defeated",
-        "damage_dealt", "damage_taken",
-        "most_used_technique", "close_calls"
-      ],
-      "properties": {
-        "combats_survived": { "type": "integer", "minimum": 0 },
-        "enemies_defeated": { "type": "integer", "minimum": 0 },
-        "damage_dealt": { "type": "integer", "minimum": 0 },
-        "damage_taken": { "type": "integer", "minimum": 0 },
-        "most_used_technique": { "type": "string" },
-        "close_calls": { "type": "integer", "minimum": 0 }
-      }
+      "additionalProperties": true,
+      "description": "Character definition. Required fields are minimal — extend with your game's attributes, resources, equipment, and abilities."
     },
 
     "world": {
       "type": "object",
-      "required": ["human_factions", "meta_clocks"],
-      "properties": {
-        "human_factions": { "type": "array" },
-        "meta_clocks": { "type": "array" }
-      }
+      "description": "World-level containers. Structure is game-specific."
     },
 
     "current_scene": {
@@ -410,25 +242,6 @@
         "event": { "type": "string" },
         "mechanical": { "type": "string" },
         "fired": { "type": "boolean" }
-      }
-    },
-
-    "world_situation": {
-      "type": "object",
-      "required": ["nyc_wide", "neighborhoods", "regions"],
-      "properties": {
-        "nyc_wide": { "type": "object" },
-        "neighborhoods": {
-          "type": "object",
-          "additionalProperties": { "type": "object" }
-        },
-        "regions": {
-          "type": "object",
-          "additionalProperties": {
-            "type": "array",
-            "items": { "type": "string" }
-          }
-        }
       }
     },
 

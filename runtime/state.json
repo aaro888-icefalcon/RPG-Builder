@@ -1,119 +1,25 @@
 {
-  "schema_version": "5.0.0",
+  "schema_version": "6.0.0",
   "content_version": "0.0.1",
   "meta": {
-    "last_played": "2026-02-24T00:00:00Z",
+    "last_played": "2026-03-01T00:00:00Z",
     "session_number": 0
   },
   "character": {
     "name": "Unnamed",
-    "level": 0,
-    "xp": {
-      "current": 0,
-      "next": 100
-    },
-    "class_name": "Pending",
-    "aspect": "pending",
-    "archetype": "pending",
-    "background": "",
-    "hp": {
-      "current": 1,
-      "max": 1
-    },
-    "stamina": {
-      "current": 1,
-      "max": 1
-    },
-    "mana": {
-      "current": 1,
-      "max": 1
-    },
-    "composure": {
-      "current": 1,
-      "max": 1
-    },
-    "attributes": {
-      "might": 10,
-      "agility": 10,
-      "fortitude": 10,
-      "precision": 10,
-      "intellect": 10,
-      "wisdom": 10,
-      "willpower": 10,
-      "presence": 10
-    },
-    "combat": {
-      "physical_def": 10,
-      "mental_def": 10,
-      "resistance_dc": 10,
-      "initiative": 0,
-      "movement": 6,
-      "crit_threshold": 12,
-      "current_stance": "balanced",
-      "ap": {
-        "current": 2,
-        "max": 2
-      },
-      "rp": {
-        "current": 1,
-        "max": 1
-      },
-      "conditions": [],
-      "zone": null
-    },
-    "awakening": {
-      "name": "Pending",
-      "tier": "L0",
-      "category": "pending",
-      "trigger": "pending",
-      "passive": "Pending",
-      "active": "Pending",
-      "active_available": false
-    },
-    "forms": [
-      {
-        "slot": 1,
-        "name": null,
-        "variant": null,
-        "notes": "Empty"
-      },
-      {
-        "slot": 2,
-        "name": null,
-        "variant": null,
-        "notes": "Empty"
-      }
-    ],
-    "form_pool": [],
-    "equipment": {
-      "main_weapon": null,
-      "off_weapon": null,
-      "armor": null
-    },
-    "inventory": [],
-    "combat_history": {
-      "combats_survived": 0,
-      "enemies_defeated": 0,
-      "damage_dealt": 0,
-      "damage_taken": 0,
-      "most_used_technique": "none",
-      "close_calls": 0
-    }
+    "level": 0
   },
-  "world": {
-    "human_factions": [],
-    "meta_clocks": []
-  },
+  "world": {},
   "current_scene": {
     "scene_id": "scene_000",
     "location": "Starting Location",
-    "region": "urban",
-    "threat_level": 1,
+    "region": "starting",
+    "threat_level": 0,
     "scene_type": "exploration"
   },
   "campaign": {
     "name": "New Campaign",
-    "start_date": "2026-02-24",
+    "start_date": "2026-03-01",
     "current_day": 1,
     "current_time": "12:00",
     "current_location": "Starting Location"
@@ -121,14 +27,7 @@
   "current_day": 1,
   "current_time": "12:00",
   "clocks": [],
-  "world_situation": {
-    "nyc_wide": {
-      "socioeconomic": [],
-      "geopolitical": []
-    },
-    "neighborhoods": {},
-    "regions": {}
-  },
+  "world_situation": {},
   "inter_group_relations": [],
   "pc_standing": [],
   "human_factions": [],
@@ -136,16 +35,7 @@
   "meta_clocks": [],
   "faction_relationships": [],
   "known_npcs": [],
-  "known_locations": [
-    {
-      "id": "loc_start",
-      "name": "Starting Location",
-      "region": "urban",
-      "threat_level": 1,
-      "discovered_day": 1,
-      "notes": ""
-    }
-  ],
+  "known_locations": [],
   "campaign_arcs": [],
   "active_quests": [],
   "chronicle": [],
@@ -157,5 +47,5 @@
     "trends": [],
     "arrivals": []
   },
-  "last_played": "2026-02-24T00:00:00Z"
+  "last_played": "2026-03-01T00:00:00Z"
 }

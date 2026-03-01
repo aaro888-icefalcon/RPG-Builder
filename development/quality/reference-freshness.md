@@ -4,13 +4,16 @@ This table tracks ownership and review cadence for core runbooks that must remai
 
 | Reference doc | Owner | Review cadence | Last verified commit | Notes |
 |---|---|---|---|---|
-| `phases/1-context-loading/references/hard-rules.md` | GM Protocol Maintainer | Every release + weekly | `d3a35f3524372b22b541d00c83e86aed347845c1` | Non-negotiable procedures and checklists |
-| `phases/1-context-loading/references/gm-protocol.md` | Narrative Systems Lead | Every release + biweekly | `d3a35f3524372b22b541d00c83e86aed347845c1` | Full adjudication protocol and move guidance |
-| `phases/2-action-interpretation/references/cli-reference.md` | CLI Maintainer | On every command change + weekly | `d3a35f3524372b22b541d00c83e86aed347845c1` | Command contract and examples |
-| `phases/3-resolution/skills/combat/references/combat.md` | Combat Systems Owner | On combat logic changes + biweekly | `d3a35f3524372b22b541d00c83e86aed347845c1` | Combat loop, AP economy, and turn structure |
-| `phases/3-resolution/skills/core/references/conditions.md` | Survival/Conditions Owner | On condition logic changes + biweekly | `d3a35f3524372b22b541d00c83e86aed347845c1` | Condition handling, damage-over-time, recovery |
-| `schemas/state.schema.json` | Schema Owner | On every schema change | `c2f67eaf0470193352cde6bc9a1229ba8c771075` | State shape definition (v5.0.0) — see §5 of change-integration-checklist.md |
-| `scripts/validate_state.py` | Schema Owner | On every schema/validator change | `c2f67eaf0470193352cde6bc9a1229ba8c771075` | 5-layer state validator |
+| `schemas/state.schema.json` | Schema Owner | On every schema change | `8d9636ce840a0ff382adeca8987fee2a1ea5fabd` | State shape definition (v6.0.0) |
+| `scripts/validate_state.py` | Schema Owner | On every schema/validator change | `8d9636ce840a0ff382adeca8987fee2a1ea5fabd` | 5-layer state validator (game-agnostic) |
+
+## Adding game-specific references
+
+As you create game content, add rows to the table above for each reference doc you want to track. Use a 40-character git commit hash in the "Last verified commit" column.
+
+Example row format:
+
+    | `phases/1-context-loading/references/hard-rules.md` | GM Protocol Maintainer | Every release | `abc123...` | Your game's rules |
 
 ## Freshness workflow
 

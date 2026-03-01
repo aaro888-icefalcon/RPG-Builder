@@ -1,45 +1,33 @@
-# Campaign State Migration Notes (Schema 5.0.0)
+# Campaign State Migration Notes (Schema 6.0.0)
 
-Use this when upgrading older campaign `state.json` files to the current schema expected by:
+Use this when upgrading campaign `state.json` files to the current template schema.
 
-- `scripts/world_tick.py`
-- `scripts/scene.py`
-- `scripts/diplomacy.py`
-- `scripts/emergence_cli.py` world/session commands
+## 1) Schema version
 
-## 1) Add explicit version fields
-
-Older files often used a single `version` field. Replace it with:
-
-- `schema_version` (state shape compatibility)
-- `content_version` (game/content build)
-
-Example:
+Current schema version is `6.0.0` (game-agnostic template). Update `schema_version` in your state file:
 
 ```json
 {
-  "schema_version": "5.0.0",
-  "content_version": "4.5.12"
+  "schema_version": "6.0.0",
+  "content_version": "0.0.1"
 }
 ```
 
 ## 2) Keep both campaign and top-level day/time fields
 
-Current scripts read both styles depending on command path.
-
 Required:
 
-- `campaign.current_day` and `campaign.current_time` (used by world tick)
-- top-level `current_day` and `current_time` (used by scene generation)
+- `campaign.current_day` and `campaign.current_time`
+- top-level `current_day` and `current_time`
 
-If one side exists, copy values to the other side.
+Both sides must agree. The sync validator checks this.
 
 ## 3) Ensure required world containers exist
 
 Add empty defaults if missing:
 
 - `clocks: []`
-- `world_situation: {"nyc_wide": {}, "neighborhoods": {}, "regions": {}}`
+- `world_situation: {}` (open object — define your own structure)
 - `inter_group_relations: []`
 - `pc_standing: []`
 - `human_factions: []`
@@ -47,33 +35,23 @@ Add empty defaults if missing:
 - `meta_clocks: []`
 - `faction_relationships: []`
 
-## 4) Normalize relation and standing entries
+## 4) Character is minimal
 
-`inter_group_relations` entries should contain:
+Template schema requires only `name` (string) and `level` (integer 0-100) on the character object. Additional properties are allowed — add your game's attributes, resource pools, equipment, and abilities as needed.
 
-- `faction_a` (string)
-- `faction_b` (string)
-- `relation_type` (string)
-- `history` (array)
+## 5) World situation is open
 
-`pc_standing` entries should contain:
+`world_situation` is now an open `{}` object. Define whatever structure your game needs (regions, political state, weather, etc.). No sub-keys are required by the template schema.
 
-- `faction_id` (string)
-- `rank` (string)
-- `disposition` (string)
-- `reputation_events` (array)
+## 6) Remove obsolete keys
 
-## 5) Remove obsolete keys
+Delete legacy top-level keys if present:
 
-Delete legacy top-level keys that are no longer part of current schema:
+- `version` (replaced by `schema_version` + `content_version`)
+- `entropy` (legacy pressure system)
+- `factions`, `threats`, `relations` (ambiguous aliases)
 
-- `version`
-- `entropy`
-- `factions`
-- `threats`
-- `relations`
-
-## 6) Validate after migration
+## 7) Validate after migration
 
 Run:
 

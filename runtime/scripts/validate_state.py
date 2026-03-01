@@ -6,10 +6,13 @@ Layers:
   1. Required keys and types (top-level and nested)
   2. Domain-specific structure (character, factions, clocks, NPCs, etc.)
   3. Cross-reference integrity (faction IDs, NPC IDs across sections)
-  4. Mechanical invariants (current <= max, attribute bounds, clock consistency)
+  4. Mechanical invariants (clock consistency, resource pools)
   5. Sync checks (duplicated fields must agree)
 
 Zero external dependencies — uses only the Python standard library.
+
+Template version: game-agnostic. Character validation checks only name and
+level. Extend _validate_character() with your game's fields.
 """
 
 import argparse
@@ -66,17 +69,12 @@ def _is_type(value, expected_type):
 
 
 def _check_required(obj, fields, path, errors):
-    """Check that *obj* (dict) has all *fields* with correct types.
-
-    *fields* is a dict of {key: type} or {key: (type1, type2, ...)} for
-    union types (e.g. str-or-None).
-    """
+    """Check that *obj* (dict) has all *fields* with correct types."""
     for key, typ in fields.items():
         if key not in obj:
             errors.append(f"{path}.{key}: missing")
             continue
         val = obj[key]
-        # Support (type, type) union and None-as-NoneType
         if isinstance(typ, tuple):
             if not any(_is_type(val, t) if t is not None else val is None for t in typ):
                 names = "/".join(t.__name__ if t is not None else "null" for t in typ)
@@ -97,12 +95,6 @@ def _check_range(value, low, high, path, errors):
 # Layer 2 — Domain-specific structure
 # ---------------------------------------------------------------------------
 
-ATTRIBUTE_NAMES = (
-    "might", "agility", "fortitude", "precision",
-    "intellect", "wisdom", "willpower", "presence",
-)
-
-VALID_STANCES = {"balanced", "aggressive", "defensive"}
 VALID_SIGNIFICANCE = {"minor", "moderate", "major", "critical"}
 VALID_CLOCK_STATUS = {"active", "completed", "paused", "cancelled"}
 VALID_NPC_STATUS = {"active", "dead", "missing", "departed"}
@@ -128,209 +120,20 @@ def _validate_resource_pool(pool, path, errors):
 
 
 def _validate_character(char, errors):
-    path = "character"
-    required = {
-        "name": str, "level": int, "xp": dict,
-        "class_name": str, "aspect": str, "archetype": str,
-        "background": str, "hp": dict, "stamina": dict,
-        "mana": dict, "composure": dict, "attributes": dict,
-        "combat": dict, "awakening": dict, "forms": list,
-        "form_pool": list, "equipment": dict, "inventory": list,
-        "combat_history": dict,
-    }
-    _check_required(char, required, path, errors)
+    """Validate character — template version checks only name and level.
 
-    # Level bounds
+    Extend this function with your game's character validation:
+    - Resource pools (hp, stamina, mana, etc.)
+    - Attributes and their ranges
+    - Equipment slots
+    - Abilities, forms, techniques
+    """
+    path = "character"
+    _check_required(char, {"name": str, "level": int}, path, errors)
+
     level = char.get("level")
     if isinstance(level, int):
-        _check_range(level, 0, 20, f"{path}.level", errors)
-
-    # XP
-    xp = char.get("xp", {})
-    if isinstance(xp, dict):
-        _check_required(xp, {"current": int, "next": int}, f"{path}.xp", errors)
-        xp_cur = xp.get("current")
-        if isinstance(xp_cur, int) and xp_cur < 0:
-            errors.append(f"{path}.xp.current: {xp_cur} is negative")
-
-    # Resource pools
-    for pool_name in ("hp", "stamina", "mana", "composure"):
-        pool = char.get(pool_name)
-        if isinstance(pool, dict):
-            _validate_resource_pool(pool, f"{path}.{pool_name}", errors)
-
-    # Attributes
-    attrs = char.get("attributes", {})
-    if isinstance(attrs, dict):
-        for attr in ATTRIBUTE_NAMES:
-            if attr not in attrs:
-                errors.append(f"{path}.attributes.{attr}: missing")
-            elif not _is_type(attrs[attr], int):
-                errors.append(f"{path}.attributes.{attr}: expected int, got {type(attrs[attr]).__name__}")
-            else:
-                _check_range(attrs[attr], 1, 30, f"{path}.attributes.{attr}", errors)
-
-    # Combat state
-    combat = char.get("combat", {})
-    if isinstance(combat, dict):
-        _validate_combat_state(combat, f"{path}.combat", errors)
-
-    # Awakening
-    awk = char.get("awakening", {})
-    if isinstance(awk, dict):
-        _check_required(awk, {
-            "name": str, "tier": str, "category": str,
-            "trigger": str, "passive": str, "active": str,
-            "active_available": bool,
-        }, f"{path}.awakening", errors)
-
-    # Forms
-    forms = char.get("forms", [])
-    if isinstance(forms, list):
-        seen_slots = set()
-        for idx, form in enumerate(forms):
-            fp = f"{path}.forms[{idx}]"
-            if not isinstance(form, dict):
-                errors.append(f"{fp}: expected dict, got {type(form).__name__}")
-                continue
-            if "slot" not in form:
-                errors.append(f"{fp}.slot: missing")
-            elif isinstance(form["slot"], int):
-                if form["slot"] in seen_slots:
-                    errors.append(f"{fp}.slot: duplicate slot {form['slot']}")
-                seen_slots.add(form["slot"])
-            # Validate techniques if form is populated
-            if form.get("name") is not None and "techniques_known" in form:
-                for tidx, tech in enumerate(form.get("techniques_known", [])):
-                    tp = f"{fp}.techniques_known[{tidx}]"
-                    if isinstance(tech, dict):
-                        _check_required(tech, {
-                            "name": str, "tier": int, "source": str,
-                            "ap": int, "cost": str, "range": str,
-                            "effect": str, "unlocked_via": str,
-                        }, tp, errors)
-
-    # Equipment
-    equip = char.get("equipment", {})
-    if isinstance(equip, dict):
-        _check_required(equip, {
-            "main_weapon": (str, None),
-            "off_weapon": (str, None),
-            "armor": (str, None),
-        }, f"{path}.equipment", errors)
-
-    # Inventory
-    inv = char.get("inventory", [])
-    if isinstance(inv, list):
-        for idx, item in enumerate(inv):
-            ip = f"{path}.inventory[{idx}]"
-            if not isinstance(item, dict):
-                errors.append(f"{ip}: expected dict, got {type(item).__name__}")
-                continue
-            _check_required(item, {"name": str, "qty": int}, ip, errors)
-            qty = item.get("qty")
-            if isinstance(qty, int) and qty < 0:
-                errors.append(f"{ip}.qty: {qty} is negative")
-
-    # Combat history
-    ch = char.get("combat_history", {})
-    if isinstance(ch, dict):
-        _check_required(ch, {
-            "combats_survived": int, "enemies_defeated": int,
-            "damage_dealt": int, "damage_taken": int,
-            "most_used_technique": str, "close_calls": int,
-        }, f"{path}.combat_history", errors)
-        for counter in ("combats_survived", "enemies_defeated", "damage_dealt", "damage_taken", "close_calls"):
-            v = ch.get(counter)
-            if isinstance(v, int) and v < 0:
-                errors.append(f"{path}.combat_history.{counter}: {v} is negative")
-
-
-def _validate_combat_state(combat, path, errors):
-    _check_required(combat, {
-        "physical_def": int, "mental_def": int, "resistance_dc": int,
-        "initiative": int, "movement": int, "crit_threshold": int,
-        "current_stance": str, "ap": dict, "rp": dict,
-        "conditions": list, "zone": (str, None),
-    }, path, errors)
-
-    stance = combat.get("current_stance")
-    if isinstance(stance, str) and stance not in VALID_STANCES:
-        errors.append(f"{path}.current_stance: '{stance}' not in {VALID_STANCES}")
-
-    for pool_name in ("ap", "rp"):
-        pool = combat.get(pool_name)
-        if isinstance(pool, dict):
-            _validate_resource_pool(pool, f"{path}.{pool_name}", errors)
-
-    movement = combat.get("movement")
-    if isinstance(movement, int) and movement < 0:
-        errors.append(f"{path}.movement: {movement} is negative")
-
-    initiative = combat.get("initiative")
-    if isinstance(initiative, int) and initiative < 0:
-        errors.append(f"{path}.initiative: {initiative} is negative")
-
-
-def _validate_clock_shape(clock, path, errors):
-    required = {"name": str, "current": int, "max": int}
-    _check_required(clock, required, path, errors)
-
-    cur = clock.get("current")
-    mx = clock.get("max")
-    if isinstance(cur, int) and isinstance(mx, int):
-        if cur < 0:
-            errors.append(f"{path}.current: {cur} is negative")
-        if mx < 1:
-            errors.append(f"{path}.max: {mx} must be >= 1")
-        if cur > mx:
-            errors.append(f"{path}: current ({cur}) > max ({mx})")
-
-    status = clock.get("status")
-    if isinstance(status, str) and status not in VALID_CLOCK_STATUS:
-        errors.append(f"{path}.status: '{status}' not in {VALID_CLOCK_STATUS}")
-
-    # Validate history entries
-    history = clock.get("history", [])
-    if isinstance(history, list):
-        for hidx, entry in enumerate(history):
-            hp = f"{path}.history[{hidx}]"
-            if isinstance(entry, dict):
-                _check_required(entry, {
-                    "day": int, "change": int,
-                    "old": int, "new": int, "reason": str,
-                }, hp, errors)
-
-    # Clock history -> current consistency: last entry's "new" should match current
-    if isinstance(history, list) and len(history) > 0 and isinstance(cur, int):
-        last_entry = history[-1]
-        if isinstance(last_entry, dict):
-            last_new = last_entry.get("new")
-            if isinstance(last_new, int) and last_new != cur:
-                errors.append(
-                    f"{path}: last history entry new ({last_new}) != current ({cur})"
-                )
-
-    # Validate portents
-    portents = clock.get("portents", [])
-    if isinstance(portents, list):
-        for pidx, portent in enumerate(portents):
-            pp = f"{path}.portents[{pidx}]"
-            if isinstance(portent, dict):
-                _check_required(portent, {
-                    "at": int, "event": str,
-                    "mechanical": str, "fired": bool,
-                }, pp, errors)
-                # Portent fired consistency: at <= current means should be fired
-                p_at = portent.get("at")
-                p_fired = portent.get("fired")
-                if (isinstance(p_at, int) and isinstance(p_fired, bool)
-                        and isinstance(cur, int)):
-                    if p_at <= cur and not p_fired:
-                        errors.append(
-                            f"{pp}: threshold ({p_at}) <= current ({cur}) "
-                            f"but fired is false"
-                        )
+        _check_range(level, 0, 100, f"{path}.level", errors)
 
 
 def _validate_current_scene(scene, errors):
@@ -445,19 +248,74 @@ def _validate_known_locations(locations, errors):
             _check_range(tl, 0, 10, f"{path}.threat_level", errors)
 
 
+def _validate_clock_shape(clock, path, errors):
+    required = {"name": str, "current": int, "max": int}
+    _check_required(clock, required, path, errors)
+
+    cur = clock.get("current")
+    mx = clock.get("max")
+    if isinstance(cur, int) and isinstance(mx, int):
+        if cur < 0:
+            errors.append(f"{path}.current: {cur} is negative")
+        if mx < 1:
+            errors.append(f"{path}.max: {mx} must be >= 1")
+        if cur > mx:
+            errors.append(f"{path}: current ({cur}) > max ({mx})")
+
+    status = clock.get("status")
+    if isinstance(status, str) and status not in VALID_CLOCK_STATUS:
+        errors.append(f"{path}.status: '{status}' not in {VALID_CLOCK_STATUS}")
+
+    history = clock.get("history", [])
+    if isinstance(history, list):
+        for hidx, entry in enumerate(history):
+            hp = f"{path}.history[{hidx}]"
+            if isinstance(entry, dict):
+                _check_required(entry, {
+                    "day": int, "change": int,
+                    "old": int, "new": int, "reason": str,
+                }, hp, errors)
+
+    if isinstance(history, list) and len(history) > 0 and isinstance(cur, int):
+        last_entry = history[-1]
+        if isinstance(last_entry, dict):
+            last_new = last_entry.get("new")
+            if isinstance(last_new, int) and last_new != cur:
+                errors.append(
+                    f"{path}: last history entry new ({last_new}) != current ({cur})"
+                )
+
+    portents = clock.get("portents", [])
+    if isinstance(portents, list):
+        for pidx, portent in enumerate(portents):
+            pp = f"{path}.portents[{pidx}]"
+            if isinstance(portent, dict):
+                _check_required(portent, {
+                    "at": int, "event": str,
+                    "mechanical": str, "fired": bool,
+                }, pp, errors)
+                p_at = portent.get("at")
+                p_fired = portent.get("fired")
+                if (isinstance(p_at, int) and isinstance(p_fired, bool)
+                        and isinstance(cur, int)):
+                    if p_at <= cur and not p_fired:
+                        errors.append(
+                            f"{pp}: threshold ({p_at}) <= current ({cur}) "
+                            f"but fired is false"
+                        )
+
+
 # ---------------------------------------------------------------------------
 # Layer 3 — Cross-reference integrity
 # ---------------------------------------------------------------------------
 
 def _validate_cross_references(state, errors):
     """Check that IDs referenced across sections actually exist."""
-    # Collect all known faction IDs
     faction_ids = set()
     for f in state.get("human_factions", []):
         if isinstance(f, dict) and isinstance(f.get("id"), str):
             faction_ids.add(f["id"])
 
-    # Collect all known threat IDs
     threat_ids = set()
     for t in state.get("external_threats", []):
         if isinstance(t, dict) and isinstance(t.get("id"), str):
@@ -465,7 +323,6 @@ def _validate_cross_references(state, errors):
 
     all_entity_ids = faction_ids | threat_ids
 
-    # pc_standing faction_ids must reference real factions
     for idx, standing in enumerate(state.get("pc_standing", [])):
         if not isinstance(standing, dict):
             continue
@@ -475,7 +332,6 @@ def _validate_cross_references(state, errors):
                 f"pc_standing[{idx}].faction_id: '{fid}' not found in human_factions"
             )
 
-    # inter_group_relations faction_a/faction_b must be known entities
     for idx, rel in enumerate(state.get("inter_group_relations", [])):
         if not isinstance(rel, dict):
             continue
@@ -489,12 +345,11 @@ def _validate_cross_references(state, errors):
 
 
 # ---------------------------------------------------------------------------
-# Layer 4 — Mechanical invariants (clock consistency, etc.)
+# Layer 4 — Mechanical invariants (clock consistency)
 # ---------------------------------------------------------------------------
 
 def _validate_clock_invariants(state, errors):
     """Check clock-level invariants across all clock collections."""
-    # Completed clocks should have current == max
     def _check_clock_completion(clock, path):
         status = clock.get("status")
         cur = clock.get("current")
@@ -505,24 +360,20 @@ def _validate_clock_invariants(state, errors):
                     f"{path}: status is 'completed' but current ({cur}) != max ({mx})"
                 )
 
-    # Top-level clocks
     for idx, clock in enumerate(state.get("clocks", [])):
         if isinstance(clock, dict):
             _check_clock_completion(clock, f"clocks[{idx}]")
 
-    # Meta clocks
     for idx, clock in enumerate(state.get("meta_clocks", [])):
         if isinstance(clock, dict):
             _check_clock_completion(clock, f"meta_clocks[{idx}]")
 
-    # Faction clocks
     for fidx, faction in enumerate(state.get("human_factions", [])):
         if isinstance(faction, dict):
             clock = faction.get("clock")
             if isinstance(clock, dict):
                 _check_clock_completion(clock, f"human_factions[{fidx}].clock")
 
-    # Threat clocks
     for tidx, threat in enumerate(state.get("external_threats", [])):
         if isinstance(threat, dict):
             clock = threat.get("clock")
@@ -531,14 +382,13 @@ def _validate_clock_invariants(state, errors):
 
 
 # ---------------------------------------------------------------------------
-# Layer 5 — Sync checks (duplicated fields must agree)
+# Layer 5 — Sync checks
 # ---------------------------------------------------------------------------
 
 def _validate_sync(state, errors):
     """Check that duplicated/mirrored fields are consistent."""
     campaign = state.get("campaign", {})
     if isinstance(campaign, dict):
-        # current_day sync
         top_day = state.get("current_day")
         camp_day = campaign.get("current_day")
         if (isinstance(top_day, int) and isinstance(camp_day, int)
@@ -547,7 +397,6 @@ def _validate_sync(state, errors):
                 f"sync: current_day ({top_day}) != campaign.current_day ({camp_day})"
             )
 
-        # current_time sync
         top_time = state.get("current_time")
         camp_time = campaign.get("current_time")
         if (isinstance(top_time, str) and isinstance(camp_time, str)
@@ -577,14 +426,12 @@ def validate_state(state):
         if not _is_type(state[key], typ):
             errors.append(f"{key}: expected {typ.__name__}, got {type(state[key]).__name__}")
 
-    # Unexpected top-level keys (catches typos like "chornicle")
     allowed_keys = set(REQUIRED_TOP_LEVEL_TYPES.keys())
     for key in state:
         if key not in allowed_keys:
             errors.append(f"{key}: unexpected top-level key (typo?)")
 
-    # If top-level structure is severely broken, skip deeper checks
-    critical_keys = {"character", "campaign", "world_situation", "meta"}
+    critical_keys = {"character", "campaign", "meta"}
     if any(k not in state or not isinstance(state.get(k), dict) for k in critical_keys):
         return errors
 
@@ -593,7 +440,6 @@ def validate_state(state):
     _validate_character(state["character"], errors)
     _validate_current_scene(state.get("current_scene", {}), errors)
 
-    # Campaign
     campaign = state.get("campaign", {})
     if isinstance(campaign, dict):
         _check_required(campaign, {
@@ -602,16 +448,6 @@ def validate_state(state):
             "current_location": str,
         }, "campaign", errors)
 
-    # World situation
-    ws = state.get("world_situation", {})
-    if isinstance(ws, dict):
-        for key in ("nyc_wide", "neighborhoods", "regions"):
-            if key not in ws:
-                errors.append(f"world_situation.{key}: missing")
-            elif not isinstance(ws[key], dict):
-                errors.append(f"world_situation.{key}: expected dict, got {type(ws[key]).__name__}")
-
-    # Inter-group relations
     for idx, rel in enumerate(state.get("inter_group_relations", [])):
         path = f"inter_group_relations[{idx}]"
         if not isinstance(rel, dict):
@@ -622,7 +458,6 @@ def validate_state(state):
             "relation_type": str, "history": list,
         }, path, errors)
 
-    # PC standing
     for idx, standing in enumerate(state.get("pc_standing", [])):
         path = f"pc_standing[{idx}]"
         if not isinstance(standing, dict):
@@ -633,7 +468,6 @@ def validate_state(state):
             "disposition": str, "reputation_events": list,
         }, path, errors)
 
-    # Human factions (deep)
     seen_faction_ids = set()
     for idx, faction in enumerate(state.get("human_factions", [])):
         path = f"human_factions[{idx}]"
@@ -644,27 +478,21 @@ def validate_state(state):
             "id": str, "name": str,
             "archetype": str, "goal": str, "clock": dict,
         }, path, errors)
-
         fid = faction.get("id")
         if isinstance(fid, str):
             if fid in seen_faction_ids:
                 errors.append(f"{path}.id: duplicate faction id '{fid}'")
             seen_faction_ids.add(fid)
-
         if isinstance(faction.get("clock"), dict):
             _validate_clock_shape(faction["clock"], f"{path}.clock", errors)
-
         power = faction.get("power_level")
         if power is not None and isinstance(power, int):
             _check_range(power, 1, 10, f"{path}.power_level", errors)
-
-        # Validate embedded NPCs
         for nidx, npc_ref in enumerate(faction.get("npcs", [])):
             np = f"{path}.npcs[{nidx}]"
             if isinstance(npc_ref, dict):
                 _check_required(npc_ref, {"id": str, "role": str}, np, errors)
 
-    # External threats (deep)
     seen_threat_ids = set()
     for idx, threat in enumerate(state.get("external_threats", [])):
         path = f"external_threats[{idx}]"
@@ -675,21 +503,17 @@ def validate_state(state):
             "id": str, "name": str,
             "threat_type": str, "region": str, "clock": dict,
         }, path, errors)
-
         tid = threat.get("id")
         if isinstance(tid, str):
             if tid in seen_threat_ids:
                 errors.append(f"{path}.id: duplicate threat id '{tid}'")
             seen_threat_ids.add(tid)
-
         if isinstance(threat.get("clock"), dict):
             _validate_clock_shape(threat["clock"], f"{path}.clock", errors)
-
         status = threat.get("status")
         if isinstance(status, str) and status not in VALID_THREAT_STATUS:
             errors.append(f"{path}.status: '{status}' not in {VALID_THREAT_STATUS}")
 
-    # Faction relationships
     for idx, rel in enumerate(state.get("faction_relationships", [])):
         path = f"faction_relationships[{idx}]"
         if not isinstance(rel, dict):
@@ -699,7 +523,6 @@ def validate_state(state):
             "faction_a": str, "faction_b": str, "complication": str,
         }, path, errors)
 
-    # Clocks + meta_clocks
     for list_name in ("clocks", "meta_clocks"):
         for idx, clock in enumerate(state.get(list_name, [])):
             path = f"{list_name}[{idx}]"
@@ -708,13 +531,11 @@ def validate_state(state):
                 continue
             _validate_clock_shape(clock, path, errors)
 
-    # Known NPCs, locations, chronicle, clock_log
     _validate_known_npcs(state.get("known_npcs", []), errors)
     _validate_known_locations(state.get("known_locations", []), errors)
     _validate_chronicle(state.get("chronicle", []), errors)
     _validate_clock_log(state.get("clock_log", []), errors)
 
-    # World pulse
     pulse = state.get("world_pulse", {})
     if isinstance(pulse, dict):
         _check_required(pulse, {
@@ -739,7 +560,7 @@ def validate_state(state):
 # ---------------------------------------------------------------------------
 
 def main():
-    parser = argparse.ArgumentParser(description="Validate Emergence world-state JSON")
+    parser = argparse.ArgumentParser(description="Validate RPG Engine world-state JSON")
     parser.add_argument("state_json", help="Path to world state JSON file")
     args = parser.parse_args()
 
