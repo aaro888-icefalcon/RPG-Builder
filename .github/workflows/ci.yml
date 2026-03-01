@@ -1,0 +1,72 @@
+name: ci
+
+on:
+  pull_request:
+  push:
+    branches:
+      - main
+
+jobs:
+  smoke-balance:
+    name: smoke-balance
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: runtime
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Run balance smoke tests (phase 1)
+        run: python tests/run_all_tests.py 1
+
+  state-validators:
+    name: state-validators
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: runtime
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Validate quality references table
+        run: python scripts/validate_reference_freshness.py
+
+      - name: Validate docs structure contracts
+        run: python scripts/validate_docs_structure.py
+
+  regen-check:
+    name: regen-check
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: runtime
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+
+      - name: Run validators that may update derived artifacts
+        run: |
+          python scripts/validate_reference_freshness.py
+          python scripts/validate_docs_structure.py
+
+      - name: Fail fast if derived artifacts are stale
+        run: |
+          git update-index -q --refresh
+          git diff --exit-code -- .

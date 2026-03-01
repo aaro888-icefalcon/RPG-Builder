@@ -1,0 +1,602 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "emergence-state-v5",
+  "title": "RPG Engine — Campaign State",
+  "description": "Canonical schema for the monolithic state.json. Schema version 5.0.0.",
+  "type": "object",
+  "required": [
+    "schema_version",
+    "content_version",
+    "meta",
+    "character",
+    "world",
+    "current_scene",
+    "campaign",
+    "current_day",
+    "current_time",
+    "clocks",
+    "world_situation",
+    "inter_group_relations",
+    "pc_standing",
+    "human_factions",
+    "external_threats",
+    "meta_clocks",
+    "faction_relationships",
+    "known_npcs",
+    "known_locations",
+    "campaign_arcs",
+    "active_quests",
+    "chronicle",
+    "clock_log",
+    "world_pulse",
+    "last_played"
+  ],
+  "additionalProperties": false,
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$",
+      "description": "Semver of state structure"
+    },
+    "content_version": {
+      "type": "string",
+      "pattern": "^\\d+\\.\\d+\\.\\d+$",
+      "description": "Semver of game content/mechanics"
+    },
+    "meta": { "$ref": "#/$defs/meta" },
+    "character": { "$ref": "#/$defs/character" },
+    "world": { "$ref": "#/$defs/world" },
+    "current_scene": { "$ref": "#/$defs/current_scene" },
+    "campaign": { "$ref": "#/$defs/campaign" },
+    "current_day": {
+      "type": "integer",
+      "minimum": 1,
+      "description": "Top-level campaign day (must match campaign.current_day)"
+    },
+    "current_time": {
+      "type": "string",
+      "pattern": "^\\d{2}:\\d{2}$",
+      "description": "Top-level HH:MM (must match campaign.current_time)"
+    },
+    "clocks": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/clock" },
+      "description": "Scene-level story clocks"
+    },
+    "world_situation": { "$ref": "#/$defs/world_situation" },
+    "inter_group_relations": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/inter_group_relation" }
+    },
+    "pc_standing": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/pc_standing_entry" }
+    },
+    "human_factions": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/human_faction" }
+    },
+    "external_threats": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/external_threat" }
+    },
+    "meta_clocks": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/clock" },
+      "description": "World-level meta clocks"
+    },
+    "faction_relationships": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/faction_relationship" }
+    },
+    "known_npcs": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/known_npc" }
+    },
+    "known_locations": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/known_location" }
+    },
+    "campaign_arcs": {
+      "type": "array",
+      "items": { "type": "object" }
+    },
+    "active_quests": {
+      "type": "array",
+      "items": { "type": "object" }
+    },
+    "chronicle": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/chronicle_entry" }
+    },
+    "clock_log": {
+      "type": "array",
+      "items": { "$ref": "#/$defs/clock_log_entry" }
+    },
+    "world_pulse": { "$ref": "#/$defs/world_pulse" },
+    "last_played": {
+      "type": "string",
+      "description": "ISO-8601 timestamp of last session"
+    }
+  },
+
+  "$defs": {
+    "meta": {
+      "type": "object",
+      "required": ["last_played", "session_number"],
+      "properties": {
+        "last_played": { "type": "string" },
+        "session_number": { "type": "integer", "minimum": 0 }
+      }
+    },
+
+    "resource_pool": {
+      "type": "object",
+      "required": ["current", "max"],
+      "properties": {
+        "current": { "type": "integer", "minimum": 0 },
+        "max": { "type": "integer", "minimum": 1 }
+      },
+      "description": "current/max pool; current must be <= max"
+    },
+
+    "character": {
+      "type": "object",
+      "required": [
+        "name", "level", "xp", "class_name", "aspect", "archetype",
+        "background", "hp", "stamina", "mana", "composure",
+        "attributes", "combat", "awakening", "forms", "form_pool",
+        "equipment", "inventory", "combat_history"
+      ],
+      "properties": {
+        "name": { "type": "string", "minLength": 1 },
+        "level": { "type": "integer", "minimum": 0, "maximum": 20 },
+        "xp": {
+          "type": "object",
+          "required": ["current", "next"],
+          "properties": {
+            "current": { "type": "integer", "minimum": 0 },
+            "next": { "type": "integer", "minimum": 1 }
+          }
+        },
+        "class_name": { "type": "string", "minLength": 1 },
+        "aspect": { "type": "string", "minLength": 1 },
+        "archetype": { "type": "string", "minLength": 1 },
+        "background": { "type": "string" },
+        "hp": { "$ref": "#/$defs/resource_pool" },
+        "stamina": { "$ref": "#/$defs/resource_pool" },
+        "mana": { "$ref": "#/$defs/resource_pool" },
+        "composure": { "$ref": "#/$defs/resource_pool" },
+        "attributes": { "$ref": "#/$defs/attributes" },
+        "combat": { "$ref": "#/$defs/combat_state" },
+        "awakening": { "$ref": "#/$defs/awakening" },
+        "forms": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/form_slot" }
+        },
+        "form_pool": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "equipment": { "$ref": "#/$defs/equipment" },
+        "inventory": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/inventory_item" }
+        },
+        "combat_history": { "$ref": "#/$defs/combat_history" }
+      }
+    },
+
+    "attributes": {
+      "type": "object",
+      "required": [
+        "might", "agility", "fortitude", "precision",
+        "intellect", "wisdom", "willpower", "presence"
+      ],
+      "properties": {
+        "might": { "type": "integer", "minimum": 1, "maximum": 30 },
+        "agility": { "type": "integer", "minimum": 1, "maximum": 30 },
+        "fortitude": { "type": "integer", "minimum": 1, "maximum": 30 },
+        "precision": { "type": "integer", "minimum": 1, "maximum": 30 },
+        "intellect": { "type": "integer", "minimum": 1, "maximum": 30 },
+        "wisdom": { "type": "integer", "minimum": 1, "maximum": 30 },
+        "willpower": { "type": "integer", "minimum": 1, "maximum": 30 },
+        "presence": { "type": "integer", "minimum": 1, "maximum": 30 }
+      },
+      "additionalProperties": false
+    },
+
+    "combat_state": {
+      "type": "object",
+      "required": [
+        "physical_def", "mental_def", "resistance_dc",
+        "initiative", "movement", "crit_threshold",
+        "current_stance", "ap", "rp", "conditions", "zone"
+      ],
+      "properties": {
+        "physical_def": { "type": "integer" },
+        "mental_def": { "type": "integer" },
+        "resistance_dc": { "type": "integer" },
+        "initiative": { "type": "integer", "minimum": 0 },
+        "movement": { "type": "integer", "minimum": 0 },
+        "crit_threshold": { "type": "integer" },
+        "current_stance": {
+          "type": "string",
+          "enum": ["balanced", "aggressive", "defensive"]
+        },
+        "ap": { "$ref": "#/$defs/resource_pool" },
+        "rp": { "$ref": "#/$defs/resource_pool" },
+        "conditions": {
+          "type": "array",
+          "items": { "type": ["string", "object"] }
+        },
+        "zone": { "type": ["string", "null"] }
+      }
+    },
+
+    "awakening": {
+      "type": "object",
+      "required": ["name", "tier", "category", "trigger", "passive", "active", "active_available"],
+      "properties": {
+        "name": { "type": "string" },
+        "tier": { "type": "string" },
+        "category": { "type": "string" },
+        "trigger": { "type": "string" },
+        "passive": { "type": "string" },
+        "active": { "type": "string" },
+        "active_available": { "type": "boolean" }
+      }
+    },
+
+    "form_slot": {
+      "type": "object",
+      "required": ["slot"],
+      "properties": {
+        "slot": { "type": "integer", "minimum": 1 },
+        "name": { "type": ["string", "null"] },
+        "variant": { "type": ["string", "null"] },
+        "default_attribute": { "type": "string" },
+        "damage_type": { "type": "string" },
+        "aspect_affinity": { "type": "string" },
+        "variant_modifier": { "type": "string" },
+        "notes": { "type": "string" },
+        "techniques_known": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/technique" }
+        }
+      }
+    },
+
+    "technique": {
+      "type": "object",
+      "required": ["name", "tier", "source", "ap", "cost", "range", "effect", "unlocked_via"],
+      "properties": {
+        "name": { "type": "string" },
+        "tier": { "type": "integer", "minimum": 1 },
+        "source": { "type": "string" },
+        "ap": { "type": "integer", "minimum": 0 },
+        "cost": { "type": "string" },
+        "range": { "type": "string" },
+        "duration": { "type": "string" },
+        "effect": { "type": "string" },
+        "unlocked_via": { "type": "string" }
+      }
+    },
+
+    "equipment": {
+      "type": "object",
+      "required": ["main_weapon", "off_weapon", "armor"],
+      "properties": {
+        "main_weapon": { "type": ["string", "null"] },
+        "off_weapon": { "type": ["string", "null"] },
+        "armor": { "type": ["string", "null"] }
+      }
+    },
+
+    "inventory_item": {
+      "type": "object",
+      "required": ["name", "qty"],
+      "properties": {
+        "name": { "type": "string", "minLength": 1 },
+        "qty": { "type": "integer", "minimum": 0 },
+        "notes": { "type": "string" }
+      }
+    },
+
+    "combat_history": {
+      "type": "object",
+      "required": [
+        "combats_survived", "enemies_defeated",
+        "damage_dealt", "damage_taken",
+        "most_used_technique", "close_calls"
+      ],
+      "properties": {
+        "combats_survived": { "type": "integer", "minimum": 0 },
+        "enemies_defeated": { "type": "integer", "minimum": 0 },
+        "damage_dealt": { "type": "integer", "minimum": 0 },
+        "damage_taken": { "type": "integer", "minimum": 0 },
+        "most_used_technique": { "type": "string" },
+        "close_calls": { "type": "integer", "minimum": 0 }
+      }
+    },
+
+    "world": {
+      "type": "object",
+      "required": ["human_factions", "meta_clocks"],
+      "properties": {
+        "human_factions": { "type": "array" },
+        "meta_clocks": { "type": "array" }
+      }
+    },
+
+    "current_scene": {
+      "type": "object",
+      "required": ["scene_id", "location", "region", "threat_level", "scene_type"],
+      "properties": {
+        "scene_id": { "type": "string" },
+        "location": { "type": "string" },
+        "region": { "type": "string" },
+        "threat_level": { "type": "integer", "minimum": 0, "maximum": 10 },
+        "scene_type": {
+          "type": "string",
+          "enum": ["combat", "exploration", "social", "downtime", "travel"]
+        },
+        "encounter_type": { "type": "string" }
+      }
+    },
+
+    "campaign": {
+      "type": "object",
+      "required": ["name", "start_date", "current_day", "current_time", "current_location"],
+      "properties": {
+        "name": { "type": "string", "minLength": 1 },
+        "start_date": {
+          "type": "string",
+          "pattern": "^\\d{4}-\\d{2}-\\d{2}$"
+        },
+        "current_day": { "type": "integer", "minimum": 1 },
+        "current_time": {
+          "type": "string",
+          "pattern": "^\\d{2}:\\d{2}$"
+        },
+        "current_location": { "type": "string" }
+      }
+    },
+
+    "clock": {
+      "type": "object",
+      "required": ["name", "current", "max"],
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string", "minLength": 1 },
+        "current": { "type": "integer", "minimum": 0 },
+        "max": { "type": "integer", "minimum": 1 },
+        "owner": { "type": "string" },
+        "goal": { "type": "string" },
+        "completion_effect": { "type": "string" },
+        "hidden": { "type": "boolean" },
+        "history": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/clock_history_entry" }
+        },
+        "portents": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/clock_portent" }
+        },
+        "status": {
+          "type": "string",
+          "enum": ["active", "completed", "paused", "cancelled"]
+        }
+      }
+    },
+
+    "clock_history_entry": {
+      "type": "object",
+      "required": ["day", "change", "old", "new", "reason"],
+      "properties": {
+        "day": { "type": "integer", "minimum": 1 },
+        "change": { "type": "integer" },
+        "old": { "type": "integer", "minimum": 0 },
+        "new": { "type": "integer", "minimum": 0 },
+        "reason": { "type": "string" }
+      }
+    },
+
+    "clock_portent": {
+      "type": "object",
+      "required": ["at", "event", "mechanical", "fired"],
+      "properties": {
+        "at": { "type": "integer", "minimum": 1 },
+        "event": { "type": "string" },
+        "mechanical": { "type": "string" },
+        "fired": { "type": "boolean" }
+      }
+    },
+
+    "world_situation": {
+      "type": "object",
+      "required": ["nyc_wide", "neighborhoods", "regions"],
+      "properties": {
+        "nyc_wide": { "type": "object" },
+        "neighborhoods": {
+          "type": "object",
+          "additionalProperties": { "type": "object" }
+        },
+        "regions": {
+          "type": "object",
+          "additionalProperties": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        }
+      }
+    },
+
+    "inter_group_relation": {
+      "type": "object",
+      "required": ["faction_a", "faction_b", "relation_type", "history"],
+      "properties": {
+        "faction_a": { "type": "string" },
+        "faction_b": { "type": "string" },
+        "relation_type": { "type": "string" },
+        "history": {
+          "type": "array",
+          "items": { "type": "object" }
+        }
+      }
+    },
+
+    "pc_standing_entry": {
+      "type": "object",
+      "required": ["faction_id", "rank", "disposition", "reputation_events"],
+      "properties": {
+        "faction_id": { "type": "string" },
+        "rank": { "type": "string" },
+        "disposition": { "type": "string" },
+        "reputation_events": { "type": "array" }
+      }
+    },
+
+    "human_faction": {
+      "type": "object",
+      "required": ["id", "name", "archetype", "goal", "clock"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^faction_\\d+$" },
+        "name": { "type": "string", "minLength": 1 },
+        "archetype": { "type": "string" },
+        "goal": { "type": "string" },
+        "method": { "type": "string" },
+        "territory": { "type": "string" },
+        "power_level": { "type": "integer", "minimum": 1, "maximum": 10 },
+        "clock": { "$ref": "#/$defs/clock" },
+        "npcs": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["id", "role"],
+            "properties": {
+              "id": { "type": "string" },
+              "role": { "type": "string" }
+            }
+          }
+        }
+      }
+    },
+
+    "external_threat": {
+      "type": "object",
+      "required": ["id", "name", "threat_type", "region", "clock"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^threat_\\d+$" },
+        "name": { "type": "string", "minLength": 1 },
+        "threat_type": { "type": "string" },
+        "goal": { "type": "string" },
+        "region": { "type": "string" },
+        "threat_level": { "type": "integer", "minimum": 1, "maximum": 10 },
+        "creature_types": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "clock": { "$ref": "#/$defs/clock" },
+        "status": {
+          "type": "string",
+          "enum": ["active", "completed", "dormant", "defeated"]
+        }
+      }
+    },
+
+    "faction_relationship": {
+      "type": "object",
+      "required": ["faction_a", "faction_b", "complication"],
+      "properties": {
+        "faction_a": { "type": "string" },
+        "faction_b": { "type": "string" },
+        "complication": { "type": "string" }
+      }
+    },
+
+    "known_npc": {
+      "type": "object",
+      "required": ["id", "name", "faction", "role", "disposition", "status"],
+      "properties": {
+        "id": { "type": "string", "pattern": "^npc_\\d+$" },
+        "name": { "type": "string", "minLength": 1 },
+        "faction": { "type": "string" },
+        "role": { "type": "string" },
+        "disposition": { "type": "string" },
+        "status": {
+          "type": "string",
+          "enum": ["active", "dead", "missing", "departed"]
+        },
+        "last_seen": { "type": "string" },
+        "trust": { "type": "integer", "minimum": 0, "maximum": 10 },
+        "motivation": { "type": ["string", "null"] },
+        "secret": { "type": ["string", "null"] }
+      }
+    },
+
+    "known_location": {
+      "type": "object",
+      "required": ["id", "name", "region", "threat_level", "discovered_day"],
+      "properties": {
+        "id": { "type": "string" },
+        "name": { "type": "string", "minLength": 1 },
+        "region": { "type": "string" },
+        "threat_level": { "type": "integer", "minimum": 0, "maximum": 10 },
+        "discovered_day": { "type": "integer", "minimum": 1 },
+        "notes": { "type": "string" }
+      }
+    },
+
+    "chronicle_entry": {
+      "type": "object",
+      "required": ["day", "time", "event", "significance", "tags"],
+      "properties": {
+        "day": { "type": "integer", "minimum": 1 },
+        "time": { "type": "string" },
+        "event": { "type": "string", "minLength": 1 },
+        "significance": {
+          "type": "string",
+          "enum": ["minor", "moderate", "major", "critical"]
+        },
+        "tags": {
+          "type": "array",
+          "items": { "type": "string" }
+        }
+      }
+    },
+
+    "clock_log_entry": {
+      "type": "object",
+      "required": ["day", "clock", "change", "new_value", "reason"],
+      "properties": {
+        "day": { "type": "integer", "minimum": 1 },
+        "clock": { "type": "string" },
+        "change": { "type": "string" },
+        "new_value": { "type": "string" },
+        "reason": { "type": "string" }
+      }
+    },
+
+    "world_pulse": {
+      "type": "object",
+      "required": ["day", "news", "rumors", "trends", "arrivals"],
+      "properties": {
+        "day": { "type": "integer", "minimum": 1 },
+        "news": { "type": "string" },
+        "rumors": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "trends": {
+          "type": "array",
+          "items": { "type": "string" }
+        },
+        "arrivals": {
+          "type": "array",
+          "items": { "type": ["string", "object"] }
+        }
+      }
+    }
+  }
+}

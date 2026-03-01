@@ -1,0 +1,1984 @@
+{
+  "schema_version": "5.0.0",
+  "content_version": "4.5.12",
+  "meta": {
+    "last_played": "2026-02-15T18:41:00Z",
+    "session_number": 1
+  },
+  "character": {
+    "name": "Abhishek 'Shake' Rao",
+    "level": 1,
+    "xp": {
+      "current": 0,
+      "next": 100
+    },
+    "class_name": "Reaper",
+    "aspect": "shroud",
+    "archetype": "striker",
+    "background": "Medical/Science \u2014 Vascular Surgery Chief Resident",
+    "hp": {
+      "current": 69,
+      "max": 69
+    },
+    "stamina": {
+      "current": 43,
+      "max": 43
+    },
+    "mana": {
+      "current": 49,
+      "max": 49
+    },
+    "composure": {
+      "current": 43,
+      "max": 43
+    },
+    "attributes": {
+      "might": 12,
+      "agility": 10,
+      "fortitude": 11,
+      "precision": 10,
+      "intellect": 13,
+      "wisdom": 11,
+      "willpower": 12,
+      "presence": 10
+    },
+    "combat": {
+      "physical_def": 10,
+      "mental_def": 11,
+      "resistance_dc": 11,
+      "initiative": 0,
+      "movement": 6,
+      "crit_threshold": 12,
+      "current_stance": "balanced",
+      "ap": {
+        "current": 2,
+        "max": 2
+      },
+      "rp": {
+        "current": 1,
+        "max": 1
+      },
+      "conditions": [],
+      "zone": null
+    },
+    "awakening": {
+      "name": "Death's Harvest",
+      "tier": "L1",
+      "category": "conditional",
+      "trigger": "killing blow",
+      "passive": "Killing blow restores HP equal to WIL mod (+1)",
+      "active": "Mark for death: +50% damage from you or ally, 3 rounds",
+      "active_available": true
+    },
+    "forms": [
+      {
+        "slot": 1,
+        "name": "Blood",
+        "variant": "Crimson Knight",
+        "default_attribute": "willpower",
+        "damage_type": "necrotic",
+        "aspect_affinity": "shroud",
+        "variant_modifier": "Blood self-buffs grant +2 to physical stats (MIG, AGI, FOR). -1 to magical effect potency.",
+        "techniques_known": [
+          {
+            "name": "Blood Bolt",
+            "tier": 1,
+            "source": "base",
+            "ap": 1,
+            "cost": "2 Mana (or 4 HP)",
+            "range": "30m",
+            "effect": "2d6+WIL necrotic. HP-empowered: +2 bonus damage.",
+            "unlocked_via": "starting"
+          },
+          {
+            "name": "Blood Armor",
+            "tier": 1,
+            "source": "base",
+            "ap": 1,
+            "cost": "2 Mana",
+            "range": "self",
+            "duration": "5 rounds",
+            "effect": "+1 DEF. Each time you take damage: +1 DEF (max +4). Resets if unhit for 1 round.",
+            "unlocked_via": "take damage in melee combat"
+          },
+          {
+            "name": "Blood Rage",
+            "tier": 1,
+            "source": "crimson_knight",
+            "ap": 1,
+            "cost": "2 Mana",
+            "range": "self",
+            "duration": "3 rounds",
+            "effect": "+2 MIG, +1 melee damage for 3 rounds. Take 2 damage/round. (Sustained)",
+            "unlocked_via": "variant"
+          }
+        ]
+      },
+      {
+        "slot": 2,
+        "name": null,
+        "variant": null,
+        "notes": "Empty — awaiting discovery"
+      }
+    ],
+    "form_pool": [
+      "Blood (Crimson Knight)",
+      "Death",
+      "Aggressive Arts",
+      "Unarmed Strike",
+      "Medicine",
+      "Surgery"
+    ],
+    "equipment": {
+      "main_weapon": "Chef knife (galley)",
+      "off_weapon": "Cast-iron stock pot (improvised shield)",
+      "armor": null
+    },
+    "inventory": [
+      {
+        "name": "Backpack",
+        "qty": 1,
+        "notes": "Standard backpack with personal items"
+      },
+      {
+        "name": "Duffel bag (empty)",
+        "qty": 1,
+        "notes": "Meals destroyed \u2014 trampled during barricade panic. Ice packs burst. Bag still usable as container."
+      },
+      {
+        "name": "Phone (dead)",
+        "qty": 1,
+        "notes": "All electronics permanently failed at Transit"
+      },
+      {
+        "name": "Wallet",
+        "qty": 1,
+        "notes": "Cash (reduced ~$50), ID, credit cards. Cash value declining rapidly."
+      },
+      {
+        "name": "Keys",
+        "qty": 1,
+        "notes": "NYC apartment keys, hospital badge"
+      },
+      {
+        "name": "Book",
+        "qty": 1,
+        "notes": "Reading material for the train"
+      },
+      {
+        "name": "Bottled water",
+        "qty": 3,
+        "notes": "2 purchased, 2 from galley (White's deal)"
+      },
+      {
+        "name": "Turkey club sandwich",
+        "qty": 1,
+        "notes": "Purchased from Amtrak cafe car"
+      },
+      {
+        "name": "Pretzels",
+        "qty": 1,
+        "notes": "Purchased from Amtrak cafe car"
+      },
+      {
+        "name": "Chef knife (galley)",
+        "qty": 1,
+        "notes": "10-inch chef knife, heavy blade, solid steel. Upgraded from utility knife. Equipped main hand."
+      },
+      {
+        "name": "Cast-iron stock pot",
+        "qty": 1,
+        "notes": "Heavy galley stock pot. Improvised shield, +1 DEF. Equipped off hand."
+      },
+      {
+        "name": "Improvised spear",
+        "qty": 1,
+        "notes": "Chef knife duct-taped to aluminum mop handle. Reach, two-handed, DMG 5. Cannot use shield simultaneously. Functional quality."
+      },
+      {
+        "name": "Duct tape (partial roll)",
+        "qty": 1,
+        "notes": "Found in galley cleaning cabinet. Partially used sealing Car 5 breach."
+      },
+      {
+        "name": "Bottled water",
+        "qty": 2,
+        "notes": "Scavenged from Car 6 luggage"
+      },
+      {
+        "name": "Snack bars",
+        "qty": 2,
+        "notes": "Scavenged from Car 6 overhead bins"
+      },
+      {
+        "name": "Flashlight",
+        "qty": 1,
+        "notes": "Working flashlight, scavenged Car 6"
+      },
+      {
+        "name": "Multi-tool",
+        "qty": 1,
+        "notes": "Folding multi-tool with pliers, blade, screwdriver. Scavenged Car 6."
+      }
+    ],
+    "combat_history": {
+      "combats_survived": 1,
+      "enemies_defeated": 2,
+      "damage_dealt": 24,
+      "damage_taken": 13,
+      "most_used_technique": "knife_attack",
+      "close_calls": 1
+    }
+  },
+  "world": {
+    "human_factions": [],
+    "meta_clocks": []
+  },
+  "current_scene": {
+    "scene_id": "scene_002",
+    "location": "NEC Rail Corridor \u2014 New Jersey, 1 mile west of derailment",
+    "region": "wilderness_corridor",
+    "threat_level": 3,
+    "scene_type": "exploration",
+    "encounter_type": "march"
+  },
+  "campaign": {
+    "name": "Emergence: The Exile",
+    "start_date": "2026-02-15",
+    "current_day": 2,
+    "current_time": "07:15",
+    "current_location": "NEC Rail Corridor \u2014 1 mile west of train, on foot"
+  },
+  "current_day": 2,
+  "current_time": "07:15",
+  "clocks": [
+    {
+      "id": "clock_29146",
+      "name": "Faction Recruitment Drive",
+      "current": 4,
+      "max": 4,
+      "owner": "Digital Collective",
+      "goal": "A faction solidifies local control",
+      "completion_effect": "Faction issues ultimatum: join or leave",
+      "hidden": false,
+      "history": [
+        {
+          "day": 2,
+          "change": 1,
+          "old": 0,
+          "new": 1,
+          "reason": "Scene pressure advancement"
+        },
+        {
+          "day": 2,
+          "change": 1,
+          "old": 1,
+          "new": 2,
+          "reason": "Scene pressure advancement"
+        },
+        {
+          "day": 2,
+          "change": 1,
+          "old": 2,
+          "new": 3,
+          "reason": "Scene pressure advancement — factional lines hardening at shift-change meeting"
+        },
+        {
+          "day": 2,
+          "change": 1,
+          "old": 3,
+          "new": 4,
+          "reason": "COMPLETED — Miss on Shake's mediation attempt. White seizes moment to force factional alignment. Ultimatum issued."
+        }
+      ],
+      "status": "completed"
+    }
+  ],
+  "world_situation": {
+    "nyc_wide": {
+      "socioeconomic": [
+        "mass_starvation",
+        "water_crisis",
+        "medical_collapse",
+        "infrastructure_decay",
+        "shelter_shortage",
+        "manufacturing_zero",
+        "scavenging_economy"
+      ],
+      "geopolitical": [
+        "no_central_authority",
+        "information_blackout"
+      ],
+      "economic": [
+        "trade_active"
+      ]
+    },
+    "neighborhoods": {
+      "Harlem": {
+        "socioeconomic": [
+          "starving",
+          "open",
+          "lawless"
+        ],
+        "military": [
+          "demilitarized"
+        ]
+      },
+      "Upper West Side": {
+        "socioeconomic": [
+          "starving",
+          "open",
+          "lawless",
+          "refugee_camp"
+        ],
+        "military": [
+          "demilitarized"
+        ]
+      },
+      "Upper East Side": {
+        "socioeconomic": [
+          "starving",
+          "open",
+          "lawless"
+        ],
+        "military": [
+          "demilitarized"
+        ]
+      },
+      "Midtown": {
+        "socioeconomic": [
+          "starving",
+          "open",
+          "lawless",
+          "refugee_camp"
+        ],
+        "military": [
+          "demilitarized"
+        ]
+      },
+      "Hell's Kitchen": {
+        "socioeconomic": [
+          "starving",
+          "open",
+          "lawless"
+        ],
+        "military": [
+          "demilitarized"
+        ]
+      },
+      "Chelsea": {
+        "socioeconomic": [
+          "starving",
+          "open",
+          "lawless"
+        ],
+        "military": [
+          "demilitarized"
+        ]
+      },
+      "Greenwich Village": {
+        "socioeconomic": [
+          "starving",
+          "open",
+          "lawless"
+        ],
+        "military": [
+          "demilitarized"
+        ]
+      },
+      "Lower East Side": {
+        "socioeconomic": [
+          "starving",
+          "open",
+          "lawless"
+        ],
+        "military": [
+          "demilitarized"
+        ]
+      },
+      "Financial District": {
+        "socioeconomic": [
+          "starving",
+          "open",
+          "lawless",
+          "refugee_camp"
+        ],
+        "military": [
+          "demilitarized"
+        ]
+      },
+      "Chinatown": {
+        "socioeconomic": [
+          "starving",
+          "open",
+          "lawless"
+        ],
+        "military": [
+          "demilitarized"
+        ]
+      },
+      "SoHo": {
+        "socioeconomic": [
+          "starving",
+          "open",
+          "lawless"
+        ],
+        "military": [
+          "garrisoned"
+        ]
+      },
+      "East Village": {
+        "socioeconomic": [
+          "starving",
+          "open",
+          "lawless",
+          "refugee_camp"
+        ],
+        "military": [
+          "demilitarized"
+        ]
+      },
+      "Washington Heights": {
+        "socioeconomic": [
+          "starving",
+          "open",
+          "lawless"
+        ],
+        "military": [
+          "demilitarized"
+        ]
+      },
+      "Inwood": {
+        "socioeconomic": [
+          "starving",
+          "open",
+          "lawless"
+        ],
+        "military": [
+          "garrisoned"
+        ]
+      },
+      "South Bronx": {
+        "socioeconomic": [
+          "starving",
+          "open",
+          "lawless"
+        ],
+        "military": [
+          "demilitarized"
+        ]
+      },
+      "East Bronx": {
+        "socioeconomic": [
+          "starving",
+          "open",
+          "lawless"
+        ],
+        "military": [
+          "demilitarized"
+        ]
+      },
+      "Williamsburg": {
+        "socioeconomic": [
+          "starving",
+          "open",
+          "lawless"
+        ],
+        "military": [
+          "demilitarized"
+        ]
+      },
+      "Downtown Brooklyn": {
+        "socioeconomic": [
+          "starving",
+          "open",
+          "lawless"
+        ],
+        "military": [
+          "demilitarized"
+        ]
+      },
+      "Bushwick": {
+        "socioeconomic": [
+          "starving",
+          "open",
+          "lawless"
+        ],
+        "military": [
+          "garrisoned"
+        ]
+      },
+      "Red Hook": {
+        "socioeconomic": [
+          "starving",
+          "open",
+          "lawless"
+        ],
+        "military": [
+          "garrisoned"
+        ]
+      },
+      "Astoria": {
+        "socioeconomic": [
+          "starving",
+          "open",
+          "contested"
+        ],
+        "military": [
+          "demilitarized"
+        ]
+      },
+      "Flushing": {
+        "socioeconomic": [
+          "starving",
+          "open",
+          "contested"
+        ],
+        "military": [
+          "demilitarized"
+        ]
+      },
+      "Jackson Heights": {
+        "socioeconomic": [
+          "starving",
+          "open",
+          "lawless"
+        ],
+        "military": [
+          "garrisoned"
+        ]
+      },
+      "Long Island City": {
+        "socioeconomic": [
+          "starving",
+          "open",
+          "lawless"
+        ],
+        "military": [
+          "demilitarized"
+        ]
+      },
+      "Staten Island North": {
+        "socioeconomic": [
+          "starving",
+          "open",
+          "lawless"
+        ],
+        "military": [
+          "demilitarized"
+        ]
+      },
+      "Staten Island South": {
+        "socioeconomic": [
+          "starving",
+          "open",
+          "lawless"
+        ],
+        "military": [
+          "demilitarized"
+        ]
+      }
+    },
+    "regions": {
+      "Thornwood": [
+        "unexplored",
+        "hostile_wildlife",
+        "indigenous_territory"
+      ],
+      "The Barrens": [
+        "unexplored",
+        "hostile_wildlife"
+      ],
+      "Crystal Wastes": [
+        "unexplored",
+        "hostile_wildlife",
+        "corrupted"
+      ],
+      "Shadow Marches": [
+        "unexplored",
+        "hostile_wildlife"
+      ],
+      "Iron Hills": [
+        "unexplored",
+        "hostile_wildlife",
+        "indigenous_territory"
+      ],
+      "Mirelands": [
+        "unexplored",
+        "hostile_wildlife",
+        "resource_rich"
+      ],
+      "Ashfield": [
+        "unexplored",
+        "hostile_wildlife"
+      ],
+      "Stormbreak Coast": [
+        "unexplored",
+        "hostile_wildlife"
+      ],
+      "Deepwood": [
+        "unexplored",
+        "hostile_wildlife"
+      ],
+      "Hollow Vale": [
+        "unexplored",
+        "hostile_wildlife"
+      ]
+    }
+  },
+  "inter_group_relations": [
+    {
+      "faction_a": "faction_52761",
+      "faction_b": "faction_75724",
+      "relation_type": "trade",
+      "history": [
+        {
+          "day": 1,
+          "old": "neutral",
+          "new": "trade",
+          "reason": "Complementary resources"
+        }
+      ]
+    },
+    {
+      "faction_a": "faction_52761",
+      "faction_b": "threat_69679",
+      "relation_type": "enmity",
+      "history": [
+        {
+          "day": 1,
+          "old": "neutral",
+          "new": "enmity",
+          "reason": "Threat encroaching on faction territory"
+        }
+      ]
+    },
+    {
+      "faction_a": "faction_71490",
+      "faction_b": "threat_19136",
+      "relation_type": "enmity",
+      "history": [
+        {
+          "day": 1,
+          "old": "neutral",
+          "new": "enmity",
+          "reason": "Threat encroaching on faction territory"
+        }
+      ]
+    },
+    {
+      "faction_a": "faction_10778",
+      "faction_b": "threat_69679",
+      "relation_type": "enmity",
+      "history": [
+        {
+          "day": 1,
+          "old": "neutral",
+          "new": "enmity",
+          "reason": "Threat encroaching on faction territory"
+        }
+      ]
+    }
+  ],
+  "pc_standing": [
+    {
+      "faction_id": "faction_78560",
+      "rank": "unknown",
+      "disposition": "neutral",
+      "reputation_events": []
+    },
+    {
+      "faction_id": "faction_52761",
+      "rank": "unknown",
+      "disposition": "neutral",
+      "reputation_events": []
+    },
+    {
+      "faction_id": "faction_71490",
+      "rank": "unknown",
+      "disposition": "neutral",
+      "reputation_events": []
+    },
+    {
+      "faction_id": "faction_75724",
+      "rank": "unknown",
+      "disposition": "neutral",
+      "reputation_events": []
+    },
+    {
+      "faction_id": "faction_10778",
+      "rank": "unknown",
+      "disposition": "neutral",
+      "reputation_events": []
+    }
+  ],
+  "human_factions": [
+    {
+      "id": "faction_78560",
+      "name": "Guardian Guard",
+      "archetype": "military",
+      "goal": "Protect civilians",
+      "method": "Patrols",
+      "territory": "Armory",
+      "power_level": 3,
+      "clock": {
+        "id": "clock_70330",
+        "name": "Guardian Guard - Protect civilians",
+        "current": 2,
+        "max": 6,
+        "owner": "Guardian Guard",
+        "goal": "Protect civilians",
+        "completion_effect": "Guardian Guard achieves protect civilians.",
+        "hidden": false,
+        "history": [
+          {
+            "day": 1,
+            "change": 1,
+            "old": 0,
+            "new": 1,
+            "reason": "Scene pressure advancement"
+          },
+          {
+            "day": 2,
+            "change": 1,
+            "old": 1,
+            "new": 2,
+            "reason": "Scene pressure advancement — retroactive turn 006"
+          }
+        ],
+        "portents": [
+          {
+            "at": 1,
+            "event": "Increases patrols",
+            "mechanical": "tag:patrolled",
+            "fired": true
+          },
+          {
+            "at": 2,
+            "event": "Pressures rivals",
+            "mechanical": "relation_shift:-1",
+            "fired": true
+          },
+          {
+            "at": 3,
+            "event": "Seizes territory",
+            "mechanical": "tag:contested_to_controlled",
+            "fired": false
+          },
+          {
+            "at": 4,
+            "event": "Military dominance.",
+            "mechanical": "faction_victory",
+            "fired": false
+          }
+        ],
+        "status": "active"
+      },
+      "npcs": [
+        {
+          "id": "npc_45471",
+          "role": "Commander"
+        },
+        {
+          "id": "npc_63221",
+          "role": "Sergeant"
+        },
+        {
+          "id": "npc_58451",
+          "role": "Scout"
+        }
+      ]
+    },
+    {
+      "id": "faction_52761",
+      "name": "Digital Collective",
+      "archetype": "tech",
+      "goal": "Keep power on",
+      "method": "Hacking",
+      "territory": "Communications hub",
+      "power_level": 2,
+      "clock": {
+        "id": "clock_42187",
+        "name": "Digital Collective - Keep power on",
+        "current": 3,
+        "max": 10,
+        "owner": "Digital Collective",
+        "goal": "Keep power on",
+        "completion_effect": "Plan complete.",
+        "hidden": false,
+        "history": [
+          {
+            "day": 1,
+            "change": 1,
+            "old": 0,
+            "new": 1,
+            "reason": "Scene pressure advancement"
+          },
+          {
+            "day": 1,
+            "change": 1,
+            "old": 1,
+            "new": 2,
+            "reason": "Scene pressure advancement"
+          },
+          {
+            "day": 1,
+            "change": 1,
+            "old": 2,
+            "new": 3,
+            "reason": "Scene pressure advancement"
+          }
+        ],
+        "portents": [
+          {
+            "at": 2,
+            "event": "Restores power",
+            "mechanical": "infrastructure_gain",
+            "fired": true
+          },
+          {
+            "at": 4,
+            "event": "Trades tech for loyalty",
+            "mechanical": "social_leverage",
+            "fired": false
+          },
+          {
+            "at": 6,
+            "event": "Controls infrastructure",
+            "mechanical": "infrastructure_control",
+            "fired": false
+          },
+          {
+            "at": 8,
+            "event": "Indispensable.",
+            "mechanical": "faction_victory",
+            "fired": false
+          }
+        ],
+        "status": "active"
+      },
+      "npcs": [
+        {
+          "id": "npc_19743",
+          "role": "Chief Engineer"
+        },
+        {
+          "id": "npc_60767",
+          "role": "Inventor"
+        },
+        {
+          "id": "npc_18298",
+          "role": "Technician"
+        }
+      ]
+    },
+    {
+      "id": "faction_71490",
+      "name": "Holy Path",
+      "archetype": "faith",
+      "goal": "Spread belief",
+      "method": "Prophecy",
+      "territory": "Temple",
+      "power_level": 4,
+      "clock": {
+        "id": "clock_35673",
+        "name": "Holy Path - Spread belief",
+        "current": 0,
+        "max": 7,
+        "owner": "Holy Path",
+        "goal": "Spread belief",
+        "completion_effect": "Belief spreads.",
+        "hidden": false,
+        "history": [],
+        "portents": [
+          {
+            "at": 1,
+            "event": "Gains converts",
+            "mechanical": "social_influence",
+            "fired": false
+          },
+          {
+            "at": 2,
+            "event": "Demands conformity",
+            "mechanical": "social_pressure",
+            "fired": false
+          },
+          {
+            "at": 4,
+            "event": "Declares rivals heretical",
+            "mechanical": "relation_shift:-2",
+            "fired": false
+          },
+          {
+            "at": 5,
+            "event": "Commands loyalty.",
+            "mechanical": "faction_victory",
+            "fired": false
+          }
+        ],
+        "status": "active"
+      },
+      "npcs": [
+        {
+          "id": "npc_64401",
+          "role": "Leader"
+        },
+        {
+          "id": "npc_38508",
+          "role": "Prophet"
+        },
+        {
+          "id": "npc_72987",
+          "role": "Healer"
+        }
+      ]
+    },
+    {
+      "id": "faction_75724",
+      "name": "Scientific Academy",
+      "archetype": "knowledge",
+      "goal": "Understand System",
+      "method": "Information brokering",
+      "territory": "Research facility",
+      "power_level": 3,
+      "clock": {
+        "id": "clock_78959",
+        "name": "Scientific Academy - Understand System",
+        "current": 0,
+        "max": 12,
+        "owner": "Scientific Academy",
+        "goal": "Understand System",
+        "completion_effect": "System understood.",
+        "hidden": false,
+        "history": [],
+        "portents": [
+          {
+            "at": 2,
+            "event": "Breakthrough",
+            "mechanical": "knowledge_gain",
+            "fired": false
+          },
+          {
+            "at": 4,
+            "event": "Hoards knowledge",
+            "mechanical": "social_pressure",
+            "fired": false
+          },
+          {
+            "at": 7,
+            "event": "Power to joiners",
+            "mechanical": "faction_leverage",
+            "fired": false
+          },
+          {
+            "at": 9,
+            "event": "Controls System knowledge.",
+            "mechanical": "faction_victory",
+            "fired": false
+          }
+        ],
+        "status": "active"
+      },
+      "npcs": [
+        {
+          "id": "npc_65639",
+          "role": "Lead Researcher"
+        },
+        {
+          "id": "npc_17785",
+          "role": "Archivist"
+        },
+        {
+          "id": "npc_73831",
+          "role": "Field Investigator"
+        }
+      ]
+    },
+    {
+      "id": "faction_10778",
+      "name": "The Trading Company",
+      "archetype": "trade",
+      "goal": "Control supply",
+      "method": "Markets",
+      "territory": "Port",
+      "power_level": 5,
+      "clock": {
+        "id": "clock_63800",
+        "name": "The Trading Company - Control supply",
+        "current": 5,
+        "max": 7,
+        "owner": "The Trading Company",
+        "goal": "Control supply",
+        "completion_effect": "Monopoly achieved.",
+        "hidden": false,
+        "history": [
+          {
+            "day": 1,
+            "change": 1,
+            "old": 0,
+            "new": 1,
+            "reason": "Scene pressure advancement"
+          },
+          {
+            "day": 1,
+            "change": 1,
+            "old": 1,
+            "new": 2,
+            "reason": "Scene pressure advancement"
+          },
+          {
+            "day": 1,
+            "change": 1,
+            "old": 2,
+            "new": 3,
+            "reason": "Scene pressure advancement"
+          },
+          {
+            "day": 2,
+            "change": 1,
+            "old": 3,
+            "new": 4,
+            "reason": "Scene pressure advancement"
+          },
+          {
+            "day": 2,
+            "change": 1,
+            "old": 4,
+            "new": 5,
+            "reason": "Scene pressure advancement"
+          }
+        ],
+        "portents": [
+          {
+            "at": 1,
+            "event": "Market days established",
+            "mechanical": "tag:trade_active",
+            "fired": true
+          },
+          {
+            "at": 2,
+            "event": "Price-fixing begins",
+            "mechanical": "scarcity_increase",
+            "fired": true
+          },
+          {
+            "at": 4,
+            "event": "Embargoes non-cooperative",
+            "mechanical": "economic_pressure",
+            "fired": true
+          },
+          {
+            "at": 5,
+            "event": "Total monopoly.",
+            "mechanical": "faction_victory",
+            "fired": true
+          }
+        ],
+        "status": "active"
+      },
+      "npcs": [
+        {
+          "id": "npc_41330",
+          "role": "Boss"
+        },
+        {
+          "id": "npc_67399",
+          "role": "Negotiator"
+        },
+        {
+          "id": "npc_83787",
+          "role": "Caravan Master"
+        }
+      ]
+    }
+  ],
+  "external_threats": [
+    {
+      "id": "threat_69679",
+      "name": "The Awakened of Shadow",
+      "threat_type": "elemental",
+      "goal": "Purify",
+      "region": "shadow",
+      "threat_level": 2,
+      "creature_types": [
+        "elemental",
+        "golem"
+      ],
+      "clock": {
+        "id": "clock_16636",
+        "name": "The Awakened of Shadow - Purify",
+        "current": 0,
+        "max": 10,
+        "owner": "The Awakened of Shadow",
+        "goal": "Purify",
+        "completion_effect": "Area transformed.",
+        "hidden": false,
+        "history": [],
+        "portents": [
+          {
+            "at": 2,
+            "event": "Erratic weather",
+            "mechanical": "change_environment",
+            "fired": false
+          },
+          {
+            "at": 4,
+            "event": "Unnatural tremors",
+            "mechanical": "hazard:environmental",
+            "fired": false
+          },
+          {
+            "at": 6,
+            "event": "Landscape transformed",
+            "mechanical": "zone_transformed",
+            "fired": false
+          },
+          {
+            "at": 8,
+            "event": "Full incursion.",
+            "mechanical": "location_lost",
+            "fired": false
+          }
+        ],
+        "status": "active"
+      },
+      "status": "active"
+    },
+    {
+      "id": "threat_19136",
+      "name": "Shadow Warband",
+      "threat_type": "horde",
+      "goal": "Prove strength",
+      "region": "forest",
+      "threat_level": 5,
+      "creature_types": [
+        "humanoid"
+      ],
+      "clock": {
+        "id": "clock_62847",
+        "name": "Shadow Warband - Prove strength",
+        "current": 1,
+        "max": 5,
+        "owner": "Shadow Warband",
+        "goal": "Prove strength",
+        "completion_effect": "Major raid.",
+        "hidden": false,
+        "history": [
+          {
+            "day": 2,
+            "change": 1,
+            "old": 0,
+            "new": 1,
+            "reason": "Scene pressure advancement — retroactive turn 006"
+          }
+        ],
+        "portents": [
+          {
+            "at": 1,
+            "event": "Raiding parties spotted",
+            "mechanical": "reveal_threat",
+            "fired": true
+          },
+          {
+            "at": 2,
+            "event": "Supply caravan raided",
+            "mechanical": "destroy:supplies",
+            "fired": false
+          },
+          {
+            "at": 3,
+            "event": "Demands tribute",
+            "mechanical": "impose_hard_choice",
+            "fired": false
+          },
+          {
+            "at": 4,
+            "event": "Full assault.",
+            "mechanical": "encounter:assault",
+            "fired": false
+          }
+        ],
+        "status": "active"
+      },
+      "status": "active"
+    },
+    {
+      "id": "threat_83613",
+      "name": "The Brood of Mountain",
+      "threat_type": "swarm",
+      "goal": "Feed",
+      "region": "mountain",
+      "threat_level": 4,
+      "creature_types": [
+        "wolf",
+        "insect",
+        "spider",
+        "bird"
+      ],
+      "clock": {
+        "id": "clock_16669",
+        "name": "The Brood of Mountain - Feed",
+        "current": 4,
+        "max": 4,
+        "owner": "The Brood of Mountain",
+        "goal": "Feed",
+        "completion_effect": "Outbreak.",
+        "hidden": false,
+        "history": [
+          {
+            "day": 1,
+            "change": 1,
+            "old": 0,
+            "new": 1,
+            "reason": "Scene pressure advancement"
+          },
+          {
+            "day": 1,
+            "change": 1,
+            "old": 1,
+            "new": 2,
+            "reason": "Scene pressure advancement"
+          },
+          {
+            "day": 1,
+            "change": 1,
+            "old": 2,
+            "new": 3,
+            "reason": "Scene pressure advancement"
+          },
+          {
+            "day": 1,
+            "change": 1,
+            "old": 3,
+            "new": 4,
+            "reason": "Scene pressure advancement"
+          }
+        ],
+        "portents": [
+          {
+            "at": 1,
+            "event": "Signs of activity",
+            "mechanical": "reveal_threat",
+            "fired": true
+          },
+          {
+            "at": 2,
+            "event": "Food stores devoured",
+            "mechanical": "destroy:food_supply",
+            "fired": true
+          },
+          {
+            "at": 3,
+            "event": "Attacks settlement",
+            "mechanical": "encounter:swarm_raid",
+            "fired": true
+          }
+        ],
+        "status": "completed"
+      },
+      "status": "active"
+    }
+  ],
+  "meta_clocks": [
+    {
+      "id": "clock_96854",
+      "name": "Night Hunter Activity",
+      "current": 3,
+      "max": 6,
+      "owner": "World",
+      "goal": "Nocturnal creatures establish territory",
+      "completion_effect": "Nighttime becomes deadly dangerous",
+      "hidden": false,
+      "history": [
+        {
+          "day": 1,
+          "change": 1,
+          "old": 0,
+          "new": 1,
+          "reason": "Forced consequence \u2014 partial hit during Brood outbreak combat"
+        },
+        {
+          "day": 1,
+          "change": 1,
+          "old": 1,
+          "new": 2,
+          "reason": "Overnight tick \u2014 something probing the train, calls from tree line"
+        },
+        {
+          "day": 2,
+          "change": 1,
+          "old": 2,
+          "new": 3,
+          "reason": "Scene pressure advancement \u2014 march departure, creature tracks along NEC corridor"
+        }
+      ],
+      "status": "active"
+    }
+  ],
+  "faction_relationships": [
+    {
+      "faction_a": "Guardian Guard",
+      "faction_b": "Digital Collective",
+      "complication": "Proxy conflict through third parties"
+    },
+    {
+      "faction_a": "Digital Collective",
+      "faction_b": "Holy Path",
+      "complication": "Shared resource neither can secure alone"
+    },
+    {
+      "faction_a": "Holy Path",
+      "faction_b": "Scientific Academy",
+      "complication": "Trade dependency"
+    },
+    {
+      "faction_a": "Scientific Academy",
+      "faction_b": "The Trading Company",
+      "complication": "Sheltering someone the other wants"
+    }
+  ],
+  "known_npcs": [
+    {
+      "id": "npc_91546",
+      "name": "David White",
+      "faction": "The Trading Company",
+      "role": "Guard",
+      "disposition": "cooperative",
+      "status": "active",
+      "last_seen": "Day 2, Amtrak Cafe Car \u2014 issued ultimatum at shift-change meeting. Controls column."
+    },
+    {
+      "id": "npc_13231",
+      "name": "Amanda Torres",
+      "faction": "Scientific Academy",
+      "role": "Survivor",
+      "disposition": "desperate",
+      "status": "active",
+      "last_seen": "Day 2, Amtrak Cafe Car \u2014 left meeting with Janet, headed toward rear cars. Has armory intel.",
+      "trust": 3,
+      "motivation": "Find Dr. Nakamura (missing \u2014 seat empty, signs of struggle)",
+      "secret": "Knows the location of a pre-Transit weapons cache"
+    },
+    {
+      "id": "npc_56041",
+      "name": "Carlos Walker",
+      "faction": "Guardian Guard",
+      "role": "Messenger",
+      "disposition": "grateful",
+      "status": "active",
+      "last_seen": "Day 2, Amtrak Car 2 \u2014 pre-dawn bonding with Shake. Shared personal details. Wife and son (6) in Manhattan. That's why he's pushing the tunnel.",
+      "trust": 4,
+      "motivation": "Reach his family in Manhattan. Survive. Reach Guardian Guard contacts.",
+      "secret": "Was carrying a warning about pre-Transit creature activity in NJ corridor. The Guard knew something was coming."
+    },
+    {
+      "id": "npc_88201",
+      "name": "Janet Chen",
+      "faction": "none",
+      "role": "Retired teacher",
+      "disposition": "pragmatic",
+      "status": "active",
+      "last_seen": "Day 2, Amtrak Cafe Car \u2014 walked out of meeting after White's ultimatum. Headed to rear cars with Torres.",
+      "trust": 2,
+      "motivation": "Keep rear car passengers alive and organized",
+      "secret": null
+    },
+    {
+      "id": "npc_88202",
+      "name": "Marcus",
+      "faction": "none",
+      "role": "Construction worker",
+      "disposition": "cooperative",
+      "status": "active",
+      "last_seen": "Day 2, Amtrak Car 2 \u2014 pre-dawn bonding with Shake. From Newark. Mom in Newark, brother in Brooklyn. Feels useless in new world.",
+      "trust": 3,
+      "motivation": "Survive, protect others, prove baselines still matter",
+      "secret": null
+    },
+    {
+      "id": "npc_88203",
+      "name": "Rivera",
+      "faction": "none",
+      "role": "Unknown (possible ex-military)",
+      "disposition": "guarded",
+      "status": "active",
+      "last_seen": "Day 1, Amtrak Cafe Car \u2014 volunteered for forward sweep",
+      "trust": 1,
+      "motivation": "Unknown",
+      "secret": null
+    },
+    {
+      "id": "npc_88204",
+      "name": "Officer Diane Reyes",
+      "faction": "none",
+      "role": "NJ Transit Police officer",
+      "disposition": "pragmatic",
+      "status": "active",
+      "last_seen": "Day 2, Amtrak Car 2 — pre-dawn bonding with Shake. Two daughters (9, 13) in Elizabeth with her mother.",
+      "trust": 3,
+      "motivation": "Reach her daughters in Elizabeth. Maintain order. Protect civilians.",
+      "secret": "Carries service Glock with limited ammo. Has not disclosed round count to anyone."
+    },
+    {
+      "id": "npc_41241",
+      "name": "Mei Perez",
+      "faction": "none",
+      "role": "Panicked bystander",
+      "disposition": "frightened",
+      "status": "active",
+      "last_seen": "Day 2, Column mid-section \u2014 noticed by Shake during departure. Shaking, pale, moving wrong.",
+      "trust": 2,
+      "motivation": "Atone for something done in the early chaos",
+      "secret": "Has symptoms of mana corruption but hiding progression"
+    }
+  ],
+  "known_locations": [
+    {
+      "id": "loc_amtrak_nec",
+      "name": "Amtrak NEC Train",
+      "region": "urban",
+      "threat_level": 1,
+      "discovered_day": 1,
+      "notes": "Player starting location"
+    }
+  ],
+  "campaign_arcs": [],
+  "active_quests": [],
+  "chronicle": [
+    {
+      "day": 1,
+      "time": "18:00",
+      "event": "Transit occurs. NYC transported to Vaelithar. 8.4M people. Two moons visible.",
+      "significance": "critical",
+      "tags": [
+        "transit",
+        "worldchange"
+      ]
+    },
+    {
+      "day": 1,
+      "time": "18:15",
+      "event": "Shake reaches Amtrak cafe car. Meets David White (Trading Company). Brood of Mountain shows first signs of activity.",
+      "significance": "minor",
+      "tags": [
+        "exploration",
+        "npc_encounter",
+        "threat_portent"
+      ]
+    },
+    {
+      "day": 1,
+      "time": "18:20",
+      "event": "Shake buys water, food from cafe car ($50). No knife available. David White seizes control of cafe car supplies, establishes rationing. Trading Company begins market control. Duffel bag meals spoiling.",
+      "significance": "moderate",
+      "tags": [
+        "trade",
+        "resource_pressure",
+        "faction_move",
+        "scarcity"
+      ]
+    },
+    {
+      "day": 1,
+      "time": "18:25",
+      "event": "Shake searches train cars for weapons. Finds fire extinguisher (Car 2). Observes passengers in shock. Meets Amanda Torres (Scientific Academy) in Car 3 \u2014 offers weapons cache location in exchange for help finding Dr. Nakamura in forward cars. Brood creatures spotted feeding near tracks.",
+      "significance": "moderate",
+      "tags": [
+        "exploration",
+        "npc_encounter",
+        "threat_portent",
+        "scavenging"
+      ]
+    },
+    {
+      "day": 1,
+      "time": "18:28",
+      "event": "Shake follows Torres back to cafe car. White demands fire extinguisher, blocks passage forward. Brood creature testing train exterior \u2014 six-legged, dog-sized, mandibles on vestibule seal. Forward vestibule door warped shut. Three-way crisis: White, creature, jammed door.",
+      "significance": "major",
+      "tags": [
+        "confrontation",
+        "direct_threat",
+        "npc_hostile",
+        "obstacle"
+      ]
+    },
+    {
+      "day": 1,
+      "time": "18:35",
+      "event": "Shake convinces White to help barricade (Full Hit, 10). White organizes passengers. Brood escalates to full attack \u2014 windows cracking, swarm_raid portent fires (3/4). Duffel bag meals destroyed in panic. Carlos Walker (Guardian Guard messenger) emerges to help. Torres works jammed vestibule alone. White offers galley access deal: fire extinguisher + public backing for supplies and knives. Choice pending.",
+      "significance": "major",
+      "tags": [
+        "social_success",
+        "swarm_raid",
+        "resource_loss",
+        "npc_encounter",
+        "hard_choice"
+      ]
+    },
+    {
+      "day": 1,
+      "time": "18:40",
+      "event": "Shake accepts White's deal \u2014 trades fire extinguisher for galley access (utility knife, water). Calls other cars to barricade. Alien landscape visible through windows \u2014 rust-red trees, grey soil, two moons. This is not Earth. Torres pries forward vestibule open \u2014 creature breaches through the gap. Cafe car window shatters \u2014 second creature enters. BROOD CLOCK COMPLETES (4/4): Outbreak. Full swarm attack on the train. Multiple breach points. Two creatures in cafe car. Torres down near vestibule creature.",
+      "significance": "critical",
+      "tags": [
+        "outbreak",
+        "clock_completion",
+        "breach",
+        "combat_imminent",
+        "lore_revelation"
+      ]
+    },
+    {
+      "day": 1,
+      "time": "18:41",
+      "event": "COMBAT Round 1. Shake attacks Ironpeak Chitinous with utility knife \u2014 Partial (7), deals 3 dmg (11\u21928 HP). Improvised tray shield on left arm. Ironpeak retaliates \u2014 exceptional hit, 3 dmg to Shake (20\u219217). Hive-drone flanks from counter \u2014 hit, 3 dmg (17\u219214). Shake at 14/20 HP, flanked by two creatures. Night Hunter clock ticks (forced consequence). Torres pulling herself up behind Creature A.",
+      "significance": "major",
+      "tags": [
+        "combat",
+        "first_blood",
+        "injury"
+      ]
+    },
+    {
+      "day": 1,
+      "time": "18:42",
+      "event": "COMBAT Round 2. Shake misses Ironpeak (6). FORCED: Split and Surround \u2014 Hive-drone blocks rear exit, retreat cut off. Ironpeak hits Shake (8 vs 8), 3 dmg (14\u219211). Hive-drone exceptional hit (12 vs 8), 3 dmg (11\u21928). Shake at 8/20 HP, flanked, exits blocked. No damage dealt.",
+      "significance": "major",
+      "tags": [
+        "combat",
+        "miss",
+        "surrounded",
+        "critical_danger"
+      ]
+    },
+    {
+      "day": 1,
+      "time": "18:43",
+      "event": "COMBAT Round 3. Shake switches to DEFENSIVE stance (DEF 8\u219213). Swaps to chef knife and stock pot shield from galley. Shouts for White to use fire extinguisher. White hits Ironpeak with CO2 blast (9 vs 8) \u2014 2 dmg (8\u21926), Ironpeak BLINDED + SUFFOCATING (spiracles clogged). Cloud disorients Hive-drone (-2 ATK). Ironpeak attacks Shake at disadvantage \u2014 MISS (5 vs 17, Shake dodges). Hive-drone attacks \u2014 MISS (4 vs 17, Shake dodges). First round with zero damage taken. Turning point.",
+      "significance": "major",
+      "tags": [
+        "combat",
+        "defensive_stance",
+        "npc_cooperation",
+        "environmental_weapon",
+        "turning_point"
+      ]
+    },
+    {
+      "day": 1,
+      "time": "18:44",
+      "event": "COMBAT Round 4. Shake switches to AGGRESSIVE stance (DEF 13\u21927, ATK +1, DMG +2). Attacks blinded Ironpeak with advantage \u2014 HIT (9 vs 6), chef knife deals 6 dmg, KILLS Ironpeak Chitinous (6\u21920 HP). First enemy defeated. Redirects 2 remaining AP to Hive-drone: HIT for 6 dmg (11\u21925), GRAZE for 3 dmg (5\u21922). Hive-drone retaliates \u2014 GRAZE (6 vs 7), 1 dmg to Shake (8\u21927). Shake dealt 15 total damage this round. Hive-drone at 2/11, nearly finished.",
+      "significance": "critical",
+      "tags": [
+        "combat",
+        "first_kill",
+        "aggressive_stance",
+        "momentum_shift"
+      ]
+    },
+    {
+      "day": 1,
+      "time": "18:45",
+      "event": "COMBAT Round 5. Shake attacks Hive-drone \u2014 HIT (9 vs 8), chef knife deals 6 dmg, KILLS Stonehorn Hive-drone (2\u21920 HP). COMBAT COMPLETE. Both Brood creatures eliminated. 5 rounds, 24 total damage dealt by Shake, 13 taken. First combat survived. Cafe car secured. Torres alive, White uninjured. +60 XP awarded (25 per kill + 10 survival bonus).",
+      "significance": "critical",
+      "tags": [
+        "combat_victory",
+        "second_kill",
+        "encounter_complete",
+        "xp_gain",
+        "first_combat_survived"
+      ]
+    },
+    {
+      "day": 1,
+      "time": "18:55",
+      "event": "Post-combat. Shake performs first aid on himself using bottled water and backpack supplies. Medicine check HIT (8 vs 7, +2 background bonus). Clean irrigation, pressure bandaging \u2014 textbook field medicine. HP 7\u219211. Used 1 bottled water (4\u21923). Takes 10 minutes. Torres and White also examining their System status screens.",
+      "significance": "minor",
+      "tags": [
+        "healing",
+        "medical_background",
+        "resource_use",
+        "system_discovery"
+      ]
+    },
+    {
+      "day": 1,
+      "time": "19:00",
+      "event": "Shake crafts improvised spear (chef knife + mop handle + duct tape). Crafting check HIT (10 vs 8). Functional quality \u2014 Reach, two-handed, DMG 5. Trade-off vs knife+pot loadout. Surveys surroundings: train stopped in alien forest, tracks end 200m ahead. Brood creatures at tree line (~100m) feeding, not approaching. Rear cars sealed, passengers alive. Forward cars dark with clicking sounds, Car 5 breached. Temperature dropping at sunset.",
+      "significance": "moderate",
+      "tags": [
+        "crafting",
+        "observation",
+        "weapon_upgrade",
+        "environmental_survey"
+      ]
+    },
+    {
+      "day": 1,
+      "time": "19:30",
+      "event": "Forward sweep of Cars 5-7. Leadership check EXCEPTIONAL (11 vs 6) \u2014 4 volunteers join, 8-person party. Car 5: GRAZE on perception \u2014 Brood Skitterer ambush, detected late, White dispatches it. 1 survivor found. Breach sealed (HIT, 7 vs 7) with luggage and duct tape. Car 6: searched (HIT, 7 vs 7), found water x2, snack bars x2, flashlight, multi-tool. 2 survivors. Car 7: Dr. Nakamura NOT FOUND (MISS, 4 vs 7). Seat empty, signs of struggle \u2014 he was taken or fled deeper. 3 survivors recovered. Torres trust +1 (Shake honored the deal). Total: 6 survivors rescued, 1 Skitterer killed, 1 breach sealed. +20 XP.",
+      "significance": "major",
+      "tags": [
+        "exploration",
+        "leadership",
+        "rescue",
+        "scavenging",
+        "mystery",
+        "nakamura_missing"
+      ]
+    },
+    {
+      "day": 1,
+      "time": "19:45",
+      "event": "Social recon. Insight EXCEPTIONAL (11 vs 6) \u2014 Shake reads the room completely. Identifies key players: White (supplies/rationing), Torres (Nakamura obsession, weapons cache), Walker (Guardian Guard intel), Marcus (construction/fighter), Rivera (possible ex-military). Walker opens up (Persuasion HIT, 8 vs 7): Guard was tracking anomalous wildlife BEFORE Transit, was mobilizing, knew something was coming. Rear cars: ~40 survivors led by Janet Chen (retired teacher), sealed and organized but supplies low, morale fragile. Total train: ~55 confirmed survivors. Key tension: White wants to stay, Torres wants to push forward. Shake is the swing vote.",
+      "significance": "major",
+      "tags": [
+        "social",
+        "intelligence",
+        "leadership_dynamics",
+        "walker_secret",
+        "pre_transit_warning",
+        "chen_introduced"
+      ]
+    },
+    {
+      "day": 1,
+      "time": "20:00-20:30",
+      "event": "Shake goes to rear cars. Treats broken arm (Medicine HIT, 8 vs 8, +2 medical competence) \u2014 solid field splint with torn clothing and luggage straps. Treats 4-5 minor injuries (auto-success). Meets Janet Chen \u2014 trust jumps to 2 from medical aid. Rear car passengers shift from fearful to cautiously hopeful. +5 XP (medical aid, total 100/100 \u2014 LEVEL UP AVAILABLE).",
+      "significance": "moderate",
+      "tags": [
+        "medical",
+        "social",
+        "trust_gain",
+        "chen_trust",
+        "level_up_available"
+      ]
+    },
+    {
+      "day": 1,
+      "time": "20:30-01:30",
+      "event": "Shake sleeps in Car 1 seat next to emergency exit window (escape route). Rest quality HIT (8 vs 7) \u2014 5 solid hours. Night sounds: distant calls from tree line (intermittent), something in brush near train at 01:00, child crying in Car 2. Night Hunter clock ticks 1\u21922/6 (overnight activity). Shake wakes at 01:30 alert, fatigue cleared. Day 2 begins.",
+      "significance": "moderate",
+      "tags": [
+        "rest",
+        "night_passage",
+        "night_hunter_tick",
+        "day_transition"
+      ]
+    },
+    {
+      "day": 2,
+      "time": "01:30",
+      "event": "AWAKENING. System completes integration during sleep. Class assigned: Reaper (Shroud/Striker). Aspect: Shroud (+2 WIL, +1 INT). Archetype: Striker (+2 MIG, +1 FOR). Background bonus: Medical/Science (+2 INT, +1 WIS). Awakening ability: Death's Harvest (HP restore on kill, Mark for Death active). Form equipped: Blood (Crimson Knight variant). Techniques: Blood Bolt, Blood Armor, Blood Rage. HP 11/20 \u2192 69/69 (full restore on integration). Mana pool online: 49. Composure pool online: 43. Level 0 \u2192 1.",
+      "significance": "critical",
+      "tags": [
+        "awakening",
+        "level_up",
+        "class_assignment",
+        "system_integration"
+      ]
+    },
+    {
+      "day": 2,
+      "time": "01:30-02:00",
+      "event": "Medical rounds. Shake checks on passengers across Cars 1-4. Broken arm patient stable but fevering. Dehydration spreading — at least 8 passengers showing signs. Two children lethargic. Rear cars' water supply critically low. White on watch in cafe car — has tightened supply access overnight. Non-contributors no longer receiving water rations (Trading Company embargo portent fires, 4/7). White shares integration info: he and several combat participants got System assignments overnight. Calls it 'the window' — combat triggers it, sleep completes it. Estimates 8-10 people on the train have awakened. White got Warden class. Faction Recruitment Drive begins (1/4) — Walker mentions Guardian Guard would want awakened fighters.",
+      "significance": "moderate",
+      "tags": [
+        "medical_rounds",
+        "resource_scarcity",
+        "embargo_portent",
+        "integration_intel",
+        "social"
+      ]
+    },
+    {
+      "day": 2,
+      "time": "02:15-03:45",
+      "event": "System screen exploration: Shake studies interface. Discovers bestiary (Brood creatures analyzed), nearby-awakened pulse (8-10 contacts), XP tracker. LORE FRAGMENT: System text briefly flickers to show different message — coordinates or designation, gone in under a second. Talks to Torres (System analysis, Nakamura was researching anomalous integration patterns), Walker (NEC corridor intel, tunnel ~3-4 miles, Guard was mobilizing pre-Transit), Marcus (frustrated baseline, hasn't awakened). Rivera observed — trained hands, possibly hiding awakened status. Janet confronts White about water access for rear cars. White reveals TOTAL MONOPOLY (Trading Company 5/7 portent fires): overnight sweep consolidated ALL supplies from every car behind his counter. Janet furious but controlled. Distant signal spotted — orange glow on western horizon, direction of NYC. Fire or light source, large scale.",
+      "significance": "major",
+      "tags": [
+        "system_exploration",
+        "lore_fragment",
+        "social_rounds",
+        "total_monopoly",
+        "trading_company_portent",
+        "distant_signal",
+        "npc_interactions"
+      ]
+    },
+    {
+      "day": 2,
+      "time": "04:00",
+      "event": "Shift-change meeting in cafe car. Attendees: Walker, White, Shake, Torres, Janet, Reyes. High tension. Walker proposes dawn movement west along NEC corridor to Hudson tunnel (~3-4 mi). White demands supply column control. Torres reveals Secaucus armory detour (~2 mi SW). Janet demands equitable march order. Reyes raises security concerns. Unknown creature scrapes along exterior hull — 3 deliberate taps. Torres reads: not Brood, larger, different signature. Shake attempts mediation: proposes armory waypoint with rest, non-combatants carry supplies, Walker inventories. MISS (2d6+1=6 vs DC 12). White sees the play, calls it out, seizes the moment. Faction Recruitment Drive COMPLETES (4/4): White issues ultimatum — join his column under his terms or walk alone. Meeting fractures.",
+      "significance": "critical",
+      "tags": [
+        "shift_change_meeting",
+        "movement_planning",
+        "faction_tensions",
+        "recruitment_drive_completed",
+        "approaching_threat",
+        "social_miss",
+        "white_ultimatum",
+        "clock_completion"
+      ]
+    },
+    {
+      "day": 2,
+      "time": "04:15",
+      "event": "Shake stays with main group after meeting fractures. Torres and Janet leave toward rear cars with armory intel. Shake talks to White and Walker — assigned as mobile combat medic, mid-column position. White is cold but pragmatic: 'You're the surgeon. Stay where I can find you.' Walker: 'If something hits, you patch people, not chase it.' Shake then recruits travel allies. GRAZE (2d6+0=7 vs DC 9). Reyes agrees to mutual protection — condition: Shake backs her authority calls on the march. Marcus agrees but carries resentment about awakened vs baseline divide. Two-person buddy system formed with complications.",
+      "significance": "moderate",
+      "tags": [
+        "faction_choice",
+        "column_assignment",
+        "ally_recruitment",
+        "social_graze",
+        "reyes_alliance",
+        "marcus_tension"
+      ]
+    },
+    {
+      "day": 2,
+      "time": "04:30-05:00",
+      "event": "Shake attempts to scavenge armor and improve stock pot shield. MISS (2d6+1=7 vs DC 11, INT craft). Train stripped clean — White's overnight sweep took everything useful. No raw materials left for armor. Tries to modify stock pot into proper shield but lacks tools (no drill, no rivets, no strapping). GM Hard Move — Reveal Unwelcome Truth: Maintenance closet in Car 3 has locks torn OFF from the outside, not broken from inside. Claw marks in the frame. Something entered the train from outside recently — before the tapping incident. The creature has been inside before. Stock pot remains improvised, no mechanical improvement.",
+      "significance": "moderate",
+      "tags": [
+        "crafting_miss",
+        "scavenge_failure",
+        "creature_intrusion_evidence",
+        "unwelcome_truth",
+        "equipment_unchanged"
+      ]
+    },
+    {
+      "day": 2,
+      "time": "05:00-06:00",
+      "event": "Shake bonds with allies before dawn march. HIT (2d6+1=10 vs DC 9, WIS social). Reyes: NJ Transit Police, was on duty when Transit hit. Two daughters (9 and 13) in Elizabeth with her mother. Not awakened. Carries service Glock — limited ammo, hasn't disclosed count. Walker: opens up — wife and 6-year-old son in Manhattan. That's why he's pushing the tunnel. It's personal. Shares more Guard intel: they detected anomalous signatures weeks before Transit. Marcus: construction worker from Newark. Mom in Newark, brother in Brooklyn. Frustration isn't about Shake — it's about feeling useless in a world that suddenly values magic over muscle. Trust increases: Reyes 2\u21923, Marcus 2\u21923, Walker 3\u21924.",
+      "significance": "moderate",
+      "tags": [
+        "social_hit",
+        "bonding",
+        "trust_increase",
+        "reyes_backstory",
+        "walker_backstory",
+        "marcus_backstory",
+        "pre_march"
+      ]
+    },
+    {
+      "day": 2,
+      "time": "06:30",
+      "event": "Column departs Amtrak train. ~40 people in White's column. Walker's vanguard leads. Shake mid-column with Reyes and Marcus. Perception GRAZE (2d6+1=8 vs DC 10): Shake spots three-clawed tracks along the rail bed — same pattern as maintenance closet. Creature has been patrolling the corridor. Fresh tracks. Partial information only — doesn't see full extent of activity. Notices Mei Perez in column — woman moving wrong, pale, shaking. Something off about her. NPC Betrayal in play (hard GM move). Night Hunter Activity ticks 2\u21923/6. Splinter group (Torres, Janet, ~15 rear-car passengers) departed separately — direction unknown.",
+      "significance": "critical",
+      "tags": [
+        "march_departure",
+        "perception_graze",
+        "creature_tracks",
+        "night_hunter_tick",
+        "mei_perez_introduced",
+        "npc_betrayal_pending",
+        "column_movement"
+      ]
+    },
+    {
+      "day": 2,
+      "time": "06:30-07:15",
+      "event": "March first mile. Walker briefing: only 4 awakened in column of 41 (FUMBLE on count, 2d6=2). Shake (Reaper/Striker), Walker (Tactician/Analyst), Deshawn Price (Vanguard/Guardian), Holt (Warlord/Striker — White's man). No Mender. One reliable striker, one tank, one support. Ongoing perception CRIT (2d6+1=13 vs DC 10): Shake spots full extent — multiple creature tracks (2-3 individuals), nocturnal patrol pattern, feeding site 1 mile in (alien wildlife killed), corridor narrows ahead with choke point, old maintenance structure partially overgrown, terrain slopes down 2-3 miles ahead toward tunnel entrance. Complete tactical picture.",
+      "significance": "critical",
+      "tags": [
+        "march_progress",
+        "walker_briefing",
+        "awakened_count_fumble",
+        "perception_crit",
+        "creature_patrol_pattern",
+        "feeding_site",
+        "choke_point_ahead",
+        "terrain_mapping",
+        "no_mender"
+      ]
+    },
+    {
+      "day": 2,
+      "time": "07:15",
+      "event": "Retroactive scene-pressure (turn 006). Shake examines Mei Perez mid-column — Reading the Unknown roll triggered for medical exam. Free narration follow-up (help up, suggest class, suggest maintenance stop) required scene-pressure. Engine output (seed 290623, tension=critical): Direct Threat Appears (hard), Offer Opportunity with Cost (soft), Introduce Faction Agent (soft), Telegraph Future Danger (soft). Clock ticks: Guardian Guard 1→2/6 (PORTENT: Pressures rivals, relation_shift:-1), Shadow Warband 0→1/5 (PORTENT: Raiding parties spotted, reveal_threat). Brood completion re-fire filtered (already completed in prior fiction).",
+      "significance": "major",
+      "tags": [
+        "retroactive_pressure",
+        "direct_threat",
+        "faction_agent",
+        "opportunity_with_cost",
+        "telegraph_danger",
+        "guardian_guard_portent",
+        "shadow_warband_portent",
+        "clock_ticks"
+      ]
+    }
+  ],
+  "clock_log": [
+    {
+      "day": 1,
+      "clock": "The Brood of Mountain - Feed",
+      "change": "+1",
+      "new_value": "1/4",
+      "reason": "Scene pressure advancement"
+    },
+    {
+      "day": 1,
+      "clock": "Digital Collective - Keep power on",
+      "change": "+1",
+      "new_value": "1/10",
+      "reason": "Scene pressure advancement"
+    },
+    {
+      "day": 1,
+      "clock": "The Trading Company - Control supply",
+      "change": "+1",
+      "new_value": "1/7",
+      "reason": "Scene pressure advancement"
+    },
+    {
+      "day": 1,
+      "clock": "The Brood of Mountain - Feed",
+      "change": "+1",
+      "new_value": "2/4",
+      "reason": "Scene pressure advancement"
+    },
+    {
+      "day": 1,
+      "clock": "Digital Collective - Keep power on",
+      "change": "+1",
+      "new_value": "2/10",
+      "reason": "Scene pressure advancement"
+    },
+    {
+      "day": 1,
+      "clock": "Digital Collective - Keep power on",
+      "change": "+1",
+      "new_value": "3/10",
+      "reason": "Scene pressure advancement"
+    },
+    {
+      "day": 1,
+      "clock": "The Trading Company - Control supply",
+      "change": "+1",
+      "new_value": "2/7",
+      "reason": "Scene pressure advancement"
+    },
+    {
+      "day": 1,
+      "clock": "The Brood of Mountain - Feed",
+      "change": "+1",
+      "new_value": "3/4",
+      "reason": "Scene pressure advancement"
+    },
+    {
+      "day": 1,
+      "clock": "The Trading Company - Control supply",
+      "change": "+1",
+      "new_value": "3/7",
+      "reason": "Scene pressure advancement"
+    },
+    {
+      "day": 1,
+      "clock": "Guardian Guard - Protect civilians",
+      "change": "+1",
+      "new_value": "1/6",
+      "reason": "Scene pressure advancement"
+    },
+    {
+      "day": 1,
+      "clock": "The Brood of Mountain - Feed",
+      "change": "+1",
+      "new_value": "4/4",
+      "reason": "Scene pressure advancement \u2014 COMPLETED: Outbreak"
+    },
+    {
+      "day": 1,
+      "clock": "Night Hunter Activity",
+      "change": "+1",
+      "new_value": "1/6",
+      "reason": "Forced consequence \u2014 partial hit during Brood outbreak combat"
+    },
+    {
+      "day": 2,
+      "clock": "Faction Recruitment Drive",
+      "change": "+1",
+      "new_value": "1/4",
+      "reason": "Scene pressure advancement"
+    },
+    {
+      "day": 2,
+      "clock": "The Trading Company - Control supply",
+      "change": "+1",
+      "new_value": "4/7",
+      "reason": "Scene pressure advancement \u2014 PORTENT: Embargoes non-cooperative (economic_pressure)"
+    },
+    {
+      "day": 2,
+      "clock": "Faction Recruitment Drive",
+      "change": "+1",
+      "new_value": "2/4",
+      "reason": "Scene pressure advancement"
+    },
+    {
+      "day": 2,
+      "clock": "The Trading Company - Control supply",
+      "change": "+1",
+      "new_value": "5/7",
+      "reason": "Scene pressure advancement \u2014 PORTENT: Total monopoly (faction_victory). White consolidated ALL train supplies."
+    },
+    {
+      "day": 2,
+      "clock": "Faction Recruitment Drive",
+      "change": "+1",
+      "new_value": "3/4",
+      "reason": "Scene pressure advancement \u2014 factional lines hardening at shift-change meeting"
+    },
+    {
+      "day": 2,
+      "clock": "Faction Recruitment Drive",
+      "change": "+1",
+      "new_value": "4/4",
+      "reason": "COMPLETED — Miss on Shake's mediation attempt (2d6+1=6 vs DC 12). White issues ultimatum: join my column or walk alone."
+    },
+    {
+      "day": 2,
+      "clock": "Night Hunter Activity",
+      "change": "+1",
+      "new_value": "3/6",
+      "reason": "Scene pressure advancement — march departure, creature tracks along NEC corridor"
+    },
+    {
+      "day": 2,
+      "clock": "Guardian Guard - Protect civilians",
+      "change": "+1",
+      "new_value": "2/6",
+      "reason": "Scene pressure advancement — retroactive turn 006. PORTENT: Pressures rivals (relation_shift:-1)"
+    },
+    {
+      "day": 2,
+      "clock": "Shadow Warband - Prove strength",
+      "change": "+1",
+      "new_value": "1/5",
+      "reason": "Scene pressure advancement — retroactive turn 006. PORTENT: Raiding parties spotted (reveal_threat)"
+    }
+  ],
+  "world_pulse": {
+    "day": 2,
+    "news": "White issues ultimatum at shift-change meeting. Faction Recruitment Drive COMPLETED (4/4). Train survivors forced to choose sides. Unknown creature outside the train — not Brood, larger, intelligent behavior. Orange glow on western horizon.",
+    "rumors": [
+      "\"White said it plain: you walk with him or you walk alone. No in-between.\" \u2014 overheard at meeting",
+      "\"Something tapped on the outside of the train. Three times. Like it was knocking.\" \u2014 cafe car witness",
+      "\"Torres says there's weapons at the armory. Real weapons. But White won't detour.\" \u2014 whispered"
+    ],
+    "trends": [
+      "The Trading Company - Control supply: 5/7 (71%) \u2014 TOTAL MONOPOLY",
+      "Night Hunter Activity: 3/6 (50%)",
+      "Digital Collective - Keep power on: 3/10 (30%)",
+      "Faction Recruitment Drive: 4/4 (100%) \u2014 COMPLETED: Ultimatum issued",
+      "Guardian Guard - Protect civilians: 2/6 (33%) \u2014 PORTENT: Pressures rivals",
+      "Shadow Warband - Prove strength: 1/5 (20%) \u2014 PORTENT: Raiding parties spotted"
+    ],
+    "arrivals": []
+  },
+  "last_played": "2026-02-15T01:30:00Z"
+}

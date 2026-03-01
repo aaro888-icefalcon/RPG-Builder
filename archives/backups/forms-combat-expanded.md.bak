@@ -1,0 +1,1768 @@
+# Combat Forms (Expanded)
+
+20 Combat Form trees, each with 3 variants. Each variant modifies all techniques and adds 1 unique technique per tier.
+
+---
+
+## Techniques as Examples
+
+**The ~400 combat techniques in this document are representative examples, not an exhaustive list.**
+
+- GMs may create additional techniques following the power budget in `core-balance-templates.md`
+- Players may propose custom techniques (GM approval required, must still be discovered in-world)
+- Most campaigns will never need techniques beyond those listed here
+- Custom techniques should fit the form's theme and maintain tier-appropriate power levels
+
+**Discovery-Based Progression:** All techniques must be learned through play — scrolls, teachers, manuals, or witnessed mastery. See `progression.md` for unlock methods.
+
+---
+
+## Form Slot Progression
+
+| Level | Slots | Source |
+|-------|-------|--------|
+| 1 | 2 | Starting (Aspect×Archetype choice of 4) |
+| 4 | 3 | +1 |
+| 8 | 4 | +1 |
+| 12 | 5 | +1 |
+| 16 | 6 | +1 |
+| 20 | 7 | +1 |
+| 24 | 8 | +1 |
+| 28 | 9 | +1 |
+
+## Starting Form Options
+
+**By Aspect (choose 2 available):**
+| Aspect | Form Options |
+|--------|--------------|
+| Ore | Heavy Crush, Shield, Defensive Arts |
+| Tide | Finesse Blade, Grappling, Thrown |
+| Pyre | Heavy Blade, Axe, Aggressive Arts |
+| Gale | Light Blade, Shortbow, Thrown |
+| Radiance | Medium Blade, Shield, Defensive Arts |
+| Shroud | Light Blade, Finesse Blade, Unarmed Strike |
+| Anima | Unarmed Strike, Grappling, Environmental |
+| Aether | Crossbow, Defensive Arts, Any (wild card) |
+
+**By Archetype (choose 2 available):**
+| Archetype | Form Options |
+|-----------|--------------|
+| Striker | Heavy Blade, Heavy Crush, Aggressive Arts |
+| Guardian | Shield, Defensive Arts, Medium Crush |
+| Hunter | Longbow, Crossbow, Thrown |
+| Skirmisher | Light Blade, Finesse Blade, Dual Wield |
+| Mender | Medium Blade, Defensive Arts, Shield |
+| Warden | Polearm, Shield, Environmental |
+| Analyst | Crossbow, Finesse Blade, Thrown |
+| Speaker | Medium Blade, Finesse Blade, Defensive Arts |
+
+---
+
+## Technique Unlock Methods
+
+Techniques are NOT unlocked by use count. They must be discovered:
+
+1. **Scroll/Manual:** Found as loot or purchased
+2. **Master NPC:** Taught by skilled teacher
+3. **Survival Unlock:** Specific combat conditions trigger
+4. **Witnessed:** See enemy use, INT/WIS check to learn
+
+---
+
+## Variant System
+
+Each form has 3 variants. When you acquire a form, choose a variant. The variant:
+- Applies a **Modifier** to ALL techniques in the form
+- Provides **1 Unique Technique** per tier (4 total)
+
+Variant choice is permanent but you can learn the same form again with a different variant (costs a slot).
+
+---
+
+# FORM 1: HEAVY BLADE
+
+**Default Attribute:** MIG
+**Weapons:** Greatsword, Claymore, Zweihander, Flamberge
+**Condition Output:** Prone (Crushing Overhead), Dazed (Staggering Blow)
+**Condition Input:** Burning → Burning Cleave (Exploit), Bleeding → bonus damage
+**Tags Present:** Opener (Power Strike), Flourish (Wide Sweep), Setup (Staggering Blow), Finisher (Crushing Overhead, Executioner's Swing), Reaction (Cleave), Exploit (Burning Cleave)
+
+## Base Techniques
+
+### TIER 1
+**POWER STRIKE** | 1 AP | 2 Stamina
+Attack with +3 damage. +5 damage vs. full HP targets.
+*Unlock: Starting technique OR any T1 scroll*
+
+**WIDE SWEEP** | 2 AP | 3 Stamina
+Attack all enemies in melee range. Single roll vs. each.
+*Unlock: Scroll, Master, OR "Hit 3+ enemies in one round"*
+
+**STAGGERING BLOW** | 1 AP | 2 Stamina
+Attack. On hit, target -2 ATK and -2 DEF until end of your next turn.
+*Unlock: Scroll, Master, OR "Witness enemy use stagger effect"*
+
+### TIER 2
+**CRUSHING OVERHEAD** | 2 AP | 4 Stamina
++2 to hit. On hit, FOR save or knocked prone.
+*Unlock: T2 Scroll, Master (1 week), OR "Knock 5 enemies prone total"*
+
+**CLEAVE** | Reaction | 2 Stamina
+When you drop enemy to 0 HP, free attack vs. another in reach at -2.
+*Unlock: T2 Scroll, Master, OR "Kill 2 enemies in same turn"*
+
+**INTIMIDATING PRESENCE** | Passive | —
+Enemies you've damaged have -1 to attack you.
+*Unlock: T2 Scroll, Master, OR "Survive combat vs. 5+ enemies"*
+
+**BURNING CLEAVE** | 2 AP | 4 Stamina | *Tag: Exploit (Burning)*
+Attack with your heavy blade. If the target is Burning, deal weapon damage ×1.5 and the Burning condition spreads to all enemies within 2m of the target. If the target is not Burning, deal normal weapon damage.
+*Condition bridge: Fire magic → Heavy Blade exploitation*
+*Unlock: T2 Scroll, Master, OR "Hit a Burning enemy with a heavy blade"*
+
+### TIER 3
+**EXECUTIONER'S SWING** | 2 AP | 5 Stamina
+Attack enemy below 50% HP at +50% damage. On crit vs. target ≤30 HP, instant kill.
+*Unlock: T3 Scroll, Master (2 weeks), OR "Execute 3 enemies with finishing blows"*
+
+**EARTHSHAKER** | 3 AP | 8 Stamina
+Slam ground. 3m radius: MIG×2 damage, AGI save or prone and immobile 1 turn.
+*Unlock: T3 Scroll, Master, OR "Deal 50+ damage in single attack"*
+
+---
+
+## Variant A: DEVASTATOR
+*Modifier: All techniques +1 damage, -1 to hit*
+
+**Unique Techniques:**
+- T1 **BRUTAL CHOP:** 1 AP, 3 Stam. Attack at -2 to hit, +6 damage.
+- T2 **SUNDER ARMOR:** 2 AP, 4 Stam. On hit, reduce target armor by 2 permanently (repairs fix).
+- T3 **ANNIHILATING STRIKE:** 3 AP, 7 Stam. Attack. Damage ignores armor and resistance.
+- T4 **WORLD CLEAVER:** Passive. Crits deal +100% (not +50%). Once/rest, auto-crit on any attack.
+
+## Variant B: WARDEN BLADE
+*Modifier: All techniques +1 DEF until next turn after use, +1 Stamina cost*
+
+**Unique Techniques:**
+- T1 **DEFENSIVE SWEEP:** 2 AP, 4 Stam. Wide Sweep that also grants +2 DEF for 1 round.
+- T2 **BLADE BARRIER:** 1 AP, 3 Stam. Hold blade defensively. +3 DEF, can't attack until next turn.
+- T3 **RETALIATING GUARD:** Reaction, 4 Stam. When hit, reduce damage by MIG mod and counterattack.
+- T4 **FORTRESS OF STEEL:** Passive. +2 DEF while wielding heavy blade. Allies adjacent gain +1 DEF.
+
+## Variant C: FLOWING GREATSWORD
+*Modifier: All techniques allow 2m movement after use, +1 AP cost on T2+*
+
+**Unique Techniques:**
+- T1 **PASSING SLASH:** 1 AP, 2 Stam. Attack while moving through enemy space.
+- T2 **MOMENTUM STRIKE:** 2 AP, 4 Stam. +2 damage for every 2m moved before attack (max +8).
+- T3 **WHIRLWIND:** 3 AP, 6 Stam. Spin while moving. Attack everyone you pass within 2m.
+- T4 **DANCE OF DEATH:** Passive. No opportunity attacks while wielding heavy blade. +4m move/turn.
+
+---
+
+# FORM 2: HEAVY CRUSH
+
+**Default Attribute:** MIG
+**Weapons:** Maul, Warhammer, Tetsubo, Great Flail
+**Condition Output:** Dazed (Skull Crack), Prone (Ground Slam), Stunned (Stunner variant)
+**Condition Input:** Frozen → Shatter (Exploit), Prone → Pulverize bonus
+**Tags Present:** Setup (Skull Crack), Flourish (Ground Slam), Exploit (Shatter — vs Frozen), Reaction (Tremor Response)
+
+## Base Techniques
+
+### TIER 1
+**CRUSHING BLOW** | 1 AP | 2 Stamina
+Attack with +2 damage. Ignores 2 armor.
+*Unlock: Starting OR scroll*
+
+**SKULL CRACK** | 1 AP | 3 Stamina
+Attack. On hit, target WIL save or Dazed (-2 all rolls) 1 round.
+*Unlock: Scroll, Master, OR "Daze an enemy with any attack"*
+
+**DEMOLISH** | 2 AP | 3 Stamina
+Attack object or structure. Triple damage to inanimate objects.
+*Unlock: Scroll, Master, OR "Destroy a door/barrier in combat"*
+
+### TIER 2
+**PULVERIZE** | 2 AP | 5 Stamina
+Attack at +4 damage. If target already damaged this combat, +6 instead.
+*Unlock: T2 Scroll, Master, OR "Deal 30+ damage to single enemy in one combat"*
+
+**GROUND SLAM** | 2 AP | 4 Stamina
+Hit ground. All within 2m: MIG mod damage, AGI save or prone.
+*Unlock: T2 Scroll, Master, OR "Knock 3 enemies prone in one combat"*
+
+**ARMOR BREAKER** | Passive | —
+Your attacks reduce target's armor by 1 for the combat (stacks to -3).
+*Unlock: T2 Scroll, Master, OR "Fight enemy with 6+ armor"*
+
+**SHATTER** | 2 AP | 4 Stamina | *Tag: Exploit (Frozen)*
+Attack with your heavy crushing weapon. If the target is Frozen, the Frozen condition ends and the target takes weapon damage ×2.0 (the ice explodes). All enemies within 3m take half that damage as piercing ice shards. If the target is not Frozen, deal normal weapon damage +2.
+*Condition bridge: Water/Ice magic → Heavy Crush exploitation*
+*Unlock: T2 Scroll, Master, OR "Strike a Frozen enemy"*
+
+**TREMOR RESPONSE** | Reaction | 3 Stamina
+When an enemy moves to within melee range of you, slam the ground: they must make a FOR save (DC 10 + your MIG mod) or be knocked Prone. Usable once per round.
+*Unlock: T2 Scroll, Master, OR "Knock down an approaching enemy"*
+
+### TIER 3
+**THUNDEROUS IMPACT** | 3 AP | 7 Stamina
+Attack at +8 damage. On hit, target pushed 4m and all adjacent to impact point take MIG mod damage.
+*Unlock: T3 Scroll, Master, OR "Push enemy into hazard/wall for damage"*
+
+**BONE SHATTER** | 2 AP | 6 Stamina
+Called shot to limb at -2. On hit, limb disabled (arm: can't use, leg: speed halved) until healed.
+*Unlock: T3 Scroll, Master, OR "Cripple 2 enemies in different combats"*
+
+---
+
+## Variant A: BREAKER
+*Modifier: +2 vs. armored targets (4+ armor), -1 vs. unarmored*
+
+**Unique Techniques:**
+- T1 **DENT ARMOR:** 1 AP, 2 Stam. On hit, -1 armor to target permanently.
+- T2 **CRUSH THROUGH:** 2 AP, 5 Stam. Attack ignores all armor.
+- T3 **SHATTER EQUIPMENT:** 2 AP, 6 Stam. On hit, destroy one piece of target's equipment (their choice).
+- T4 **UNSTOPPABLE FORCE:** Passive. Ignore all damage reduction and armor. Deal double damage to objects.
+
+## Variant B: STUNNER
+*Modifier: All hits require FOR save or -1 to next roll, +1 Stamina cost*
+
+**Unique Techniques:**
+- T1 **RINGING BLOW:** 1 AP, 3 Stam. On hit, target can't take reactions until end of their turn.
+- T2 **CONCUSSIVE STRIKE:** 2 AP, 5 Stam. On hit, WIL save or Stunned (lose next action).
+- T3 **BRAIN RATTLER:** 2 AP, 6 Stam. On hit, INT/WIS-based abilities fail for 2 rounds.
+- T4 **MIND BREAKER:** Passive. Enemies you Stun take +50% damage. Stun duration +1 round.
+
+## Variant C: TITAN
+*Modifier: +1 damage per 10 HP you're missing, takes double Stamina below 50% HP*
+
+**Unique Techniques:**
+- T1 **DESPERATE SMASH:** 1 AP, 2 Stam. +1 damage per 5 HP missing (max +10).
+- T2 **BLOODIED FURY:** Passive. Below 50% HP: +2 to hit, +2 damage.
+- T3 **LAST STAND SLAM:** 3 AP, 8 Stam. Only usable below 25% HP. Attack all adjacent at +10 damage.
+- T4 **AVATAR OF RUIN:** Passive. Cannot die from damage while attacking. Die at end of turn if 0 HP.
+
+---
+
+# FORM 3: POLEARM
+
+**Default Attribute:** MIG (or AGI for light polearms)
+**Weapons:** Spear, Halberd, Pike, Glaive, Naginata
+**Condition Output:** Prone (various knockdowns), Slowed (reach control), Bleeding (Reaper variant)
+**Condition Input:** Prone → bonus reach damage, Slowed → Impaling Thrust (Exploit)
+**Tags Present:** Opener (Reach Strike - first attack at range advantage), Setup (Brace), Reaction (Brace vs charge), Finisher (Skewer), Exploit (Impaling Thrust — vs Slowed)
+
+## Base Techniques
+
+### TIER 1
+**LONG THRUST** | 1 AP | 2 Stamina
+Attack at 3m range (instead of melee). +1 damage.
+*Unlock: Starting OR scroll*
+
+**DEFENSIVE REACH** | Passive | —
+Enemies entering your reach provoke opportunity attacks.
+*Unlock: Scroll, Master, OR "Make 3 opportunity attacks in one combat"*
+
+**SWEEPING SHAFT** | 1 AP | 2 Stamina
+Hit with shaft. 1d6 damage, target AGI save or prone.
+*Unlock: Scroll, Master, OR "Knock enemy prone"*
+
+### TIER 2
+**IMPALE** | 2 AP | 4 Stamina
+Attack at +2. On crit, target is impaled (your weapon stuck, they take 1d6 at start of each turn, MIG check to remove).
+*Unlock: T2 Scroll, Master, OR "Crit with polearm"*
+
+**BRACE FOR CHARGE** | Reaction (Special) | 3 Stamina
+Declare at start of enemy turn. If enemy moves toward you, free attack at +4 damage.
+*Unlock: T2 Scroll, Master, OR "Hit charging enemy"*
+
+**POLEARM MASTERY** | Passive | —
++1 to hit and damage with all polearms. Can attack adjacent despite reach.
+*Unlock: T2 Scroll, Master, OR "Use polearm for 10 combats"*
+
+**IMPALING THRUST** | 2 AP | 4 Stamina | *Tag: Exploit (Slowed)*
+Attack. If target is Slowed, this attack deals weapon damage ×1.5 and the target is Restrained (impaled) until they spend 1 AP to pull free (taking 1d6 additional damage). If not Slowed, deal normal damage.
+*Condition bridge: Water/Ice Slowed → Polearm exploitation.*
+*Unlock: T2 Scroll, Master, OR "Impale a Slowed enemy with a polearm"*
+
+### TIER 3
+**SKEWERING THRUST** | 2 AP | 6 Stamina
+Attack all enemies in a 6m line. Single roll vs. each.
+*Unlock: T3 Scroll, Master, OR "Hit 3 enemies with polearms in one combat"*
+
+**WHIRLWIND SWEEP** | 3 AP | 7 Stamina
+Attack all enemies within 3m. On hit, pushed 2m away.
+*Unlock: T3 Scroll, Master, OR "Fight while surrounded (3+ enemies adjacent)"*
+
+---
+
+## Variant A: LANCER
+*Modifier: +2 damage on first attack each combat, -1 damage after*
+
+**Unique Techniques:**
+- T1 **OPENING THRUST:** 1 AP, 2 Stam. First attack of combat at +4 damage, +2 to hit.
+- T2 **CAVALRY CHARGE:** 2 AP, 4 Stam. Move up to speed, attack at end at +6 damage.
+- T3 **DEVASTATING CHARGE:** 3 AP, 7 Stam. Move double speed in line, attack all in path at +8 damage.
+- T4 **FIRST BLOOD:** Passive. First attack each combat auto-crits. +50% damage vs. uninjured targets.
+
+## Variant B: HOPLITE
+*Modifier: +1 DEF while not moving, -1 DEF if you moved this turn*
+
+**Unique Techniques:**
+- T1 **HOLD THE LINE:** 1 AP, 1 Stam. +2 DEF until you move. Ends if you move.
+- T2 **PHALANX POSITION:** Passive. Adjacent allies with polearms/shields: all gain +1 DEF.
+- T3 **WALL OF SPEARS:** 2 AP, 5 Stam. Until next turn, enemies can't enter your reach without AGI save.
+- T4 **IMMOVABLE GUARDIAN:** Passive. Can't be moved or prone while holding polearm. +3 DEF vs. charges.
+
+## Variant C: REAPER
+*Modifier: +1 damage vs. multiple targets, -1 vs. single target*
+
+**Unique Techniques:**
+- T1 **SCYTHING SWEEP:** 2 AP, 3 Stam. Attack two adjacent enemies.
+- T2 **HARVEST:** 2 AP, 4 Stam. Attack all enemies in 180° arc. -2 damage each.
+- T3 **DEATH'S REACH:** 3 AP, 6 Stam. All enemies in 3m: attack at full damage.
+- T4 **REAPER'S CIRCLE:** Passive. Wide attacks +2 damage per enemy hit. Max 3 targets becomes 5.
+
+---
+
+# FORM 4: AXE
+
+**Default Attribute:** MIG
+**Weapons:** Battleaxe, Greataxe, Handaxe, Dane Axe, Tomahawk
+**Condition Output:** Bleeding (chop wounds), Prone (heavy chops)
+**Condition Input:** Bleeding → Rending Strike bonus, Prone → Execute (Exploit)
+**Tags Present:** Setup (Bleeding attacks), Finisher (Execute), Flourish (Cleaving Arc)
+
+## Base Techniques
+
+### TIER 1
+**HACKING BLOW** | 1 AP | 2 Stamina
+Attack at +2 damage. On 11-12, target bleeds (2 damage/round, 3 rounds).
+*Unlock: Starting OR scroll*
+
+**RENDING STRIKE** | 1 AP | 3 Stamina
+Attack. On hit, target bleeds (3 damage/round, 2 rounds, stacks).
+*Unlock: Scroll, Master, OR "Apply bleed 3 times"*
+
+**CHOP** | 1 AP | 2 Stamina
+Attack at +1. Double damage to objects, +4 vs. wooden objects/creatures.
+*Unlock: Scroll, Master, OR "Destroy object with axe"*
+
+### TIER 2
+**SAVAGE CLEAVE** | 2 AP | 4 Stamina
+Attack. If it kills, free attack vs. adjacent at +2 damage.
+*Unlock: T2 Scroll, Master, OR "Kill with axe attack"*
+
+**HAMSTRING CHOP** | 2 AP | 4 Stamina
+Attack legs at -1. On hit, half movement until healed or rested.
+*Unlock: T2 Scroll, Master, OR "Cripple enemy's movement"*
+
+**BERSERKER SPIRIT** | Passive | —
++1 damage for each enemy you've damaged this combat (max +3).
+*Unlock: T2 Scroll, Master, OR "Damage 4 different enemies in one combat"*
+
+**RENDING EXECUTION** | 2 AP | 4 Stamina | *Tag: Exploit (Bleeding)*
+Deliver a devastating axe strike to a wounded target. If the target is Bleeding, deal weapon damage ×1.5 and the Bleeding damage per round increases by 2 (stacks with existing Bleeding). If the target is below 50% HP AND Bleeding, this attack gains advantage. If no Bleeding, deal normal weapon damage.
+*Condition bridge: Any Bleeding source → Axe exploitation*
+*Unlock: T2 Scroll, Master, OR "Kill a Bleeding enemy with an axe"*
+
+### TIER 3
+**DECAPITATING SWING** | 3 AP | 7 Stamina
+Attack enemy below 25% HP. On hit, FOR save or instant death (creatures immune: just +50% damage).
+*Unlock: T3 Scroll, Master, OR "Kill enemy with critical hit"*
+
+**WHIRLWIND AXE** | 3 AP | 6 Stamina
+Spin attack. All within melee range take weapon damage. You are dizzy (-2 DEF) for 1 round.
+*Unlock: T3 Scroll, Master, OR "Hit 4+ enemies with axes total"*
+
+---
+
+## Variant A: RAIDER
+*Modifier: +2 damage on first hit per enemy, -1 on subsequent hits to same enemy*
+
+**Unique Techniques:**
+- T1 **OPENING HACK:** 1 AP, 2 Stam. +4 damage vs. enemy you haven't hit yet.
+- T2 **TERRIFYING CHARGE:** 2 AP, 4 Stam. Charge + attack. Target WIL save or Frightened.
+- T3 **RAMPAGE:** 3 AP, 6 Stam. Attack 3 different enemies. +2 damage each.
+- T4 **DEATH DEALER:** Passive. First hit each enemy: auto-bleed. Killing blow: +5 temp HP.
+
+## Variant B: WOODSMAN
+*Modifier: +2 damage vs. larger creatures/objects, -1 vs. smaller*
+
+**Unique Techniques:**
+- T1 **TIMBER STRIKE:** 1 AP, 2 Stam. +4 damage vs. creatures larger than you.
+- T2 **MIGHTY CHOP:** 2 AP, 5 Stam. +8 damage vs. objects and constructs.
+- T3 **FELL THE GIANT:** 3 AP, 7 Stam. Attack large+ creature. On hit, AGI save or prone.
+- T4 **GIANT KILLER:** Passive. +50% damage vs. creatures 2+ sizes larger. They can't crit you.
+
+## Variant C: DUAL AXE
+*Modifier: Can dual wield handaxes, -1 damage per axe, +1 attack per turn*
+
+**Unique Techniques:**
+- T1 **TWIN CHOP:** 1 AP, 3 Stam. Attack with both axes. Off-hand at -2.
+- T2 **CROSSING AXES:** 2 AP, 4 Stam. Attack with both, same target. +4 damage if both hit.
+- T3 **BUZZSAW:** 3 AP, 6 Stam. Spin with both axes. All adjacent take damage from each axe.
+- T4 **WHIRLING DEATH:** Passive. Off-hand penalty removed. On kill, free off-hand attack.
+
+---
+
+# FORM 5: MEDIUM BLADE
+
+**Default Attribute:** MIG (or AGI via Flowing Steel)
+**Weapons:** Longsword, Katana, Saber, Bastard Sword
+**Condition Output:** Bleeding (Duelist variant), Exposed (feints)
+**Condition Input:** Exposed → precision strike, Dazed → exploit opening
+**Tags Present:** Opener (Lunge), Flourish (Combination Attack), Reaction (Riposte), Exploit (Punishing Riposte — vs Exposed)
+
+## Base Techniques
+
+### TIER 1
+**MEASURED THRUST** | 1 AP | 2 Stamina
++2 to hit. Cannot crit but cannot miss by more than 2.
+*Unlock: Starting OR scroll*
+
+**DEFENSIVE SLASH** | 1 AP | 2 Stamina
+Attack. Gain +2 DEF until start of next turn.
+*Unlock: Scroll, Master, OR "Successfully defend 3 times in combat"*
+
+**DISARMING CUT** | 1 AP | 3 Stamina
+-2 to hit. On hit, MIG save or target drops weapon.
+*Unlock: Scroll, Master, OR "Witness disarm"*
+
+### TIER 2
+**RIPOSTE** | Reaction | 2 Stamina
+When enemy misses melee, attack at +2.
+*Unlock: T2 Scroll, Master, OR "Dodge 5 attacks in one combat"*
+
+**VERSATILE TECHNIQUE** | Passive | —
+Two-handed: +2 damage. One-handed with shield: +1 DEF.
+*Unlock: T2 Scroll, Master, OR "Use both grips in one combat"*
+
+**FEINT** | 1 AP | 2 Stamina
+Target -4 DEF vs. your next attack this turn. If it hits, +2 damage.
+*Unlock: T2 Scroll, Master, OR "Hit enemy with 6+ DEF"*
+
+**PUNISHING RIPOSTE** | 2 AP | 4 Stamina | *Tag: Exploit (Exposed)*
+Attack. If target is Exposed, deal weapon damage ×1.5 and the target is Dazed for 1 round. Consuming the Exposed condition. If not Exposed, deal normal weapon damage +2.
+*Condition bridge: Setup Strike talent / ally abilities → Medium Blade exploitation.*
+*Unlock: T2 Scroll, Master, OR "Strike an Exposed enemy with a medium blade"*
+
+### TIER 3
+**BLADE DANCE** | 3 AP | 6 Stamina
+Make 3 attacks at -1 each. Can split between targets.
+*Unlock: T3 Scroll, Master, OR "Hit 3 times in one turn"*
+
+**PRECISION COUNTER** | Reaction | 4 Stamina
+When enemy attacks ally in reach, attack. If you deal more damage than they would, their attack misses.
+*Unlock: T3 Scroll, Master, OR "Protect ally from damage"*
+
+---
+
+## Variant A: DUELIST
+*Modifier: +1 to hit vs. single enemy in reach, -1 if 2+ enemies in reach*
+
+**Unique Techniques:**
+- T1 **SINGLE COMBAT:** 1 AP, 2 Stam. Challenge one enemy. +2 to hit them, -2 vs. others.
+- T2 **PARRY AND THRUST:** Reaction, 3 Stam. When attacked, roll AGI vs attack. Beat it: negate and counterattack.
+- T3 **PERFECT RIPOSTE:** Passive. Riposte deals +4 damage and auto-crits if enemy missed by 4+.
+- T4 **MASTER DUELIST:** Passive. 1v1: +3 to all rolls. Can parry any attack (even ranged) once/round.
+
+## Variant B: KNIGHT
+*Modifier: +1 DEF while in Defensive stance, -1 DEF in other stances*
+
+**Unique Techniques:**
+- T1 **GUARDIAN'S STRIKE:** 1 AP, 2 Stam. Attack. Adjacent ally gains +2 DEF for 1 round.
+- T2 **SHIELD OF BLADES:** 2 AP, 4 Stam. Until next turn, block attacks on adjacent allies (you take the hit).
+- T3 **CHIVALRIC CHALLENGE:** 2 AP, 4 Stam. Target must attack only you for 3 rounds (WIL save each turn).
+- T4 **STALWART DEFENDER:** Passive. When ally in reach hit, you may take half the damage. +2 DEF.
+
+## Variant C: IAIJUTSU
+*Modifier: +3 damage from sheathed, must sheathe after each attack*
+
+**Unique Techniques:**
+- T1 **QUICK DRAW:** 1 AP, 1 Stam. Draw and attack. +2 damage.
+- T2 **FLASH BLADE:** 1 AP, 3 Stam. Draw, attack, sheathe. +4 damage, target doesn't know they're hit until turn ends.
+- T3 **FOUR WINDS CUT:** 2 AP, 6 Stam. Draw. Attack all adjacent. Sheathe. They don't realize until you sheathe.
+- T4 **PERFECT DRAW:** Passive. First attack from sheathed: auto-crit. Can draw/sheathe as free actions.
+
+---
+
+# FORM 6: MEDIUM CRUSH
+
+**Default Attribute:** MIG
+**Weapons:** Mace, Morningstar, Flail, War Pick
+**Condition Output:** Dazed (concussive hits), Prone (sweeps), Stunned (Skullcrusher variant)
+**Condition Input:** Dazed → escalating stun (Exploit), Prone → ground-and-pound
+**Tags Present:** Setup (Daze), Exploit (Concussive Follow-Up — vs Dazed), Flourish (Sweeping Strike)
+
+## Base Techniques
+
+### TIER 1
+**SMASH** | 1 AP | 2 Stamina
+Attack at +1 damage. Ignores 1 armor.
+*Unlock: Starting OR scroll*
+
+**SHIELD BREAKER** | 1 AP | 3 Stamina
+Attack at -1. On hit, shield provides half bonus until repaired.
+*Unlock: Scroll, Master, OR "Hit enemy with shield"*
+
+**HOBBLING STRIKE** | 1 AP | 2 Stamina
+Attack legs. On hit, -2m movement for 2 rounds.
+*Unlock: Scroll, Master, OR "Reduce enemy movement"*
+
+### TIER 2
+**CHAIN WRAP** | 2 AP | 4 Stamina (Flail only)
+Attack. On hit, target grappled by weapon. They can escape (MIG vs MIG) or you can release.
+*Unlock: T2 Scroll, Master, OR "Grapple enemy"*
+
+**SHIELD BASH** | 1 AP | 2 Stamina (With shield)
+Hit with shield. 1d6 + FOR damage, push 2m.
+*Unlock: T2 Scroll, Master, OR "Push enemy"*
+
+**ARMOR DENT** | Passive | —
+Each hit reduces target armor by 1 (stacks to -3, resets after combat).
+*Unlock: T2 Scroll, Master, OR "Fight armored enemy"*
+
+**CONCUSSIVE FOLLOW-UP** | 2 AP | 4 Stamina | *Tag: Exploit (Dazed)*
+Attack. If target is Dazed, deal weapon damage ×1.5 and the target is Stunned for 1 round (escalating from Dazed). Dazed condition ends when replaced by Stunned.
+*Condition bridge: Mind magic/other crush → Medium Crush exploitation.*
+*Unlock: T2 Scroll, Master, OR "Strike a Dazed enemy with a medium crush weapon"*
+
+### TIER 3
+**METEOR STRIKE** | 3 AP | 7 Stamina
+Jump and bring weapon down. +8 damage, AGI save or prone and Dazed.
+*Unlock: T3 Scroll, Master, OR "Deal 25+ damage in one hit"*
+
+**FLURRY OF BLOWS** | 3 AP | 6 Stamina
+Make 4 attacks at -2 each.
+*Unlock: T3 Scroll, Master, OR "Hit same enemy 3 times in one turn"*
+
+---
+
+## Variant A: TEMPLAR
+*Modifier: +2 damage vs. unholy/undead, -1 vs. living*
+
+**Unique Techniques:**
+- T1 **HOLY SMITE:** 1 AP, 3 Stam. Attack deals radiant damage. +4 vs. undead.
+- T2 **BANISHING BLOW:** 2 AP, 5 Stam. On hit, undead/fiend: WIL save or destroyed (if HP < your level × 3).
+- T3 **DIVINE WRATH:** 3 AP, 7 Stam. All undead in 5m: 4d6 radiant, WIL save half.
+- T4 **HOLY WARRIOR:** Passive. Immune to fear, disease, poison. Mace deals radiant. Undead can't regenerate.
+
+## Variant B: GLADIATOR
+*Modifier: +1 to hit per spectator (max +3), no bonus if alone*
+
+**Unique Techniques:**
+- T1 **CROWD PLEASER:** 1 AP, 2 Stam. Flashy attack. +2 damage if allies watching.
+- T2 **SHOWSTOPPER:** 2 AP, 4 Stam. Dramatic strike. On kill, all allies +2 to next roll.
+- T3 **CHAMPION'S BLOW:** 3 AP, 6 Stam. Attack at +6 damage. All witnesses (friend/foe) must WIL save or be impressed.
+- T4 **LEGENDARY GLADIATOR:** Passive. Can't be surprised if anyone watching. Killing blow: recover 10 HP.
+
+## Variant C: SKULLCRUSHER
+*Modifier: +2 to Daze/Stun effects, all techniques +1 Stamina cost*
+
+**Unique Techniques:**
+- T1 **RATTLING HIT:** 1 AP, 3 Stam. On hit, WIL save or Dazed 1 round.
+- T2 **MIND BREAKER:** 2 AP, 5 Stam. On hit, INT/WIS save or confused (random action) 1 round.
+- T3 **CONCUSSION WAVE:** 3 AP, 7 Stam. 3m radius. All: FOR save or Stunned 1 round.
+- T4 **BRAIN SMASHER:** Passive. Stuns you cause last +1 round. Stunned enemies take +50% damage.
+
+---
+
+[Continuing with Forms 7-20...]
+
+# FORM 7: LIGHT BLADE
+
+**Default Attribute:** AGI
+**Weapons:** Dagger, Shortsword, Kukri, Tanto
+**Condition Output:** Bleeding (cuts), Exposed (quick strikes), Poisoned (Assassin variant)
+**Condition Input:** Blinded → guaranteed hit, Exposed → bonus damage
+**Tags Present:** Setup (Quick Cut → Exposed), Finisher (Throat Slash), Flourish (Flurry), Exploit (Assassin's Mark — vs Blinded)
+
+## Base Techniques
+
+### TIER 1
+**QUICK STRIKE** | 1 AP | 1 Stamina
++2 to hit, -2 damage.
+*Unlock: Starting OR scroll*
+
+**OPPORTUNISTIC STAB** | Passive | —
++3 damage vs. enemies who haven't acted this combat.
+*Unlock: Scroll, Master, OR "Attack before enemy acts"*
+
+**SLIP AWAY** | 1 AP | 2 Stamina
+Attack then move 3m without provoking.
+*Unlock: Scroll, Master, OR "Escape melee without being hit"*
+
+### TIER 2
+**FLURRY** | 2 AP | 4 Stamina
+Two attacks vs. same target at -2 damage each.
+*Unlock: T2 Scroll, Master, OR "Hit twice in one turn"*
+
+**HAMSTRING** | 1 AP | 3 Stamina
+-2 to hit. On hit, speed halved until end of their next turn.
+*Unlock: T2 Scroll, Master, OR "Prevent enemy from escaping"*
+
+**EXPLOIT OPENING** | Reaction | 2 Stamina
+When ally hits enemy in reach, attack at +2.
+*Unlock: T2 Scroll, Master, OR "Fight alongside ally"*
+
+**ASSASSIN'S MARK** | 2 AP | 3 Stamina | *Tag: Exploit (Blinded)*
+Attack. If target is Blinded, this attack automatically hits and deals weapon damage ×2.0 (treated as a critical hit for the purpose of critical effects). If not Blinded, deal normal weapon damage.
+*Condition bridge: Light magic/Thrown flash → Light Blade assassination.*
+*Unlock: T2 Scroll, Master, OR "Strike a Blinded enemy with a light blade"*
+
+### TIER 3
+**DEATH OF A THOUSAND CUTS** | 3 AP | 5 Stamina
+Four attacks, any targets in reach. Damage without stat mod.
+*Unlock: T3 Scroll, Master, OR "Hit 4 times total with light blade"*
+
+**VITAL STRIKE** | 2 AP | 4 Stamina
+Auto-targets vitals (no called shot penalty). +50% damage, +100% on crit.
+*Unlock: T3 Scroll, Master, OR "Land 5 critical hits with light blade"*
+
+---
+
+## Variant A: ASSASSIN
+*Modifier: +3 damage from stealth/surprise, -1 damage otherwise*
+
+**Unique Techniques:**
+- T1 **SILENT KILL:** 1 AP, 2 Stam. From stealth: attack at +4 damage. No sound on kill.
+- T2 **POISON BLADE:** 1 AP, 3 Stam. Apply poison to blade. Next 3 hits: +2d6 poison damage.
+- T3 **DEATH STRIKE:** 2 AP, 6 Stam. From stealth vs. unaware: triple damage.
+- T4 **PERFECT ASSASSIN:** Passive. Kills don't break stealth. Auto-crit from stealth.
+
+## Variant B: BRAWLER
+*Modifier: Can attack as part of grapple, -1 to non-grapple attacks*
+
+**Unique Techniques:**
+- T1 **SHANK:** 1 AP, 1 Stam. Attack while grappling at +2. Doesn't break grapple.
+- T2 **HOLD AND STAB:** 2 AP, 4 Stam. Grapple + attack in one action.
+- T3 **GUTTING:** 2 AP, 5 Stam. While grappling: attack that auto-crits if they fail escape.
+- T4 **CLOSE-QUARTERS MASTER:** Passive. Grappled enemies can't attack you. +4 damage while grappling.
+
+## Variant C: THROWN SPECIALIST
+*Modifier: Light blades can be thrown (10m), -1 damage melee*
+
+**Unique Techniques:**
+- T1 **QUICK THROW:** 1 AP, 1 Stam. Throw dagger at +2 to hit within 10m.
+- T2 **FAN OF KNIVES:** 2 AP, 4 Stam. Throw 3 daggers at different targets.
+- T3 **RETURNING BLADE:** Passive. Thrown blades return to hand (magical or skill).
+- T4 **BLADE STORM:** 3 AP, 7 Stam. Throw at all enemies you can see. Auto-return after.
+
+---
+
+# FORM 8: FINESSE BLADE
+
+**Default Attribute:** AGI (or PRC via Surgical Precision)
+**Weapons:** Rapier, Estoc, Smallsword, Épée
+**Condition Output:** Bleeding (precise cuts), Exposed (feints)
+**Condition Input:** Slowed → precision exploit, Dazed → exploit opening
+**Tags Present:** Opener (En Garde), Flourish (Riposte Chain), Reaction (Parry Counter), Exploit (Exploit Weakness — vs Slowed/Dazed)
+
+## Base Techniques
+
+### TIER 1
+**PRECISE THRUST** | 1 AP | 2 Stamina
++2 to hit. If you beat DEF by 4+, +3 damage.
+*Unlock: Starting OR scroll*
+
+**EN GARDE** | 0 AP | 1 Stamina
+Defensive stance specific to rapier. +2 DEF until you attack.
+*Unlock: Scroll, Master, OR "Avoid 3 attacks in one combat"*
+
+**LUNGE** | 1 AP | 2 Stamina
+Attack at +2m reach, +2 damage. -2 DEF until next turn.
+*Unlock: Scroll, Master, OR "Attack enemy just out of reach"*
+
+### TIER 2
+**PARRY** | Reaction | 2 Stamina
+Roll AGI vs attack roll. Beat: attack negated.
+*Unlock: T2 Scroll, Master, OR "Successfully dodge 3 times in one combat"*
+
+**RIPOSTE** | Reaction (after Parry) | 1 Stamina
+If Parry succeeds, free attack at +2.
+*Unlock: T2 Scroll, Master, OR "Parry twice in one combat"*
+
+**BINDING BLADE** | 1 AP | 3 Stamina
+Lock blades. Target can't attack others until they pass MIG/AGI check to break.
+*Unlock: T2 Scroll, Master, OR "Fight enemy with sword"*
+
+**EXPLOIT WEAKNESS** | 2 AP | 4 Stamina | *Tag: Exploit (Slowed/Dazed)*
+Attack. If target is Slowed or Dazed, deal weapon damage ×1.5 and apply Bleeding (2/round, 3 rounds). The precision of your strikes finds gaps in their compromised defense.
+*Condition bridge: Water/Mind debuffs → Finesse Blade exploitation.*
+*Unlock: T2 Scroll, Master, OR "Strike a debilitated enemy with a finesse blade"*
+
+### TIER 3
+**FLÈCHE** | 2 AP | 5 Stamina
+Charge up to speed, attack at +4 damage, continue 2m past.
+*Unlock: T3 Scroll, Master, OR "Kill enemy with single thrust"*
+
+**WHIRLWIND RIPOSTE** | Reaction | 5 Stamina
+When enemy misses, attack them AND another enemy in reach.
+*Unlock: T3 Scroll, Master, OR "Riposte 5 times total"*
+
+---
+
+## Variant A: COURT SWORD
+*Modifier: +1 to Persuasion/Intimidation while drawn, -1 damage*
+
+**Unique Techniques:**
+- T1 **FLOURISH:** 0 AP, 1 Stam. Impressive display. +2 to social rolls this scene.
+- T2 **FIRST BLOOD:** 1 AP, 2 Stam. In formal duel: first hit wins. Attack at +2.
+- T3 **NOBLE'S CHALLENGE:** 2 AP, 4 Stam. Challenge enemy to duel. If they refuse, allies +2 vs them.
+- T4 **LEGENDARY DUELIST:** Passive. In 1v1: +4 to all rolls. Fame: enemies may refuse to fight.
+
+## Variant B: MAIN GAUCHE (Off-hand dagger)
+*Modifier: +1 DEF, requires off-hand dagger, -1 damage without*
+
+**Unique Techniques:**
+- T1 **TRAP BLADE:** Reaction, 2 Stam. Catch enemy blade with dagger. -2 their next attack.
+- T2 **DOUBLE PARRY:** Reaction, 3 Stam. Parry with dagger AND sword (two separate attempts).
+- T3 **RIPOSTE COMBO:** Reaction, 4 Stam. After parry: attack with both rapier and dagger.
+- T4 **TWIN BLADE MASTER:** Passive. Parry costs no Stamina. Off-hand dagger adds +2 to parry.
+
+## Variant C: SPORTING
+*Modifier: +1 to hit unarmored, -2 vs heavily armored (5+ DEF from armor)*
+
+**Unique Techniques:**
+- T1 **TARGET PRACTICE:** 1 AP, 2 Stam. +4 to hit vs. unarmored targets.
+- T2 **FIND THE GAP:** 2 AP, 4 Stam. Attack ignores armor if you beat DEF by 4+.
+- T3 **PERFECT STRIKE:** 2 AP, 5 Stam. Attack at +4 to hit. On hit, max damage.
+- T4 **SURGICAL PRECISION:** Passive. Called shots at no penalty. Crits ignore armor entirely.
+
+---
+
+# FORMS 9-12: RANGED
+
+# FORM 9: LONGBOW
+
+**Default Attribute:** PRC
+**Weapons:** Longbow (base 8 dmg, 60m), War Bow (base 9 dmg, 50m), Greatbow (base 10 dmg, 40m), Composite Longbow (base 8 dmg, 70m)
+**Condition Output:** Slowed (pinning shot), Bleeding (broadhead)
+**Condition Input:** Prone → auto-crit from range, Frozen/Slowed → Shattering Shot (Exploit)
+**Tags Present:** Opener (Aimed Shot), Setup (Pinning Shot), Exploit (vs Prone/Frozen), Flourish (Volley)
+
+## Base Techniques
+
+### TIER 1
+**AIMED SHOT** | 1 AP | 2 Stamina | Range: weapon
+Attack with +3 damage; if you did not move this turn, +4 damage instead.
+*Unlock: Starting OR scroll*
+
+**QUICK SHOT** | 1 AP | 1 Stamina | Range: weapon
+Attack at -2 damage but does not end your turn; you may still take non-attack actions after.
+*Unlock: Scroll, Master, OR "Fire two arrows in one combat round"*
+
+**PINNING SHOT** | 1 AP | 3 Stamina | Range: weapon
+Attack at +1 damage; on hit, target AGI save or pinned to nearest surface (0 movement until STR check to free, 1 AP).
+*Unlock: Scroll, Master, OR "Prevent an enemy from moving"*
+
+### TIER 2
+**PIERCING SHOT** | 2 AP | 4 Stamina | Range: weapon
+Attack at +4 damage that ignores up to 3 armor.
+*Unlock: T2 Scroll, Master (1 week), OR "Hit an enemy with 5+ armor"*
+
+**DOUBLE DRAW** | 2 AP | 4 Stamina | Range: weapon
+Nock two arrows and fire: make two attacks at -1 damage each against one target or two targets within 2m of each other.
+*Unlock: T2 Scroll, Master, OR "Hit two different enemies with bow in one combat"*
+
+**OVERWATCH** | Reaction | 3 Stamina | Range: weapon
+Set a firing position (requires no movement this turn); the next enemy that moves within your line of sight before your next turn provokes a free attack at +2 to hit.
+*Unlock: T2 Scroll, Master, OR "Hit an enemy during their movement"*
+
+**SHATTERING SHOT** | 2 AP | 3 Stamina | *Tag: Exploit (Frozen/Slowed)*
+Fire a carefully aimed arrow at a vulnerable target. If the target is Frozen, this attack automatically crits (×2.0 damage) and the Frozen condition ends. If the target is Slowed, this attack gains advantage (+2 to hit). If neither, deal normal weapon damage.
+*Condition bridge: Water/Ice magic or Gale effects → Longbow exploitation*
+*Unlock: T2 Scroll, Master, OR "Shoot a Frozen or Slowed enemy"*
+
+### TIER 3
+**HEARTSEEKER** | 2 AP | 6 Stamina | Range: weapon
+Called shot to vitals at -2 to hit; on hit, +8 damage and target FOR save or Bleeding (3/round, 3 rounds).
+*Unlock: T3 Scroll, Master (2 weeks), OR "Land 3 critical hits with a bow"*
+
+**RAIN OF ARROWS** | 3 AP | 7 Stamina | Range: 30m-weapon max
+Loose arrows in a high arc onto a 3m radius area; all creatures in the area take weapon damage, AGI save for half.
+*Unlock: T3 Scroll, Master, OR "Hit 4+ enemies with bow attacks across your career"*
+
+---
+
+## Variant A: MARKSMAN
+*Modifier: +1 damage at 30m+ range, -1 damage at less than 10m range*
+
+**Unique Techniques:**
+- T1 **STEADY AIM:** 1 AP, 2 Stam. Forgo all movement this turn; your next Longbow attack this turn gains advantage (roll 3d6 keep best 2).
+- T2 **KILLSHOT:** 2 AP, 5 Stam. Attack at +6 damage against a target that has not moved since your last turn; requires Focused stance or no movement.
+- T3 **ONE SHOT, ONE KILL:** 2 AP, 7 Stam. Attack at +8 damage; if the target is below 50% HP on hit, they must make a FOR save or die (creatures immune to instant death take +50% damage instead).
+- T4 **DEADEYE:** Passive. Attacks beyond 30m gain +2 to hit. Called shots with bows have no penalty. Crits deal +100% damage (instead of +50%).
+
+## Variant B: VOLLEY
+*Modifier: Can target a 2m radius area (all creatures take half damage), -2 single-target damage*
+
+**Unique Techniques:**
+- T1 **SUPPRESSING FIRE:** 1 AP, 3 Stam. Target a 3m area; until your next turn, enemies in that area have -2 to all rolls and treat the area as difficult terrain.
+- T2 **ARROW STORM:** 2 AP, 5 Stam. Rain arrows on a 4m radius area at weapon range; all creatures in the area take weapon damage +2, AGI save for half.
+- T3 **HAIL OF DEATH:** 3 AP, 8 Stam. Bombard a 5m radius area; all creatures take weapon damage +6, AGI save for half, and the area becomes difficult terrain for 2 rounds.
+- T4 **LIVING ARTILLERY:** Passive. Area attacks gain +1 radius. Enemies that start their turn in your area effects take 4 damage. You can maintain one suppression zone as a free action.
+
+## Variant C: TACTICAL
+*Modifier: +1 to condition/effect DCs inflicted by your techniques, -1 damage*
+
+**Unique Techniques:**
+- T1 **ROPE ARROW:** 1 AP, 2 Stam. Fire a trailing-line arrow; on hit, target is Tethered (must spend 1 AP to break or be unable to move beyond 6m from the anchor point).
+- T2 **SMOKE ARROW:** 1 AP, 4 Stam. Fire an alchemical arrow that creates a 3m radius smoke cloud on impact (blocks line of sight, lasts 2 rounds); does no damage.
+- T3 **HAMSTRING VOLLEY:** 2 AP, 6 Stam. Attack at +4 damage; on hit, target's movement is halved and they cannot take reactions for 2 rounds (no save).
+- T4 **MASTER FLETCHER:** Passive. You carry 3 specialty arrows per rest (choose from: Incendiary +4 fire damage, Barbed +bleed 2/round, Blunt +Daze on hit, Whistling +all allies gain +2 vs target). Switching arrow types is a free action.
+
+---
+
+# FORM 10: SHORTBOW
+
+**Default Attribute:** AGI/PRC
+**Weapons:** Shortbow (base 6 dmg, 30m), Recurve Bow (base 7 dmg, 25m), Hunting Bow (base 6 dmg, 35m)
+**Condition Output:** Bleeding (barbed arrow), Slowed (leg shot)
+**Condition Input:** Exposed → rapid fire bonus, Frightened → flee shot
+**Tags Present:** Reaction (Snap Shot), Setup (Harrying Fire), Flourish (Rapid Fire), Exploit (Harrying Volley — vs Frightened)
+
+## Base Techniques
+
+### TIER 1
+**SNAP SHOT** | 1 AP | 1 Stamina | Range: weapon
+Quick-draw attack at weapon damage +1. If you already hit this target with a Shortbow attack this round, gain +1 to hit (rapid target acquisition). Can be used after moving. *Tag: none*
+*Unlock: Starting OR scroll*
+
+**RUNNING SHOT** | 1 AP | 2 Stamina | Range: weapon
+Move up to 4m and fire: deal weapon damage. If you end this movement further from the target than you started, gain +2 DEF until start of your next turn (kiting bonus). *Tag: none*
+*Unlock: Scroll, Master, OR "Fire a bow while moving"*
+
+**WARNING SHOT** | 1 AP | 2 Stamina | Range: weapon
+Fire near target's feet; on hit, target WIL save or Frightened (moves away from you on their next turn).
+*Unlock: Scroll, Master, OR "Intimidate an enemy at range"*
+
+### TIER 2
+**RAPID FIRE** | 2 AP | 4 Stamina | Range: weapon
+Make two attacks at -1 damage each against one target or two targets within 3m of each other.
+*Unlock: T2 Scroll, Master, OR "Fire twice in one combat round"*
+
+**DISENGAGE SHOT** | 1 AP | 3 Stamina | Range: weapon
+Attack at +2 damage then move 4m without provoking opportunity attacks.
+*Unlock: T2 Scroll, Master, OR "Successfully retreat from melee while carrying a bow"*
+
+**CALLED BARRAGE** | 2 AP | 4 Stamina | Range: weapon
+Make two aimed attacks at +2 to hit each; if both hit the same target, +3 bonus damage.
+*Unlock: T2 Scroll, Master, OR "Land 3 consecutive bow hits in one combat"*
+
+**HARRYING VOLLEY** | 2 AP | 4 Stamina | *Tag: Exploit (Frightened)*
+Attack. If target is Frightened, this attack deals weapon damage +4 and forces the target to use their next move action to flee directly away from you (no save). If not Frightened, deal weapon damage +2.
+*Condition bridge: Shadow/Intimidation fear → Shortbow exploitation.*
+*Unlock: T2 Scroll, Master, OR "Shoot a Frightened enemy with a shortbow"*
+
+### TIER 3
+**ARROW FLURRY** | 3 AP | 6 Stamina | Range: weapon
+Loose four arrows in rapid succession at up to four targets; each attack at -2 damage.
+*Unlock: T3 Scroll, Master (2 weeks), OR "Hit 4 different enemies with bow attacks across your career"*
+
+**SKIRMISH VOLLEY** | 2 AP | 5 Stamina | Range: weapon
+Move up to your full speed and make two attacks at +3 damage each at any points during the movement.
+*Unlock: T3 Scroll, Master, OR "Kill an enemy while moving"*
+
+---
+
+## Variant A: SWIFT
+*Modifier: Can move 2m after each shot, -1 damage*
+
+**Unique Techniques:**
+- T1 **FLEET ARROW:** 1 AP, 2 Stam. Attack and move 4m in any direction; this movement does not count against your turn movement.
+- T2 **STRAFING RUN:** 2 AP, 4 Stam. Move up to 6m in a straight line and fire three shots at -2 damage each at any targets you pass within range.
+- T3 **WIND RUNNER:** 2 AP, 6 Stam. For the next 2 rounds, all your Shortbow attacks grant 3m free movement and do not provoke opportunity attacks.
+- T4 **BLUR OF ARROWS:** Passive. You can fire Shortbow attacks as part of any movement action. +2m movement per turn while wielding a Shortbow.
+
+## Variant B: MOUNTED
+*Modifier: +2 damage while mounted or after moving 4m+, -2 damage when stationary*
+
+**Unique Techniques:**
+- T1 **SADDLE SHOT:** 1 AP, 2 Stam. Attack from a mount at +3 damage; no penalty for mount movement.
+- T2 **PARTHIAN SHOT:** 1 AP, 3 Stam. After your mount moves at least 6m away from an enemy, fire a rear shot at +4 damage with advantage on the attack roll.
+- T3 **CAVALRY SWEEP:** 2 AP, 5 Stam. While mounted at full gallop, attack all enemies within range along your movement path (max 4 targets) at +6 damage each.
+- T4 **BORN IN THE SADDLE:** Passive. No penalty for any ranged attack while mounted. Mount gains +4m speed. You cannot be dismounted while conscious.
+
+## Variant C: HUNTER
+*Modifier: +2 damage vs beasts/large targets, -1 damage vs humanoids*
+
+**Unique Techniques:**
+- T1 **TRACKING ARROW:** 1 AP, 2 Stam. On hit, the arrow leaves a scent trail; you gain advantage on all checks to track this target for 8 hours.
+- T2 **BEAST SLAYER:** 2 AP, 4 Stam. Attack a beast or creature larger than you at +6 damage; if the target is wounded below 50% HP, +8 damage instead.
+- T3 **HEART OF THE WILD:** 2 AP, 6 Stam. Called shot to vitals of beast/large creature at +8 damage; on hit, FOR save or Bleeding (4/round, 3 rounds) and Slowed (half movement).
+- T4 **APEX PREDATOR:** Passive. You can identify creature weaknesses on sight (GM reveals resistances/vulnerabilities). Beasts with INT below 6 will not willingly attack you.
+
+---
+
+# FORM 11: CROSSBOW
+
+**Default Attribute:** PRC/INT
+**Weapons:** Light Crossbow (base 8 dmg, 40m), Heavy Crossbow (base 12 dmg, 50m, 2 AP reload), Repeating Crossbow (base 6 dmg, 30m, no reload)
+**Condition Output:** Restrained (net bolt - Engineer variant), Bleeding (bolt wounds)
+**Condition Input:** Restrained → precision shot (Exploit), Prone → headshot
+**Tags Present:** Opener (Aimed Bolt), Setup (Net Bolt), Exploit (Pinpoint Bolt — vs Restrained), Sustained (Overwatch)
+
+## Base Techniques
+
+### TIER 1
+**BOLT SHOT** | 1 AP | 2 Stamina | Range: weapon
+Standard crossbow attack dealing weapon damage +2. If the target has not yet been damaged this combat, the bolt's impact reveals their armor rating (you learn their exact DEF value and armor type). *Tag: none*
+*Unlock: Starting OR scroll*
+
+**AIMED BOLT** | 1 AP | 2 Stamina | Range: weapon
+Take careful aim: +2 to hit. On hit, mark the target for 2 rounds. While marked, the next crossbow attack against this target (by you or an ally) gains +2 to hit. Only one mark active at a time. *Tag: Setup*
+*Unlock: Scroll, Master, OR "Hit an enemy behind partial cover"*
+
+**LOADED AND READY** | Reaction | 2 Stamina | Range: weapon
+Pre-load your crossbow (declared at start of your turn); fire as a reaction when any enemy moves within your line of sight before your next turn at +2 to hit.
+*Unlock: Scroll, Master, OR "Hit an enemy during their turn"*
+
+### TIER 2
+**PENETRATING BOLT** | 2 AP | 4 Stamina | Range: weapon
+Fire a bolt that punches through defenses; +4 damage, ignores up to 4 armor.
+*Unlock: T2 Scroll, Master, OR "Hit an enemy with 5+ armor using a crossbow"*
+
+**EXPLOSIVE BOLT** | 2 AP | 4 Stamina | Range: weapon
+Fire a modified bolt that detonates on impact; target and all creatures within 2m take weapon damage, AGI save for half on secondary targets.
+*Unlock: T2 Scroll, Master, OR "Deal damage to 2+ enemies in one combat with crossbow"*
+
+**COVERING FIRE** | 2 AP | 3 Stamina | Range: weapon
+Fire bolts at a 3m area; until your next turn, enemies in that area have -2 to all attack rolls and treat the area as difficult terrain.
+*Unlock: T2 Scroll, Master, OR "Prevent an enemy from advancing on an ally"*
+
+**PINPOINT BOLT** | 2 AP | 4 Stamina | *Tag: Exploit (Restrained)*
+Attack. If target is Restrained, this attack automatically crits (×2.0 damage) and bypasses all armor. If not Restrained, deal normal weapon damage.
+*Condition bridge: Grappling/Environmental/Earth → Crossbow exploitation.*
+*Unlock: T2 Scroll, Master, OR "Shoot a Restrained enemy with a crossbow"*
+
+### TIER 3
+**SIEGE SHOT** | 3 AP | 7 Stamina | Range: weapon
+Brace weapon and fire a maximally-charged bolt at +8 damage that ignores all armor and pushes the target 2m back.
+*Unlock: T3 Scroll, Master (2 weeks), OR "Deal 20+ damage in a single crossbow hit"*
+
+**MECHANICAL BARRAGE** | 3 AP | 6 Stamina | Range: weapon
+Fire a rapid volley of four bolts at up to four targets; each bolt deals weapon damage +2, and any target hit twice must FOR save or be Staggered (-2 all rolls, 1 round).
+*Unlock: T3 Scroll, Master, OR "Hit 4 different enemies with crossbow attacks across your career"*
+
+---
+
+## Variant A: ENGINEER
+*Modifier: Can modify crossbow (1/rest, choose: scope +2 hit, hair trigger -1 AP reload, heavy draw +3 damage). -1 to hit without modification.*
+
+**Unique Techniques:**
+- T1 **FIELD MODIFICATION:** 0 AP, 1 Stam. Swap your current crossbow modification for a different one mid-combat; the new modification takes effect immediately.
+- T2 **GADGET BOLT:** 1 AP, 4 Stam. Fire a specialty bolt (choose: grappling hook anchors to surface, flashbang blinds 2m radius for 1 round WIL save, smoke creates 3m obscured area for 2 rounds).
+- T3 **MASTERWORK ASSEMBLY:** 2 AP, 6 Stam. Apply two modifications simultaneously to your crossbow for the rest of the combat; all attacks gain both bonuses.
+- T4 **GRAND ARTIFICER:** Passive. Modifications no longer cost a rest to swap (free action, once per turn). Your crossbow never jams or breaks. +2 damage to all crossbow attacks.
+
+## Variant B: SNIPER
+*Modifier: +2 damage beyond 30m, +1 AP cost to all shots (deliberate aiming)*
+
+**Unique Techniques:**
+- T1 **LONG SHOT:** 2 AP, 2 Stam. Attack at +3 damage; if target is beyond 30m, +5 damage instead and ignore cover penalties.
+- T2 **KILLZONE:** 2 AP, 4 Stam. Declare a 2m area within range as your killzone; until your next turn, the first enemy to enter or start their turn there takes an automatic attack at +4 damage.
+- T3 **EXECUTION BOLT:** 3 AP, 7 Stam. Spend a full round aiming; attack at +8 damage with advantage, ignores all armor, and target below 30% HP must FOR save or die (creatures immune to instant death take +50% damage instead).
+- T4 **GHOST IN THE DISTANCE:** Passive. Attacks beyond 30m do not reveal your position. You can use PRC or INT for crossbow attack rolls. Called shots at range have no penalty.
+
+## Variant C: REPEATER
+*Modifier: Repeating crossbow only. No reload needed, -2 damage per bolt.*
+
+**Unique Techniques:**
+- T1 **RAPID BOLTS:** 1 AP, 2 Stam. Fire two bolts at -3 damage each at one target or two adjacent targets.
+- T2 **SUPPRESSION STREAM:** 2 AP, 4 Stam. Fire six bolts across a 4m wide area; all creatures in the area take weapon damage -2, and cannot take reactions until your next turn.
+- T3 **HAIL OF BOLTS:** 3 AP, 6 Stam. Empty your magazine into a 3m radius area; all creatures take weapon damage x3, AGI save for half, and the area becomes difficult terrain from embedded bolts.
+- T4 **ENDLESS BARRAGE:** Passive. Your repeating crossbow never runs out of ammunition in combat. Once per round, you may fire a bolt as a free action at -4 damage.
+
+---
+
+# FORM 12: THROWN
+
+**Default Attribute:** AGI
+**Weapons:** Throwing Knives (base 4 dmg, 15m), Javelins (base 8 dmg, 20m), Throwing Axes (base 6 dmg, 15m), Shuriken (base 3 dmg, 10m, 3/action)
+**Condition Output:** Blinded (flash), Bleeding (blade throw), Slowed (bola)
+**Condition Input:** Blinded → guaranteed hit, Prone → rain of blades
+**Tags Present:** Setup (Flash — Blinded), Exploit (Flash Follow-Up — vs Blinded), Flourish (Fan of Blades)
+
+## Base Techniques
+
+### TIER 1
+**QUICK TOSS** | 1 AP | 1 Stamina | Range: weapon
+Hurl a thrown weapon at +2 damage as a swift action; you may still take a non-attack action after.
+*Unlock: Starting OR scroll*
+
+**AIMED THROW** | 1 AP | 2 Stamina | Range: weapon
+Throw with careful aim: +2 to hit, +1 damage. Choose the impact point — you may target a specific body part without the normal called-shot penalty (arm: -2 ATK 1 round; leg: -2m movement 1 round; hand: AGI save or drop held item). *Tag: none*
+*Unlock: Scroll, Master, OR "Hit an enemy behind cover with a thrown weapon"*
+
+**FAN OF BLADES** | 1 AP | 2 Stamina | Range: 10m
+Throw three light weapons (knives or shuriken) at up to three different targets within 10m at weapon damage each.
+*Unlock: Scroll, Master, OR "Hit 2 different enemies with thrown weapons in one round"*
+
+### TIER 2
+**POWER HURL** | 2 AP | 4 Stamina | Range: weapon +5m
+Put your full body behind the throw; +5 damage and +5m range, but you cannot attack again this turn.
+*Unlock: T2 Scroll, Master, OR "Deal 10+ damage with a single thrown weapon"*
+
+**DISARMING THROW** | 1 AP | 3 Stamina | Range: weapon
+Target an enemy's weapon hand at -1 to hit; on hit, target AGI save or drops their weapon 2m away.
+*Unlock: T2 Scroll, Master, OR "Disarm an enemy by any means"*
+
+**RETURNING THROW** | 1 AP | 3 Stamina | Range: weapon
+Throw with a spin that curves the weapon back to your hand; attack at +2 damage and the weapon returns at end of turn.
+*Unlock: T2 Scroll, Master, OR "Recover a thrown weapon mid-combat"*
+
+**FLASH FOLLOW-UP** | 2 AP | 3 Stamina | *Tag: Exploit (Blinded)*
+Attack. If target is Blinded, deal weapon damage ×1.5 and the target remains Blinded for 1 additional round (the flash overwhelms their recovering senses). If not Blinded, deal normal weapon damage.
+*Condition bridge: Light magic/your own Flash → Thrown exploitation.*
+*Unlock: T2 Scroll, Master, OR "Hit a Blinded target with a thrown weapon"*
+
+### TIER 3
+**BARRAGE** | 3 AP | 6 Stamina | Range: weapon
+Unleash a storm of thrown weapons; make five attacks against any targets in range at weapon damage each.
+*Unlock: T3 Scroll, Master (2 weeks), OR "Hit 5 different enemies with thrown weapons across your career"*
+
+**PERFECT THROW** | 2 AP | 5 Stamina | Range: weapon x2
+Make an impossible throw that ignores cover, curves around obstacles, and strikes with devastating accuracy; +7 damage, auto-hit (target rolls AGI save, failure = full damage, success = half damage).
+*Unlock: T3 Scroll, Master, OR "Land a thrown weapon hit at maximum range"*
+
+---
+
+## Variant A: BLADE DANCER
+*Modifier: Thrown weapons can ricochet to a second target within 3m (half damage), -1 primary damage*
+
+**Unique Techniques:**
+- T1 **TRICK SHOT:** 1 AP, 2 Stam. Throw a blade that ricochets off a surface to hit a target behind cover; ignores cover bonuses and deals +2 damage.
+- T2 **CASCADE:** 2 AP, 4 Stam. Throw a single weapon that bounces between up to three enemies within 3m of each other; first target takes full damage, second takes 75%, third takes 50%.
+- T3 **STORM OF STEEL:** 3 AP, 6 Stam. Throw four weapons that each ricochet to a second target; up to 8 total hits at weapon damage each, no target can be hit more than twice.
+- T4 **IMPOSSIBLE ANGLES:** Passive. Ricochet damage increases to 75% (instead of half). Thrown weapons can bounce off any solid surface. You can hit targets you cannot see via ricochet.
+
+## Variant B: JAVELIN
+*Modifier: +3 damage with javelins/heavy thrown, -2 damage with light thrown*
+
+**Unique Techniques:**
+- T1 **SHIELD PIERCE:** 1 AP, 2 Stam. Hurl a javelin at +3 damage that ignores shield bonuses to DEF entirely.
+- T2 **PINNING JAVELIN:** 2 AP, 4 Stam. Throw a javelin at +5 damage; on hit, target is pinned to nearest surface (MIG save to free, costs 1 AP) and cannot move.
+- T3 **SKYFALL JAVELIN:** 2 AP, 6 Stam. Hurl a javelin in a high arc that comes down with devastating force; +8 damage, ignores 3 armor, and target AGI save or prone.
+- T4 **PHALANX THROWER:** Passive. You carry 6 javelins without encumbrance penalty. Drawing a javelin is a free action. Javelin range increased by 10m.
+
+## Variant C: IMPROVISED
+*Modifier: Any object can be thrown (base 4 dmg, 10m), +2 to hit with improvised, -1 with regular thrown*
+
+**Unique Techniques:**
+- T1 **GRAB AND THROW:** 1 AP, 1 Stam. Pick up any nearby object and throw it in one action; +3 to hit, and if the object is heavy (chair, rock) add +2 damage.
+- T2 **ENVIRONMENTAL HAZARD:** 2 AP, 3 Stam. Throw a dangerous environmental object (lantern, acid vial, loose debris) that deals weapon damage plus an additional effect (fire, acid, difficult terrain in 2m radius).
+- T3 **ANYTHING IS A WEAPON:** 2 AP, 5 Stam. Hurl a massive improvised object (table, barrel, body) at a 2m area; all creatures in the area take 6+MIG mod damage, AGI save or prone and buried (1 AP to escape).
+- T4 **MASTER OF NONE:** Passive. Improvised thrown weapons deal base 6 damage (instead of 4) and have 15m range. You never run out of things to throw in any environment. +2 damage with all thrown weapons.
+
+# FORMS 13-16: DEFENSIVE/SPECIAL
+
+# FORM 13: SHIELD
+
+**Default Attribute:** FOR
+**Weapons:** Buckler (+1 DEF), Round Shield (+2 DEF), Tower Shield (+3 DEF, -1 ATK), Magical Shield (varies)
+**Aspect Affinity:** Ore, Radiance | **Archetype Affinity:** Guardian
+**Condition Output:** Prone (shield bash), Dazed (slam), Stunned (Protector variant)
+**Condition Input:** Stunned → follow-up slam, Lightning damage → Magnetic Repulse (Exploit)
+**Tags Present:** Reaction (Shield Block, Intercept), Setup (Shield Bash → Prone), Exploit (vs Stunned/Lightning), Sustained (Shield Wall)
+
+## Base Techniques
+
+### TIER 1
+**BLOCK** | Reaction | 2 Stamina
+React to an incoming attack to add shield DEF bonus to your defense for that attack.
+*Unlock: Starting OR scroll*
+
+**SHIELD BASH** | 1 AP | 2 Stamina
+Strike with your shield, dealing 1d6 + FOR damage and pushing the target 2m.
+*Unlock: Scroll, Master, OR "Push an enemy with your shield"*
+
+**BRACE** | 1 AP | 2 Stamina
+Plant your shield and prepare for impact, gaining +2 DEF until the start of your next turn.
+*Unlock: Scroll, Master, OR "Block 3 attacks in one combat"*
+
+### TIER 2
+**SHIELD WALL** | 1 AP | 4 Stamina
+Extend your shield to cover an adjacent ally, granting them your shield's DEF bonus until your next turn.
+*Unlock: T2 Scroll, Master (1 week), OR "Block an attack meant for an ally"*
+
+**DEFLECTING STRIKE** | Reaction | 3 Stamina
+After successfully blocking an attack, immediately counterattack at +2 to hit.
+*Unlock: T2 Scroll, Master, OR "Block and attack in the same round 3 times"*
+
+**SHIELD CHARGE** | 2 AP | 5 Stamina
+Rush up to your movement speed in a straight line, slamming into a target for 2d6 + FOR damage; target AGI save or knocked prone.
+*Unlock: T2 Scroll, Master, OR "Knock an enemy prone with a shield"*
+
+**MAGNETIC REPULSE** | 2 AP | 3 Stamina | *Tag: Exploit (Lightning)*
+Slam your shield forward with a repelling force. If the target took Lightning damage this round, push them 4m away and they cannot willingly move within 3m of you until end of their next turn. All enemies within 2m of the target are also pushed 2m. If the target did not take Lightning damage, push them 2m only.
+*Condition bridge: Lightning magic → Shield exploitation*
+*Unlock: T2 Scroll, Master, OR "Block an attack while Lightning is active nearby"*
+
+### TIER 3
+**FORTRESS STANCE** | 2 AP | 6 Stamina
+Plant yourself immovably, doubling your shield's DEF bonus and gaining immunity to knockback and prone for 2 rounds; you cannot move while active.
+*Unlock: T3 Scroll, Master (2 weeks), OR "Block 10 attacks in a single combat"*
+
+**DEVASTATING SLAM** | 3 AP | 7 Stamina
+Bring your shield crashing down on a target for 3d6 + FOR damage, ignoring 3 armor; on hit, target FOR save or Stunned for 1 round.
+*Unlock: T3 Scroll, Master, OR "Deal 20+ damage with shield attacks across your career"*
+
+---
+
+## Variant A: BULWARK
+*Modifier: +1 DEF while using Shield techniques, -2m movement*
+
+**Unique Techniques:**
+- T1 **IMMOVABLE GUARD:** 1 AP, 2 Stam. Plant your feet and raise your shield; you cannot be moved or knocked prone until your next turn.
+- T2 **AEGIS OF IRON:** 2 AP, 4 Stam. Reduce all incoming damage by 4 for 1 round; stacks with shield DEF bonus.
+- T3 **UNBREAKABLE WALL:** 2 AP, 7 Stam. For 2 rounds, all attacks against you and adjacent allies have disadvantage; you cannot move or attack.
+- T4 **LIVING FORTRESS:** Passive. Your shield DEF bonus is doubled. You cannot be critically hit while wielding a shield.
+
+## Variant B: SHIELD BASH
+*Modifier: Shield attacks deal shield DEF bonus as additional damage, -1 DEF*
+
+**Unique Techniques:**
+- T1 **BACKHAND SMASH:** 1 AP, 2 Stam. Quick shield strike at +3 damage that interrupts the target's next action if they act immediately after you.
+- T2 **CONCUSSIVE BLOW:** 2 AP, 4 Stam. Slam shield into target's head for 2d6 + FOR damage; WIL save or Dazed (-2 all rolls) for 1 round.
+- T3 **AVALANCHE RUSH:** 3 AP, 6 Stam. Charge up to double movement, hitting every enemy in your path for 2d6 + FOR damage; each target AGI save or prone.
+- T4 **SHIELD MASTER:** Passive. Shield attacks deal full weapon-equivalent damage (use shield DEF bonus as base damage die). Shield Bash no longer ends your turn.
+
+## Variant C: PROTECTOR
+*Modifier: Can intercept attacks on adjacent allies, -1 to own DEF when protecting*
+
+**Unique Techniques:**
+- T1 **GUARDIAN'S STEP:** Reaction, 2 Stam. When an ally within 3m is attacked, move adjacent to them and add your shield bonus to their DEF for that attack.
+- T2 **SACRIFICIAL BLOCK:** Reaction, 4 Stam. Take an attack meant for an adjacent ally; reduce the damage you receive by your shield's DEF bonus.
+- T3 **PHALANX COMMAND:** 2 AP, 6 Stam. All allies within 3m gain your shield's DEF bonus for 2 rounds; you take -2 DEF during this time.
+- T4 **UNDYING GUARDIAN:** Passive. When an ally within 3m would drop to 0 HP, you may take the remaining damage instead (once per rest). Allies adjacent to you cannot be critically hit.
+
+---
+
+# FORM 14: DUAL WIELD
+
+**Default Attribute:** AGI
+**Weapons:** Any two one-handed weapons
+**Aspect Affinity:** Shroud, Gale | **Archetype Affinity:** Skirmisher
+**Condition Output:** Bleeding (twin cuts), Exposed (feinting attacks)
+**Condition Input:** Exposed → dual exploit, Bleeding → twin bleed stack
+**Tags Present:** Flourish (Flurry of Steel), Finisher (Full Combo), Opener (Cross Strike), Exploit (Savage Onslaught — vs Prone)
+
+## Base Techniques
+
+### TIER 1
+**TWIN STRIKE** | 1 AP | 3 Stamina
+Attack with both weapons against one target; main hand at full damage, off-hand at -2 damage.
+*Unlock: Starting OR scroll*
+
+**OFF-HAND SLASH** | 0 AP | 2 Stamina
+After attacking with your main hand, make a bonus off-hand attack at -2 to hit and -2 damage.
+*Unlock: Scroll, Master, OR "Hit with both weapons in one round"*
+
+**CROSS PARRY** | Reaction | 2 Stamina
+Cross both weapons to deflect an incoming melee attack, gaining +2 DEF for that attack.
+*Unlock: Scroll, Master, OR "Avoid 3 melee attacks in one combat"*
+
+### TIER 2
+**FLURRY OF STEEL** | 2 AP | 5 Stamina
+Make three rapid attacks (alternating hands) at -1 to hit each against one or two targets.
+*Unlock: T2 Scroll, Master (1 week), OR "Hit with 4 attacks in one combat"*
+
+**RENDING STRIKE** | 2 AP | 4 Stamina
+Drive both weapons into one target simultaneously for combined weapon damage +4; target bleeds (2 damage/round, 2 rounds).
+*Unlock: T2 Scroll, Master, OR "Deal 15+ damage in one round with dual weapons"*
+
+**DANCE OF BLADES** | 1 AP | 3 Stamina
+Attack one target, then move 3m without provoking opportunity attacks and attack a second target; both attacks at -1 damage.
+*Unlock: T2 Scroll, Master, OR "Attack two different enemies in one turn"*
+
+**SAVAGE ONSLAUGHT** | 2 AP | 5 Stamina | *Tag: Exploit (Prone)*
+Attack with both weapons against a single target. If target is Prone, both attacks automatically hit and deal weapon damage +3 each. If not Prone, make normal attack rolls for each.
+*Condition bridge: Shield bash/Heavy Crush knockdown → Dual Wield exploitation.*
+*Unlock: T2 Scroll, Master, OR "Attack a Prone enemy while dual wielding"*
+
+### TIER 3
+**BLADE STORM** | 3 AP | 7 Stamina
+Spin through enemies, making one attack against every enemy within melee range at -2 to hit; you may move 2m between each attack.
+*Unlock: T3 Scroll, Master (2 weeks), OR "Hit 4 different enemies with dual weapons across your career"*
+
+**PERFECT COMBINATION** | 2 AP | 6 Stamina
+Unleash a devastating main-off-main-off combo on one target: four attacks, if all four hit the target takes an additional +8 bonus damage.
+*Unlock: T3 Scroll, Master, OR "Land 3 consecutive hits on the same target in one turn"*
+
+---
+
+## Variant A: WHIRLWIND
+*Modifier: All dual attacks can target separate enemies, -1 damage per hit*
+
+**Unique Techniques:**
+- T1 **SPINNING SLASH:** 1 AP, 3 Stam. Attack two different adjacent enemies with one sweeping motion, one weapon each.
+- T2 **CYCLONE STRIKE:** 2 AP, 5 Stam. Attack all enemies within 2m; each takes one weapon's damage at -2.
+- T3 **TEMPEST OF BLADES:** 3 AP, 7 Stam. Move up to your speed, attacking every enemy you pass within 2m with both weapons; each target takes combined weapon damage.
+- T4 **EYE OF THE STORM:** Passive. When surrounded by 3+ enemies, gain +1 to hit and +1 DEF per enemy beyond 2. Multi-target attacks no longer suffer damage penalties.
+
+## Variant B: PAIRED BLADES
+*Modifier: If both attacks hit same target, +3 bonus damage; -2 damage when attacking different targets*
+
+**Unique Techniques:**
+- T1 **MATCHED CUT:** 1 AP, 3 Stam. Strike the same wound with both weapons; if both hit, the second attack ignores 2 armor.
+- T2 **CHAIN COMBO:** 2 AP, 4 Stam. Attack same target: if main hand hits, off-hand gains +3 to hit; if both hit, target is Staggered (-2 DEF, 1 round).
+- T3 **DEATH BY A THOUSAND CUTS:** 2 AP, 6 Stam. Six rapid strikes at one target (-2 to hit each); each hit after the first deals +1 cumulative damage.
+- T4 **PERFECT SYNC:** Passive. Off-hand penalty removed entirely. When both weapons hit the same target, the target cannot take reactions until their next turn.
+
+## Variant C: OFF-HAND DEFENSE
+*Modifier: Off-hand weapon grants +1 DEF, off-hand attacks deal -2 damage*
+
+**Unique Techniques:**
+- T1 **DEFENSIVE RIPOSTE:** Reaction, 2 Stam. When you block with your off-hand weapon, immediately counterattack with your main hand at +1 to hit.
+- T2 **BLADE SHIELD:** 1 AP, 3 Stam. Use off-hand weapon purely defensively, gaining +3 DEF until your next turn; you cannot make off-hand attacks this round.
+- T3 **COUNTER FLURRY:** Reaction, 5 Stam. When an enemy misses you in melee, attack them with both weapons at +2 to hit.
+- T4 **DUAL DISCIPLINE:** Passive. Off-hand DEF bonus increases to +2. Once per round, you may Block (as Shield form) using your off-hand weapon.
+
+---
+
+# FORM 15: UNARMED STRIKE
+
+**Default Attribute:** MIG/AGI
+**Weapons:** Fists, kicks, elbows, knees, headbutt; Gauntlets add +1-2 damage
+**Aspect Affinity:** Anima, Pyre | **Archetype Affinity:** Striker
+**Condition Output:** Dazed (stunning fist), Exposed (pressure points), Prone (sweep)
+**Condition Input:** Any debuff → Pressure Point doubled duration (Exploit)
+**Tags Present:** Setup (Pressure Point), Exploit (vs any debuff), Flourish (Combo), Finisher (One-Inch Punch)
+
+## Base Techniques
+
+### TIER 1
+**JAB** | 1 AP | 1 Stamina
+Fast unarmed strike at +2 to hit, dealing 1d4 + MIG or AGI damage.
+*Unlock: Starting OR scroll*
+
+**POWER STRIKE** | 1 AP | 3 Stamina
+Heavy unarmed attack dealing 1d6 + MIG damage with +2 bonus damage; -1 to hit.
+*Unlock: Scroll, Master, OR "Knock an enemy back with an unarmed attack"*
+
+**DEFENSIVE STANCE** | 1 AP | 2 Stamina
+Adopt a guarded posture, gaining +2 DEF and the ability to Block (Reaction: reduce melee damage by MIG mod) until your next turn.
+*Unlock: Scroll, Master, OR "Avoid 3 attacks in one combat while unarmed"*
+
+### TIER 2
+**COMBINATION** | 2 AP | 4 Stamina
+Throw a rapid three-hit combo (jab-cross-hook) against one target; each hit deals 1d4 + stat mod, and if all three land the target is Staggered (-2 DEF, 1 round).
+*Unlock: T2 Scroll, Master (1 week), OR "Hit the same enemy 3 times in one combat unarmed"*
+
+**SWEEPING KICK** | 1 AP | 3 Stamina
+Low kick targeting the legs, dealing 1d6 + AGI damage; target AGI save or knocked prone.
+*Unlock: T2 Scroll, Master, OR "Knock an enemy prone"*
+
+**COUNTER STRIKE** | Reaction | 3 Stamina
+When an enemy misses you with a melee attack, immediately strike them for 1d6 + stat mod damage at +2 to hit.
+*Unlock: T2 Scroll, Master, OR "Dodge 5 melee attacks total while unarmed"*
+
+**PRESSURE POINT EXPLOIT** | 1 AP | 3 Stamina | *Tag: Exploit (any debuff)*
+Strike a precise pressure point on a debilitated target. If the target has any debuff condition (Bleeding, Burning, Poisoned, Dazed, Slowed, Frightened), deal weapon damage and the debuff's remaining duration doubles (max +3 rounds added). If the target has no debuff, deal weapon damage -2.
+*Condition bridge: Any debuff source → Unarmed exploitation*
+*Unlock: T2 Scroll, Master, OR "Hit an enemy that has 2 or more conditions"*
+
+### TIER 3
+**HURRICANE KICK** | 2 AP | 6 Stamina
+Leaping spinning kick hitting all enemies within 2m for 2d6 + AGI damage; targets AGI save or pushed 3m.
+*Unlock: T3 Scroll, Master (2 weeks), OR "Hit 3 enemies in one round with unarmed attacks"*
+
+**ONE INCH PUNCH** | 2 AP | 7 Stamina
+Devastating close-range strike against a single target for 3d6 + MIG damage, ignoring all armor; target FOR save or Stunned for 1 round.
+*Unlock: T3 Scroll, Master, OR "Deal 20+ unarmed damage in a single combat"*
+
+---
+
+## Variant A: IRON FIST
+*Modifier: Unarmed damage +2, -1 to hit*
+
+**Unique Techniques:**
+- T1 **HAMMER FIST:** 1 AP, 3 Stam. Overhead strike dealing 1d6 + MIG +3 damage; ignores 1 armor.
+- T2 **BODY BLOW:** 2 AP, 4 Stam. Target the torso for 2d6 + MIG damage; on hit, target FOR save or Winded (lose 1 AP next turn).
+- T3 **METEOR STRIKE:** 2 AP, 7 Stam. Leaping downward punch dealing 3d6 + MIG +4 damage to one target and 1d6 to all within 1m of impact.
+- T4 **FISTS OF STONE:** Passive. Unarmed attacks count as magical and deal damage equal to weapon attacks. Your hands cannot be broken or disarmed. +3 unarmed damage.
+
+## Variant B: FLOWING
+*Modifier: +1 DEF while using Unarmed techniques, unarmed damage -1*
+
+**Unique Techniques:**
+- T1 **REDIRECT:** Reaction, 2 Stam. When hit by a melee attack, reduce damage by AGI mod and move 2m without provoking.
+- T2 **WATER STANCE:** 1 AP, 3 Stam. Enter a flowing stance; until your next turn, all missed melee attacks against you provoke a free unarmed counter at +1.
+- T3 **BORROWED FORCE:** Reaction, 5 Stam. When an enemy hits you in melee, redirect their own damage back at them (they take the same damage they dealt).
+- T4 **UNTOUCHABLE:** Passive. +2 DEF while unarmored and unarmed. Once per round, automatically dodge one attack (no roll needed).
+
+## Variant C: PRESSURE POINTS
+*Modifier: Unarmed attacks can target pressure points (PRC check: -2 to target stat for 1 round), -2 damage*
+
+**Unique Techniques:**
+- T1 **NERVE STRIKE:** 1 AP, 2 Stam. Attack targeting a nerve cluster; on hit, target arm goes numb (-3 to attacks with that arm, 2 rounds).
+- T2 **PARALYZING TOUCH:** 1 AP, 4 Stam. Precise strike requiring PRC check vs. target FOR; on success, target loses 1 AP next turn.
+- T3 **DEATH TOUCH:** 2 AP, 7 Stam. Strike five pressure points in sequence (PRC check at -2); on success, target takes 4d6 internal damage (ignores armor) and is Weakened (-3 all physical stats, 3 rounds).
+- T4 **MERIDIAN MASTER:** Passive. Pressure point effects last double duration. You can target pressure points to heal allies (restore 2d6 HP, 1/rest per ally).
+
+---
+
+# FORM 16: GRAPPLING
+
+**Default Attribute:** MIG/FOR
+**Weapons:** None (body)
+**Aspect Affinity:** Anima, Tide | **Archetype Affinity:** Any
+**Condition Output:** Restrained (grapple), Prone (takedown), Exposed (pin)
+**Condition Input:** Prone → takedown bonus, Slowed → easy grab
+**Tags Present:** Sustained (Grapple Hold), Setup (Takedown → Prone), Finisher (Submission), Exploit (Submission Hold — vs Dazed/Stunned)
+
+## Base Techniques
+
+### TIER 1
+**GRAB** | 1 AP | 2 Stamina
+Attempt to grapple a target within melee range; contested MIG check to establish hold (target is Grappled: 0 movement, -2 to attacks against others).
+*Unlock: Starting OR scroll*
+
+**THROW** | 1 AP | 3 Stamina
+Hurl a grappled target up to 3m, dealing 1d6 + MIG damage; target lands prone.
+*Unlock: Scroll, Master, OR "Grapple an enemy successfully"*
+
+**PIN** | 1 AP | 2 Stamina
+Force a grappled target prone and hold them down; target is Pinned (0 AP until they escape, contested MIG/AGI check to break free).
+*Unlock: Scroll, Master, OR "Hold a grapple for 2 consecutive rounds"*
+
+### TIER 2
+**CHOKEHOLD** | 1 AP | 4 Stamina
+Apply a choke to a grappled target; they take 1d6 damage at the start of each of their turns and cannot speak or cast verbal spells until they escape.
+*Unlock: T2 Scroll, Master (1 week), OR "Maintain a grapple for 3 rounds"*
+
+**SUPLEX** | 2 AP | 5 Stamina
+Lift a grappled target overhead and slam them into the ground for 2d6 + MIG +3 damage; target FOR save or Dazed for 1 round.
+*Unlock: T2 Scroll, Master, OR "Throw 3 enemies total"*
+
+**BREAK FREE COUNTER** | Reaction | 3 Stamina
+When an enemy attempts to grapple you, reverse their hold and immediately establish your own grapple on them instead.
+*Unlock: T2 Scroll, Master, OR "Escape from a grapple 3 times"*
+
+**SUBMISSION HOLD** | 2 AP | 5 Stamina | *Tag: Exploit (Dazed/Stunned)*
+Grapple check with advantage. If target is Dazed or Stunned, automatically succeed on the grapple and the target takes 2d6 bludgeoning damage per round while grappled (no save to escape for 2 rounds). If not Dazed/Stunned, normal grapple check.
+*Condition bridge: Heavy Crush stun/Mind daze → Grappling exploitation.*
+*Unlock: T2 Scroll, Master, OR "Grapple a Dazed or Stunned enemy"*
+
+### TIER 3
+**SUBMISSION LOCK** | 2 AP | 6 Stamina
+Apply a joint lock to a grappled target; they take 2d6 damage per round and must choose: take the damage or surrender (incapacitated, combat ends for them).
+*Unlock: T3 Scroll, Master (2 weeks), OR "Pin 5 enemies across your career"*
+
+**DEVASTATING DRIVER** | 3 AP | 8 Stamina
+Lift a grappled target high and drive them headfirst into the ground for 4d6 + MIG damage; target FOR save or Stunned for 2 rounds, and all enemies within 2m must WIL save or become Frightened for 1 round.
+*Unlock: T3 Scroll, Master, OR "Deal 30+ grapple damage in a single combat"*
+
+---
+
+## Variant A: WRESTLER
+*Modifier: Throws deal +2 damage, +1 AP to establish grapple*
+
+**Unique Techniques:**
+- T1 **TACKLE:** 2 AP, 3 Stam. Rush up to 4m and grab a target; on success, both you and target end prone with you in grapple control.
+- T2 **POWER BOMB:** 2 AP, 5 Stam. Lift a grappled target and slam them for 2d6 + MIG +4 damage; if target is smaller than you, damage is doubled against the ground.
+- T3 **PILEDRIVER:** 3 AP, 7 Stam. Devastating inverted slam on a grappled target for 3d6 + MIG +6 damage; target FOR save or one limb is disabled until healed.
+- T4 **UNRIVALED WRESTLER:** Passive. Grapple checks gain +3. You can grapple creatures one size larger than normally allowed. Throws deal +4 damage and always knock prone.
+
+## Variant B: SUBMISSION
+*Modifier: Submission holds deal cumulative damage (+1/round held), -2 to initial grapple check*
+
+**Unique Techniques:**
+- T1 **ARM BAR:** 1 AP, 2 Stam. Apply an arm lock to a grappled target; target takes 1d4 damage per round and attacks with that arm at -3 until they escape.
+- T2 **STRANGLEHOLD:** 1 AP, 4 Stam. Advanced choke on a grappled target; they take 1d6 + FOR damage per round and must escape within 3 rounds or fall unconscious.
+- T3 **CRIPPLING LOCK:** 2 AP, 6 Stam. Lock a joint on a grappled target; they take 2d6 damage per round, and after 2 rounds the limb is permanently disabled until magically healed.
+- T4 **INEVITABLE HOLD:** Passive. Escape DC for your grapples increases by +2 each round held. Targets that fail to escape your submissions take +50% damage on your next grapple technique.
+
+## Variant C: SUMO
+*Modifier: Cannot be moved while braced, -2m movement*
+
+**Unique Techniques:**
+- T1 **PALM STRIKE:** 1 AP, 2 Stam. Open-palm thrust dealing 1d6 + MIG damage that pushes the target 3m; you do not move.
+- T2 **IMMOVABLE STANCE:** 1 AP, 3 Stam. Root yourself to the ground; you cannot be grappled, pushed, pulled, or knocked prone for 2 rounds, but you cannot move.
+- T3 **EARTH SHAKER STOMP:** 2 AP, 6 Stam. Slam your foot into the ground; all enemies within 3m take MIG + FOR damage, AGI save or prone, and the area becomes difficult terrain for 2 rounds.
+- T4 **MOUNTAIN BODY:** Passive. +3 to all grapple checks. Your weight counts as two size categories higher for push/grapple contests. Cannot be moved against your will by any non-magical means.
+
+# FORM 17: DEFENSIVE ARTS
+
+**Default Attribute:** FOR/AGI
+**Weapons:** Any (or unarmed) — this form is weapon-agnostic
+**Aspect Affinity:** Ore, Radiance
+**Archetype Affinity:** Guardian
+**Condition Output:** Exposed (counter openings), Dazed (deflection daze)
+**Condition Input:** Exposed → counter exploit, any melee attack → reactive damage
+**Tags Present:** Reaction (Counter, Deflect, Redirect), Setup (expose on miss), Sustained (Defensive Stance), Exploit (Punishing Counter — vs Exposed)
+
+> **Identity:** Stanceless defense. Dodge, parry, endure. Works with any weapon or unarmed. This form does not deal damage directly — it prevents damage, controls positioning, and punishes attackers. Pairs with any weapon form for a defense-first playstyle.
+
+## Base Techniques
+
+### TIER 1
+**BRACE** | 1 AP | 2 Stamina
+Gain +3 DEF until the start of your next turn; does not stack with stance DEF bonuses.
+*Unlock: Starting OR scroll*
+
+**SIDESTEP** | Reaction | 2 Stamina
+When attacked in melee, roll AGI vs attack roll; on success, the attack misses and you move 2m without provoking.
+*Unlock: Scroll, Master, OR "Dodge 3 melee attacks in one combat"*
+
+**ABSORB IMPACT** | Reaction | 3 Stamina
+When hit, reduce incoming damage by FOR mod +2 (minimum 1 damage taken).
+*Unlock: Scroll, Master, OR "Take 20+ damage in a single combat"*
+
+### TIER 2
+**DEFLECTING GUARD** | 1 AP | 4 Stamina
+Until your next turn, reduce all incoming damage by 4 and redirect one melee attack to an adjacent enemy (attacker rolls vs that enemy's DEF).
+*Unlock: T2 Scroll, Master, OR "Redirect an enemy attack"*
+
+**STONE STANCE** | 1 AP | 3 Stamina
+Plant your feet; gain +4 DEF and immunity to forced movement for 2 rounds, but you cannot move voluntarily.
+*Unlock: T2 Scroll, Master, OR "Hold a position against 3+ enemies"*
+
+**DANGER SENSE** | Passive | --
+You cannot be surprised and gain +2 DEF against attacks from enemies you cannot see.
+*Unlock: T2 Scroll, Master, OR "Survive an ambush"*
+
+**PUNISHING COUNTER** | 2 AP | 4 Stamina | *Tag: Exploit (Exposed)*
+Attack. If target is Exposed, deal weapon damage ×1.5 and gain +2 DEF until end of your next turn. Consumes Exposed. If not Exposed, deal normal weapon damage.
+*Condition bridge: Setup Strike talent / ally debuffs → Defensive Arts exploitation.*
+*Unlock: T2 Scroll, Master, OR "Counterattack an Exposed enemy"*
+
+### TIER 3
+**INDOMITABLE** | 2 AP | 6 Stamina
+For 3 rounds, the first attack against you each round automatically misses; subsequent attacks still resolve normally.
+*Unlock: T3 Scroll, Master, OR "Survive a combat at less than 5 HP"*
+
+**GUARDIAN'S AEGIS** | 2 AP | 7 Stamina
+Choose up to 3 allies within 3m; until your next turn, you intercept all attacks targeting them and gain +2 DEF for each ally protected.
+*Unlock: T3 Scroll, Master, OR "Protect an ally from a killing blow"*
+
+---
+
+## Variant A: EVASION
+*Modifier: +1 DEF when you moved this turn, -1 DEF when stationary*
+
+**Unique Techniques:**
+- T1 **TUMBLING DODGE:** Reaction, 2 Stam. When attacked, move 4m in any direction without provoking; the attack automatically misses if you leave its range.
+- T2 **FLOWING RETREAT:** 1 AP, 4 Stam. Move up to full speed; each enemy you pass within 2m must roll AGI vs your AGI or lose their reaction for this round.
+- T3 **AFTERIMAGE:** 2 AP, 6 Stam. For 2 rounds, the first attack each round targets a phantom; you may immediately reposition up to 4m as a free action.
+- T4 **UNTOUCHABLE:** Passive. Attacks against you have -2 to hit while you have moved this turn; opportunity attacks against you always miss.
+
+## Variant B: ENDURANCE
+*Modifier: Reduce all damage taken by 1 (after armor), +1 Stamina cost on all techniques*
+
+**Unique Techniques:**
+- T1 **IRON BODY:** 1 AP, 3 Stam. Gain temporary HP equal to FOR mod +3; lasts until end of combat or depleted.
+- T2 **PAIN THRESHOLD:** Passive. Conditions caused by damage (Bleeding, Dazed, Staggered) have their duration reduced by 1 round (minimum 1).
+- T3 **UNYIELDING:** 2 AP, 7 Stam. For 3 rounds, you cannot be reduced below 1 HP; damage that would kill you instead sets you to 1 HP (once per rest).
+- T4 **LIVING FORTRESS:** Passive. +10 maximum HP. Damage reduction increases to 3 (after armor). You are immune to instant death effects.
+
+## Variant C: COUNTER
+*Modifier: +2 damage on reaction attacks, -1 DEF when not using a reaction*
+
+**Unique Techniques:**
+- T1 **PUNISHING RIPOSTE:** Reaction, 2 Stam. When an enemy misses you in melee, make an immediate attack at +3 damage.
+- T2 **REDIRECTING STRIKE:** Reaction, 4 Stam. When attacked in melee, roll AGI vs attack; on success, the attacker hits themselves for half their own damage.
+- T3 **PERFECT COUNTER:** Reaction, 6 Stam. When attacked, negate the attack entirely and make a counterattack at +6 damage that cannot be dodged or blocked.
+- T4 **RETRIBUTION AURA:** Passive. Any enemy that attacks you in melee takes 4 damage (no roll); this triggers before their attack resolves.
+
+---
+
+# FORM 18: AGGRESSIVE ARTS
+
+**Default Attribute:** MIG/WIL
+**Weapons:** Any (or unarmed) — this form is weapon-agnostic
+**Aspect Affinity:** Pyre, Shroud
+**Archetype Affinity:** Striker
+**Condition Output:** Frightened (battle cry), Composure damage (Killing Blow), Bleeding (savage attacks)
+**Condition Input:** Frightened → demoralize chain, Bleeding → frenzy bonus
+**Tags Present:** Opener (War Cry), Flourish (Killing Blow), Setup (Intimidating presence → Frightened), Exploit (Terror Strike — vs Frightened)
+
+> **Identity:** Berserker techniques. Trade defense for offense. Rage, reckless attacks, pain-fueled fury. This form sacrifices safety for raw damage output. Pairs with any weapon form for a kill-first playstyle.
+
+## Base Techniques
+
+### TIER 1
+**RECKLESS STRIKE** | 1 AP | 2 Stamina
+Attack with +3 damage; you take -2 DEF until the start of your next turn.
+*Unlock: Starting OR scroll*
+
+**BATTLE FURY** | 1 AP | 3 Stamina
+Enter a fury state for 3 rounds; gain +2 to all attack damage but cannot use defensive reactions.
+*Unlock: Scroll, Master, OR "Take damage and continue attacking in the same round"*
+
+**BLOODLUST** | Passive | --
+When you reduce an enemy to 0 HP, recover 2 Stamina.
+*Unlock: Scroll, Master, OR "Kill 3 enemies in one combat"*
+
+### TIER 2
+**SAVAGE ONSLAUGHT** | 2 AP | 5 Stamina
+Make two attacks at +2 damage each; if both hit the same target, they are Staggered (-2 all rolls) for 1 round.
+*Unlock: T2 Scroll, Master, OR "Hit the same enemy twice in one turn"*
+
+**PAIN IS FUEL** | Passive | --
+When you take damage, your next attack this combat deals +2 damage (stacks up to +6).
+*Unlock: T2 Scroll, Master, OR "Take 30+ damage in a single combat and win"*
+
+**INTIMIDATING ASSAULT** | 1 AP | 3 Stamina
+Attack at +2 damage; on hit, target makes WIL save or is Frightened of you for 2 rounds.
+*Unlock: T2 Scroll, Master, OR "Kill an enemy while another enemy watches"*
+
+**TERROR STRIKE** | 2 AP | 4 Stamina | *Tag: Exploit (Frightened)*
+Attack. If target is Frightened of you, deal weapon damage ×1.5 and deal 4 Composure damage. If target's Composure reaches 0, they are Broken (surrender/flee). If not Frightened, deal normal weapon damage +2 Composure damage.
+*Condition bridge: Intimidation/Shadow fear → Aggressive Arts exploitation.*
+*Unlock: T2 Scroll, Master, OR "Strike a Frightened enemy in combat"*
+
+### TIER 3
+**KILLING BLOW** | 2 AP | 6 Stamina
+Attack an enemy below 50% HP at +8 damage; if this kills the target, all enemies within 5m take 4 Composure damage.
+*Unlock: T3 Scroll, Master, OR "Execute 3 wounded enemies"*
+
+**UNSTOPPABLE RAGE** | 3 AP | 8 Stamina
+For 3 rounds, gain +4 to all damage, immunity to fear and charm, and you cannot be reduced below 1 HP; when the rage ends, take 10 unblockable damage.
+*Unlock: T3 Scroll, Master, OR "Fight an entire combat at below 25% HP"*
+
+---
+
+## Variant A: BERSERKER
+*Modifier: +1 damage per 10 HP you are missing (max +5), -2 DEF at all times*
+
+**Unique Techniques:**
+- T1 **FRENZY:** 1 AP, 3 Stam. Make two attacks at -2 to hit each; if both miss, you take 4 self-damage from overextension.
+- T2 **BLOOD RAGE:** Passive. Below 50% HP, your attacks deal +3 damage and you gain +2 to hit.
+- T3 **DEATHLESS FURY:** 2 AP, 7 Stam. When reduced to 0 HP, remain conscious for 2 more rounds; you can only attack (no defend) and die when the effect ends unless healed above 0.
+- T4 **AVATAR OF CARNAGE:** Passive. You do not fall unconscious at 0 HP (die at negative max HP instead). All damage bonuses from missing HP double.
+
+## Variant B: PREDATOR
+*Modifier: +2 damage vs enemies below 50% HP, -1 damage vs enemies at full HP*
+
+**Unique Techniques:**
+- T1 **SCENT WEAKNESS:** 1 AP, 1 Stam. Mark a target you can see; you know their exact HP percentage and gain +2 to hit them for the rest of combat.
+- T2 **EXPLOIT WOUND:** 1 AP, 4 Stam. Attack a wounded enemy (below 50% HP) at +5 damage; if they are Bleeding, the bleed damage doubles.
+- T3 **PACK TACTICS:** 2 AP, 5 Stam. Until end of combat, whenever an ally damages your marked target, you may make a free attack against that target at -2 damage.
+- T4 **APEX HUNTER:** Passive. Enemies you damage cannot heal or regenerate for 2 rounds. Killing blow against any creature restores 5 HP and 5 Stamina.
+
+## Variant C: MOMENTUM
+*Modifier: +1 damage for each enemy you have hit this turn (resets each turn), -2 damage if you hit no enemies last turn*
+
+**Unique Techniques:**
+- T1 **CHAIN STRIKE:** 1 AP, 2 Stam. Attack; if it hits, you may immediately attack a different adjacent enemy at -2 to hit (free action).
+- T2 **SURGE:** Passive. When you drop an enemy to 0 HP, gain +1 AP this turn (max +2 bonus AP per turn).
+- T3 **WHIRLWIND OF DEATH:** 3 AP, 7 Stam. Attack every enemy within melee range; for each enemy hit, the next attack in the sequence gains +2 damage.
+- T4 **CRESCENDO:** Passive. Each consecutive hit in the same turn adds +2 damage to the next (first +0, second +2, third +4, etc.). Missing resets the chain.
+
+---
+
+# FORM 19: MOUNTED COMBAT
+
+**Default Attribute:** MIG/AGI
+**Weapons:** Any (lance, sword, bow preferred) — this form requires a mount
+**Aspect Affinity:** Anima, Gale
+**Archetype Affinity:** Any
+**Condition Output:** Prone (trample/charge), Frightened (warband charge)
+**Condition Input:** Prone → lance impale (Exploit), Slowed → ride-by
+**Tags Present:** Opener (Charge), Exploit (Trampling Charge — vs Prone), Flourish (Ride-By Attack), Reaction (Defensive Spur)
+
+> **Identity:** Fighting from a mount. Charge, lance, mobile warfare. Requires a trained mount (horse, war beast, or magical creature). Without a mount, only Dismounted techniques (marked *) are usable. The mount acts on your initiative and its movement is part of your turn.
+
+## Base Techniques
+
+### TIER 1
+**MOUNTED STRIKE** | 1 AP | 2 Stamina
+Attack from mount dealing weapon damage +2. If your mount moved at least 2m before this attack, add +1 damage per 2m moved (max +4). If stationary, gain +2 to hit from height advantage. *Tag: none*
+*Unlock: Starting OR scroll*
+
+**TRAMPLE** | 1 AP | 3 Stamina
+Direct your mount to run over a target in its path; target takes mount's MIG mod +3 damage and AGI save or is knocked prone.
+*Unlock: Scroll, Master, OR "Ride through an enemy's space"*
+
+**SPUR MOUNT** | 0 AP | 2 Stamina
+Your mount moves an additional 4m this turn; usable once per round.
+*Unlock: Scroll, Master, OR "Need extra movement while mounted"*
+
+### TIER 2
+**LANCE CHARGE** | 2 AP | 4 Stamina
+Move at least 6m in a straight line and make an attack at +6 damage; if using a lance, +8 damage instead.
+*Unlock: T2 Scroll, Master, OR "Charge an enemy from 10m+ away"*
+
+**RIDE-BY ATTACK** | 2 AP | 4 Stamina
+Move up to your mount's full speed, make an attack at any point during movement at +3 damage, and continue moving without provoking.
+*Unlock: T2 Scroll, Master, OR "Attack an enemy while riding past them"*
+
+**MOUNTED RESILIENCE** | Passive | --
+While mounted, you gain +2 DEF against melee attacks from unmounted enemies and your mount gains +2 DEF while you ride.
+*Unlock: T2 Scroll, Master, OR "Take damage while mounted and stay in the saddle"*
+
+**TRAMPLING CHARGE** | 2 AP | 5 Stamina | *Tag: Exploit (Prone)*
+Charge attack (requires 4m+ movement toward target). If target is Prone, deal weapon damage ×2.0 and the target cannot stand up until end of your next turn. If not Prone, deal weapon damage ×1.5.
+*Condition bridge: Any knockdown → Mounted Combat exploitation.*
+*Unlock: T2 Scroll, Master, OR "Charge over a Prone enemy while mounted"*
+
+**DEFENSIVE SPUR** | Reaction | 3 Stamina
+When you or your mount is hit by an attack, your mount immediately moves 3m in any direction (no opportunity attack provoked). If this moves you out of reach, the attack misses.
+*Unlock: T2 Scroll, Master, OR "Take damage while mounted and survive"*
+
+### TIER 3
+**DEVASTATING CHARGE** | 3 AP | 7 Stamina
+Move in a line up to double mount speed; all enemies in your path take weapon damage +8 and must FOR save or be knocked prone and pushed 3m aside.
+*Unlock: T3 Scroll, Master, OR "Scatter a group of enemies with a charge"*
+
+**UNBREAKABLE BOND** | Passive | --
+Your mount cannot be Frightened, Charmed, or forced to flee while you ride; if your mount would be reduced to 0 HP, it survives at 1 HP once per rest.
+*Unlock: T3 Scroll, Master, OR "Ride the same mount through 10 combats"*
+
+---
+
+## Variant A: LANCER
+*Modifier: +2 damage with lance/polearm while mounted, -1 damage with other weapons while mounted*
+
+**Unique Techniques:**
+- T1 **COUCHED LANCE:** 1 AP, 2 Stam. Brace lance under arm; your next charge attack this turn gains +3 damage and ignores shield DEF bonuses.
+- T2 **SHATTER LANCE:** 2 AP, 5 Stam. Charge attack at +10 damage; the lance breaks on impact, but target is Stunned for 1 round (no save).
+- T3 **THUNDERING CHARGE:** 3 AP, 7 Stam. Charge that creates a shockwave; target takes weapon damage +10, and all enemies within 3m of impact take 6 damage and AGI save or prone.
+- T4 **KNIGHT PARAMOUNT:** Passive. Lance attacks from a charge deal double damage. You can charge through allies' spaces without penalty. Charge distance +6m.
+
+## Variant B: HORSE ARCHER
+*Modifier: No penalty for ranged attacks while mounted, -2 damage on melee attacks while mounted*
+
+**Unique Techniques:**
+- T1 **SADDLE SHOT:** 1 AP, 2 Stam. Fire a ranged weapon while your mount moves at full speed with no penalty; +2 damage.
+- T2 **PARTHIAN VOLLEY:** 2 AP, 4 Stam. After your mount moves at least 6m away from enemies, fire two shots at +3 damage each at pursuers.
+- T3 **CIRCLING RAIN:** 3 AP, 6 Stam. Ride in a circle around a group; fire at every enemy within 15m (max 5 targets) at weapon damage +4 each.
+- T4 **BORN IN THE SADDLE:** Passive. You can reload any ranged weapon as a free action while mounted. Mount speed +6m. Ranged attacks while mounted gain +2 to hit.
+
+## Variant C: CAVALRY
+*Modifier: +1 DEF and +1 damage for each allied mounted combatant within 10m (max +3), -2 damage when fighting alone*
+
+**Unique Techniques:**
+- T1 **FORMATION CHARGE:** 1 AP, 3 Stam. Coordinate with one adjacent mounted ally; both charge the same target, each gaining +3 damage.
+- T2 **WEDGE FORMATION:** 2 AP, 4 Stam. Up to 3 mounted allies within 10m gain +2 DEF and +2 damage for 2 rounds while maintaining formation (within 4m of each other).
+- T3 **HAMMER AND ANVIL:** 2 AP, 6 Stam. Designate a flank; if a mounted ally attacks the same target from the opposite side, both attacks deal +6 damage and the target is Staggered for 2 rounds.
+- T4 **CAVALRY COMMANDER:** Passive. All mounted allies within 15m gain +2 to hit and +2 DEF. Your mount and all allied mounts gain +4m speed. Formation bonuses double.
+
+---
+
+# FORM 20: ENVIRONMENTAL COMBAT
+
+**Default Attribute:** WIS/INT
+**Weapons:** None (uses terrain and prepared hazards)
+**Aspect Affinity:** Anima, Aether
+**Archetype Affinity:** Warden, Analyst
+**Condition Output:** Restrained (traps), Prone (trip wire), Immobilized (set trap), Blinded (debris)
+**Condition Input:** Restrained → trap damage bonus, Prone → hazard push
+**Tags Present:** Setup (Trip Wire, Set Trap), Exploit (Environmental Exploitation — vs Restrained/Prone), Sustained (Killzone), Reaction (Triggered Trap)
+
+> **Identity:** Use terrain as a weapon. Traps, hazards, positioning. This form rewards preparation, awareness, and creative use of surroundings. Many techniques require specific terrain features or advance setup. Pairs well with ranged forms and tactical playstyles.
+
+## Base Techniques
+
+### TIER 1
+**IMPROVISED HAZARD** | 1 AP | 2 Stamina
+Use a nearby environmental element (loose stone, branch, debris) to attack; WIS vs target DEF, deals 2d6 damage on hit.
+*Unlock: Starting OR scroll*
+
+**TERRAIN READING** | 0 AP | 1 Stamina
+Analyze the battlefield; the GM reveals all environmental features, hazards, and tactical advantages within line of sight.
+*Unlock: Scroll, Master, OR "Use environment to your advantage in combat"*
+
+**TRIP WIRE** | 1 AP | 3 Stamina
+Set a quick obstacle across a 2m opening; the next creature to move through makes AGI save or falls prone and takes 1d6 damage.
+*Unlock: Scroll, Master, OR "Knock an enemy prone using terrain"*
+
+### TIER 2
+**SET TRAP** | 2 AP | 4 Stamina
+Place a concealed trap in a 2m area (WIS DC to spot equals your INT + 10); triggered creature takes 3d6 damage and is Immobilized for 1 round.
+*Unlock: T2 Scroll, Master, OR "Set and trigger 3 improvised traps"*
+
+**FORCE TERRAIN** | 1 AP | 3 Stamina
+Push, pull, or lure an enemy into a hazardous terrain feature (fire, pit, rubble); target takes environmental damage +4 and the terrain's effect.
+*Unlock: T2 Scroll, Master, OR "Push an enemy into a hazard"*
+
+**FORTIFY POSITION** | 2 AP | 4 Stamina
+Spend time reinforcing a 3m area with barricades and obstacles; all allies within gain +3 DEF and the area counts as difficult terrain for enemies (lasts until destroyed).
+*Unlock: T2 Scroll, Master, OR "Defend a position for 3+ rounds"*
+
+**ENVIRONMENTAL EXPLOITATION** | 2 AP | 4 Stamina | *Tag: Exploit (Restrained/Prone)*
+Interact with the environment to punish a compromised target. If target is Restrained or Prone, deal 3d6 bludgeoning/piercing damage (environment-dependent) and one of: push into hazardous terrain, bury under debris (Blinded 1 round), or submerge in water (Slowed 2 rounds). No attack roll needed — automatic.
+*Condition bridge: Your own traps/grappling → Environmental follow-up.*
+*Unlock: T2 Scroll, Master, OR "Use the environment against a helpless enemy"*
+
+### TIER 3
+**KILLZONE** | 2 AP | 6 Stamina
+Designate a 4m radius area you can see; for 3 rounds, enemies entering or starting their turn there take 4d6 damage from prepared hazards (AGI save for half).
+*Unlock: T3 Scroll, Master, OR "Deal environmental damage to 5+ enemies total"*
+
+**COLLAPSE STRUCTURE** | 3 AP | 8 Stamina
+Destroy a load-bearing element (pillar, wall, ceiling); all creatures in a 5m radius take 6d6 damage, AGI save for half, and the area becomes impassable rubble.
+*Unlock: T3 Scroll, Master, OR "Destroy a structure during combat"*
+
+---
+
+## Variant A: TRAPPER
+*Modifier: Traps deal +2 damage and have +2 DC to detect, -2 to all non-trap techniques*
+
+**Unique Techniques:**
+- T1 **QUICK TRAP:** 1 AP, 2 Stam. Set a simple trap (caltrops, snare, alarm) as a single action instead of the usual 2 AP.
+- T2 **LINKED TRAPS:** 2 AP, 5 Stam. Place two traps that trigger simultaneously when either is activated; both deal full damage to the triggering creature.
+- T3 **DEADFALL:** 2 AP, 6 Stam. Rig a massive trap (falling rocks, swinging log, spiked pit) in a 3m area; deals 5d6 damage, FOR save or Pinned (immobile, 1 AP to escape) for 2 rounds.
+- T4 **MASTER TRAPPER:** Passive. You can maintain up to 5 active traps simultaneously. Traps you set cannot be detected without magical means. Reset destroyed traps as a free action once per rest.
+
+## Variant B: TERRAIN MASTER
+*Modifier: +2 to all checks involving terrain features, -1 damage with improvised attacks*
+
+**Unique Techniques:**
+- T1 **SURE FOOTING:** Passive. You ignore difficult terrain and cannot be knocked prone by terrain effects.
+- T2 **SHAPE BATTLEFIELD:** 2 AP, 4 Stam. Create or alter a terrain feature in a 3m area (raise barricade, dig trench, create cover) that lasts until destroyed.
+- T3 **NATURE'S WRATH:** 2 AP, 7 Stam. Cause a terrain feature to attack (falling tree, surging water, collapsing ground); all enemies in a 4m area take 4d6 damage and suffer a terrain-appropriate condition for 2 rounds.
+- T4 **ONE WITH THE LAND:** Passive. You gain +3 DEF while adjacent to natural terrain features. Once per combat, you may cause any terrain feature within 10m to activate as a free action (dealing 3d6 to enemies in its area).
+
+## Variant C: DEMOLISHER
+*Modifier: +3 damage vs structures and objects, -1 damage vs creatures*
+
+**Unique Techniques:**
+- T1 **WEAK POINT:** 1 AP, 2 Stam. Identify the structural weakness of an object or building; your next attack against it deals triple damage and ignores hardness.
+- T2 **CONTROLLED DEMOLITION:** 2 AP, 5 Stam. Destroy a specific section of wall, floor, or ceiling (up to 3m) to create an opening, cover, or hazard without collapsing adjacent structures.
+- T3 **CHAIN REACTION:** 3 AP, 7 Stam. Destroy a series of structural elements in sequence; up to 3 connected structures collapse in order, each dealing 3d6 damage in a 3m area (AGI save for half).
+- T4 **SIEGE MASTER:** Passive. You deal quadruple damage to structures and objects. You can determine exactly how a structure will collapse before destroying it. Allies are never caught in your demolitions (they instinctively move to safe zones).
+
+---
+
+## FORM SUMMARY TABLE
+
+| # | Form | Attr | Aspect Affinity | Archetype Affinity |
+|---|------|------|-----------------|-------------------|
+| 1 | Heavy Blade | MIG | Pyre | Striker |
+| 2 | Heavy Crush | MIG | Ore | Striker |
+| 3 | Polearm | MIG | Ore, Radiance | Guardian, Warden |
+| 4 | Axe | MIG | Pyre | Striker |
+| 5 | Medium Blade | MIG/AGI | Radiance | Any |
+| 6 | Medium Crush | MIG | Ore | Guardian |
+| 7 | Light Blade | AGI | Shroud, Gale | Skirmisher |
+| 8 | Finesse Blade | AGI/PRC | Tide, Radiance | Skirmisher |
+| 9 | Longbow | PRC | Gale | Hunter |
+| 10 | Shortbow | AGI/PRC | Gale, Anima | Hunter, Skirmisher |
+| 11 | Crossbow | PRC/INT | Aether | Hunter, Analyst |
+| 12 | Thrown | AGI | Gale, Tide | Hunter, Skirmisher |
+| 13 | Shield | FOR | Ore, Radiance | Guardian |
+| 14 | Dual Wield | AGI | Shroud, Gale | Skirmisher |
+| 15 | Unarmed Strike | MIG/AGI | Anima, Pyre | Striker |
+| 16 | Grappling | MIG/FOR | Anima, Tide | Any |
+| 17 | Defensive Arts | FOR/AGI | Ore, Radiance | Guardian |
+| 18 | Aggressive Arts | MIG/WIL | Pyre, Shroud | Striker |
+| 19 | Mounted Combat | MIG/AGI | Anima, Gale | Any |
+| 20 | Environmental | WIS/INT | Anima, Aether | Warden, Analyst |
+
+---
+
+## TECHNIQUE COUNT
+
+- 20 Forms × 8 Base Techniques = 160 Base Techniques
+- 20 Forms × 3 Variants × 4 Unique = 240 Variant Techniques
+- **Total Combat Techniques: 400**
+
+Each form fully detailed in supplementary files:
+- forms-combat-ranged.md (Forms 9-12)
+- forms-combat-defensive.md (Forms 13-16)
+- forms-combat-styles.md (Forms 17-20)
