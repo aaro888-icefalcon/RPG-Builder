@@ -16,3 +16,4 @@ This folder is optional and short-lived. Keep only completion records that are s
 - [Repository hierarchy reorganization plan](./repository-hierarchy-reorganization-plan.md) — structural cleanup strategy (completed 2026-02; repository now uses flat `runtime/` layout)
 - [Runtime doc placement audit](./runtime-doc-placement-audit.md) — docs placement analysis (completed; resolved by phase co-location)
 - [Phase-oriented runtime reorganization](./phase-oriented-runtime-reorganization.md) — phase-overlay navigation layer (completed 2026-02; superseded by 6-phase GM pipeline)
+- [Runtime scrub — blank RPG template](./2026-02-24-runtime-scrub-blank-template.md) — strip game-specific content, create blank template (completed 2026-03)

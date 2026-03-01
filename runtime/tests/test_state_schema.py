@@ -10,6 +10,9 @@ Covers:
 
 Uses the live state.json as the baseline "known-good" state, then injects
 targeted mutations to verify each check fires.
+
+Template version: game-agnostic. Character tests check only name and level.
+Add your game's character mutation tests as you extend the schema.
 """
 
 import copy
@@ -38,11 +41,7 @@ def _load_state():
 
 
 def _mutate(state, path_parts, value):
-    """Return a deep copy of *state* with the nested path set to *value*.
-
-    path_parts is a list like ["character", "hp", "current"].
-    If value is the sentinel _DELETE, the key is removed instead.
-    """
+    """Return a deep copy of *state* with the nested path set to *value*."""
     s = copy.deepcopy(state)
     obj = s
     for part in path_parts[:-1]:
@@ -113,81 +112,16 @@ def test_wrong_type_top_level():
 
 # --- Layer 2: Character ---
 
-def test_character_missing_field():
-    state = _mutate(_load_state(), ["character", "hp"], _DELETE)
+def test_character_missing_name():
+    state = _mutate(_load_state(), ["character", "name"], _DELETE)
     errors = validate_state(state)
-    return len(_errors_containing(errors, "character.hp")) > 0
-
-
-def test_character_hp_overflow():
-    """HP current > max must be caught."""
-    state = _mutate(_load_state(), ["character", "hp", "current"], 999)
-    errors = validate_state(state)
-    return len(_errors_containing(errors, "character.hp")) > 0
-
-
-def test_character_negative_stamina():
-    state = _mutate(_load_state(), ["character", "stamina", "current"], -5)
-    errors = validate_state(state)
-    return len(_errors_containing(errors, "character.stamina.current")) > 0
-
-
-def test_character_attribute_out_of_range():
-    state = _mutate(_load_state(), ["character", "attributes", "might"], 0)
-    errors = validate_state(state)
-    return len(_errors_containing(errors, "character.attributes.might")) > 0
-
-
-def test_character_attribute_too_high():
-    state = _mutate(_load_state(), ["character", "attributes", "agility"], 31)
-    errors = validate_state(state)
-    return len(_errors_containing(errors, "character.attributes.agility")) > 0
-
-
-def test_character_missing_attribute():
-    state = _load_state()
-    del state["character"]["attributes"]["willpower"]
-    errors = validate_state(state)
-    return len(_errors_containing(errors, "character.attributes.willpower")) > 0
-
-
-def test_character_invalid_stance():
-    state = _mutate(_load_state(), ["character", "combat", "current_stance"], "berserk")
-    errors = validate_state(state)
-    return len(_errors_containing(errors, "current_stance")) > 0
-
-
-def test_character_ap_overflow():
-    state = _mutate(_load_state(), ["character", "combat", "ap", "current"], 99)
-    errors = validate_state(state)
-    return len(_errors_containing(errors, "character.combat.ap")) > 0
+    return len(_errors_containing(errors, "character.name")) > 0
 
 
 def test_character_level_out_of_range():
-    state = _mutate(_load_state(), ["character", "level"], 25)
+    state = _mutate(_load_state(), ["character", "level"], 101)
     errors = validate_state(state)
     return len(_errors_containing(errors, "character.level")) > 0
-
-
-def test_character_negative_xp():
-    state = _mutate(_load_state(), ["character", "xp", "current"], -10)
-    errors = validate_state(state)
-    return len(_errors_containing(errors, "character.xp.current")) > 0
-
-
-def test_character_duplicate_form_slot():
-    state = _load_state()
-    if len(state["character"]["forms"]) < 2:
-        return True  # Skip if fewer than 2 forms
-    state["character"]["forms"][1]["slot"] = 1  # Same as forms[0]
-    errors = validate_state(state)
-    return len(_errors_containing(errors, "duplicate slot")) > 0
-
-
-def test_character_combat_history_negative():
-    state = _mutate(_load_state(), ["character", "combat_history", "damage_dealt"], -1)
-    errors = validate_state(state)
-    return len(_errors_containing(errors, "combat_history.damage_dealt")) > 0
 
 
 # --- Layer 2: Clocks ---
@@ -335,7 +269,6 @@ def test_completed_clock_mismatched_current():
 def test_sync_current_day_mismatch():
     state = _load_state()
     state["current_day"] = 5
-    # campaign.current_day stays at original value
     errors = validate_state(state)
     return len(_errors_containing(errors, "sync: current_day")) > 0
 
@@ -419,18 +352,8 @@ ALL_TESTS = [
     ("Forbidden key rejected", test_forbidden_key_rejected),
     ("Missing top-level key", test_missing_top_level_key),
     ("Wrong type top-level", test_wrong_type_top_level),
-    ("Character missing field", test_character_missing_field),
-    ("Character HP overflow", test_character_hp_overflow),
-    ("Character negative stamina", test_character_negative_stamina),
-    ("Character attribute out of range (low)", test_character_attribute_out_of_range),
-    ("Character attribute out of range (high)", test_character_attribute_too_high),
-    ("Character missing attribute", test_character_missing_attribute),
-    ("Character invalid stance", test_character_invalid_stance),
-    ("Character AP overflow", test_character_ap_overflow),
+    ("Character missing name", test_character_missing_name),
     ("Character level out of range", test_character_level_out_of_range),
-    ("Character negative XP", test_character_negative_xp),
-    ("Character duplicate form slot", test_character_duplicate_form_slot),
-    ("Character combat history negative", test_character_combat_history_negative),
     ("Clock current exceeds max", test_clock_current_exceeds_max),
     ("Clock negative current", test_clock_negative_current),
     ("Clock invalid status", test_clock_invalid_status),

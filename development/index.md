@@ -9,6 +9,13 @@ Two reading paths depending on your goal:
 - **Understand the system:** [Design principles](./design-docs/design-principles.md) → [Folder contracts](./design-docs/repo-architecture.md)
 - **Make changes:** [Change integration checklist](./change-integration-checklist.md) → [Maintenance policy](./repo-maintenance-policy.md) → [CI commands](./quality/ci-commands.md)
 
+## Getting Started — Build Your Game
+
+- [Guides index](./guides/index.md) — step-by-step guides for building on this template
+- [Creating Game State](./guides/creating-game-state.md) — design your character model, world situation, and state schema
+- [Creating Skills and Mechanics](./guides/creating-skills-and-mechanics.md) — write mechanics scripts and wire them into the pipeline
+- [Creating Hooks](./guides/creating-hooks.md) — build Claude Code hooks for enforcement and context injection
+
 ## Architecture & Structure
 
 - [Change integration checklist](./change-integration-checklist.md) — phase-first placement, 7-touchpoint integration, scope accounting
@@ -27,7 +34,7 @@ Two reading paths depending on your goal:
 - [Quality docs index](./quality/index.md)
 - [CI commands](./quality/ci-commands.md) — how to run CI jobs locally
 - [Reference freshness](./quality/reference-freshness.md) — tracked doc versions and commit hashes
-- [State schema migration notes](./quality/state-schema-migration-notes.md) — v5.0.0 upgrade guide
+- [State schema migration notes](./quality/state-schema-migration-notes.md) — v6.0.0 upgrade guide
 - **Schema or cross-cutting changes?** → [Change integration checklist §5](./change-integration-checklist.md) for full cross-cutting artifact workflow
 
 ## Security

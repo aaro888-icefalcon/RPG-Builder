@@ -1,8 +1,8 @@
-# Emergence: The Exile
+# AI RPG Engine Template
 
 ## What This Is
 
-PbtA RPG with a deterministic CLI mechanics engine. All dice rolls, damage calculations, enemy behavior, and state mutations are executed through Python scripts — never estimated or improvised.
+Template for building AI-led RPGs with a deterministic CLI mechanics engine. All dice rolls, damage calculations, enemy behavior, and state mutations are executed through Python scripts — never estimated or improvised.
 
 Two operating modes govern all work in this repository.
 
